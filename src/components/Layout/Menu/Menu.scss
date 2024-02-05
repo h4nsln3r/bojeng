@@ -1,0 +1,315 @@
+.menu {
+  position: relative;
+  z-index: 997;
+  max-width: $page__width;
+  margin: 0 auto;
+
+  &__list {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: none;
+    @extend %list--clearstyle;
+
+    @include mq('tablet--small') {
+      display: flex;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__sub {
+    position: absolute;
+    max-height: calc(100vh - 320px);
+    overflow-y: auto;
+    width: 100%;
+    background-color: $color__white;
+    max-width: $page__width;
+    margin: 0 auto;
+
+    .button__search--close{
+      margin-top: 8px
+    }
+
+    &--carmc,
+    &--default {
+      .menu__sub__title a {
+        border-color: $color__blue--carmc;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__blue--carmc;
+        fill: $color__white;
+      }
+    }
+
+    &--bike {
+      .menu__sub__title a {
+        border-color: $color__blue--bike;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__blue--bike;
+        fill: $color__white;
+      }
+    }
+
+    &--boat {
+      .menu__sub__title a {
+        border-color: $color__blue--boat;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__blue--boat;
+        fill: $color__white;
+      }
+    }
+
+    &--leisure {
+      .menu__sub__title a {
+        border-color: $color__green--leisure;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__green--leisure;
+        fill: $color__white;
+      }
+    }
+
+    &--home {
+      .menu__sub__title a {
+        border-color: $color__green--home;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__green--home;
+        fill: $color__white;
+      }
+    }
+
+    &--officemultimedia,
+    &--office {
+      .menu__sub__title a {
+        border-color: $color__yellow--office;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__yellow--office;
+        fill: $color__black;
+      }
+    }
+
+    &--construction {
+      .menu__sub__title a {
+        border-color: $color__orange--construction;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__orange--construction;
+        fill: $color__white;
+      }
+    }
+
+    &--carcare {
+      .menu__sub__title a {
+        border-color: $color__red--carcare;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__red--carcare;
+        fill: $color__white;
+      }
+    }
+
+    &--tools {
+      .menu__sub__title a {
+        border-color: $color__grey--tools;
+      }
+
+      .menu__sub__item__expander--active {
+        background-color: $color__grey--tools;
+        fill: $color__white;
+      }
+    }
+
+    &__list {
+      @extend %list--clearstyle;
+
+      &--depth-0 {
+        .menu__sub__item {
+          @extend %font__myriad--semibold;
+        }
+      }
+
+      @for $i from 1 through 10 {
+        &--depth-#{$i} {
+          .menu__sub__item {
+            text-indent: $i * 16px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    &__item {
+      @include font__size(20);
+      border-bottom: 1px $color__grey--light--3 solid;
+      display: flex;
+      align-items: center;
+      height: 58px;
+
+      a {
+        display: flex;
+        flex-grow: 1;
+        padding: 16px;
+      }
+
+      &__expander {
+        height: 58px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border-left: 1px $color__grey--light--3 solid;
+
+        &--active {
+          background-color: red;
+        }
+      }
+    }
+
+    &__title {
+      @include font__size(20);
+      padding: 16px;
+      margin: 0;
+      border-bottom: 1px $color__grey--light--3 solid;
+      display: flex;
+      align-items: center;
+
+      a {
+        border-left: 8px solid;
+        padding: 4px 16px;
+        text-decoration: none;
+        color: $color__black;
+
+        @media (hover) {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 12px 4px;
+    flex-grow: 1;
+    text-align: center;
+    text-transform: uppercase;
+    word-break: break-word;
+    @extend %font__myriad--semibold;
+    @include font__size(14);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(100% - 5px);
+      left: 0;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: -1;
+      background-color: $color__white;
+      transition: top 0.15s;
+      border-width: 5px;
+      border-style: solid;
+      border-bottom-width: 0;
+    }
+
+    &--active {
+      border-bottom-color: $color__white;
+
+      &:before {
+        top: 0px;
+        transition: top 0.25s;
+        pointer-events: none;
+      }
+    }
+
+    @media (hover) {
+      &:hover {
+        cursor: pointer;
+        border-bottom-color: $color__white;
+
+        &:before {
+          top: 0px;
+          transition: top 0.25s;
+          pointer-events: none;
+        }
+      }
+    }
+
+    @include mq('tablet') {
+      min-width: auto;
+    }
+
+    @include mq('tablet--large') {
+      @include font__size(16);
+    }
+
+    &--carmc,
+    &--carmc::before,
+    &--default,
+    &--default::before {
+      border-color: $color__blue--carmc;
+    }
+
+    &--bike,
+    &--bike::before {
+      border-color: $color__blue--bike;
+    }
+
+    &--boat,
+    &--boat::before {
+      border-color: $color__blue--boat;
+    }
+
+    &--leisure,
+    &--leisure::before {
+      border-color: $color__green--leisure;
+    }
+
+    &--home,
+    &--home::before {
+      border-color: $color__green--home;
+    }
+
+    &--officemultimedia,
+    &--officemultimedia::before,
+    &--office,
+    &--office::before {
+      border-color: $color__yellow--office;
+    }
+
+    &--construction,
+    &--construction::before {
+      border-color: $color__orange--construction;
+    }
+
+    &--carcare,
+    &--carcare::before {
+      border-color: $color__red--carcare;
+    }
+
+    &--tools,
+    &--tools::before {
+      border-color: $color__grey--tools;
+    }
+  }
+}

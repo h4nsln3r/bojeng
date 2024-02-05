@@ -1,0 +1,152 @@
+
+$startPage: url('../../assets/highQ/Bojeng12.jpg');
+$secondStartPage: url('../../assets/highQ/Bojeng12.jpg');
+$thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
+
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+ width: 100%;
+ height: 100vh;
+ scroll-behavior: smooth;
+ overflow: auto;
+ scroll-snap-type: y proximity;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  background-size: cover;      
+  background-repeat: no-repeat;
+  &:nth-child(1){
+    background-image: $startPage;
+  }
+  &:nth-child(2){
+    background-image: $secondStartPage;
+  }
+  &:nth-child(3){
+    background-image: $thirdStartPage;
+  }
+}
+
+.header {
+  cursor: pointer;
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-18%, -50%);
+  text-align: center;
+  &__bojeng{
+    // font-family: 'Bangers', cursive;
+    // font-family: 'Fredericka the Great', cursive;
+    // font-family: 'Fontdiner Swanky', cursive;
+    // font-family: 'Luckiest Guy', cursive;
+    font-family: 'Righteous', cursive;
+    color: orange;
+    font-size: 4em;
+    font-weight: bold;
+    padding: 10px;
+    // animation: none; /* Disable the animation on hover */
+    // transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+
+    &:hover {
+
+      animation: zoomAnimation 0.8s ease-in-out;
+      color: red;
+    }
+  }
+}
+@keyframes zoomAnimation {
+  0% {
+    transform:  scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+
+.nav{
+    cursor: pointer;
+    &__cross{
+        position: fixed;
+        padding: 25px;
+        background-color: orange;
+        border-radius: 4pc;
+        width: 1em;
+        top: 5px;
+        right: 10px;
+        z-index: 1;
+    }
+    &__menu{
+        position: fixed;
+        padding: 25px;
+        background-color: orange;
+        border-radius: 4pc;
+        width: 1em;
+        top: 5px;
+        left: 10px;
+        z-index: 1;
+    }
+
+    &:hover{
+        padding: 22px;
+        background-color: red;
+    }
+  }
+
+  
+
+  .menu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 165, 0, 0.2); /* Orange background with transparency */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .menu-header {
+    text-align: center;
+    padding: 16px;
+    font-size: 24px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-list li:hover {
+    background-color: rgba(255, 165, 0, 0.5); /* Darker orange on hover */
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  

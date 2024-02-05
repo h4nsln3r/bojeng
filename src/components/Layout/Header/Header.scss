@@ -1,0 +1,144 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color__white;
+  overflow: hidden;
+  padding: $grid__margin;
+  max-width: $page__width;
+  margin: 0 auto;
+  z-index: 9998;
+
+  &--margin--top {
+    margin-top: 82px;
+  }
+
+  @include mq('tablet--large') {
+    padding: 32px 50px;
+  }
+
+  &__inner {
+    max-width: $page__width;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    &--terminal{
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: 50px;
+    }
+  }
+
+  &__back {
+    padding: 0;
+    min-height: auto;
+    height: 40px;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &--biltema {
+      position: relative;
+      z-index: 2;
+      max-height: 20px;
+      cursor: pointer;
+
+      @include mq('tablet') {
+        max-height: 24px;
+      }
+
+      @include mq('desktop--small') {
+        max-height: 35px;
+      }
+    }
+  }
+
+  &__languages {
+    background-color: $color__white;
+    border-radius: $radius;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    padding: $grid__margin / 2;
+
+    button {
+      padding: 4px;
+      min-height: auto;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      padding: 4px;
+      min-height: auto;
+    }
+  }
+
+  &__store {
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    text-align: right;
+    color: $color__biltema--blue;
+
+    @include mq('tablet--small') {
+      margin-right: 30px;
+    }
+
+    &__name {
+      @include font__size(16);
+      @extend %font__myriad--semibold;
+    }
+
+    &__open {
+      @include font__size(14);
+    }
+  }
+
+  &__scrollup {
+    position: fixed;
+    z-index: 997;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+  }
+
+  &__session {
+    height: 38px;
+    padding: 0 20px;
+    min-height: auto;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    @include font__size(14);
+    @extend %font__myriad--semibold;
+
+    @include mq('tablet--small') {
+      display: flex;
+    }
+
+    @include mq('tablet--large') {
+      margin-right: 30px;
+    }
+  }
+}
