@@ -5,7 +5,6 @@ import { PersistGate } from 'redux-persist/integration/react';
 import Container from './components/Layout/Container';
 import store, { sagaMiddleware, persistor } from './store';
 import sagas from './store';
-import Init from './pages/init';
 import StartPage from './pages/startpage/';
 import ErrorPage from './pages/errorpage/ErrorPage';
 import './styles/main.scss';
@@ -39,7 +38,6 @@ const Routing = ({ }: Props) => { // Here
           <PersistGate loading={null} persistor={persistor}>
 
             <Routes>
-              <Route path={PATHS.INIT} element={<Init />} />
               <Route path={PATHS.STARTPAGE} element={<StartPage />} />
               <Route path={PATHS.TESTPAGE} element={<TestPage />} />
               <Route path={PATHS.ERRORPAGE} element={<ErrorPage />} />

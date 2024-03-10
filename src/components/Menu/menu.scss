@@ -1,0 +1,44 @@
+.menu-header {
+    text-align: center;
+    padding: 16px;
+    font-size: 24px;
+  }
+  
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-list li {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-list li:hover {
+    background-color: rgba(255, 165, 0, 0.5); /* Darker orange on hover */
+  }
+  
+  
+  .toggle-button {
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+  }
+
+  
+  .menu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 165, 0, 0.2); /* Orange background with transparency */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
