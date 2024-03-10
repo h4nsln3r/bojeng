@@ -2,7 +2,6 @@ import Helmet from 'react-helmet';
 import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
-import Container from './components/Layout/Container';
 import store, { sagaMiddleware, persistor } from './store';
 import sagas from './store';
 import StartPage from './pages/startpage/';

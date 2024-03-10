@@ -3,27 +3,18 @@ $startPage: url('../../assets/highQ/Bojeng12.jpg');
 $secondStartPage: url('../../assets/highQ/Bojeng12.jpg');
 $thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
 
-.app {
+.container {
+  background-image: $startPage;
+  // scroll-snap-align: start;
+  background-size: cover;      
+  background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
-  &:nth-child(1){
-    background-image: $startPage;
-      // scroll-snap-align: start;
-    background-size: cover;      
-    background-repeat: no-repeat;
-  }
-}
-
-.container {
- width: 100%;
- height: 100vh;
- scroll-behavior: smooth;
- overflow: auto;
- scroll-snap-type: y proximity;
- display: flex;
- flex-direction: column;
-
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y proximity;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
@@ -34,122 +25,12 @@ $thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
   margin-top: -200px;
 }
 
-.header {
-  display: flex; /* Use Flexbox */
-  justify-content: center; /* Center horizontally */
-  
-  height: 200px;
-  &__bojeng{
-    cursor: pointer;
-    font-family: 'Righteous', cursive;
-    font-size: 10em;
-    font-weight: bold;
-    color: orange;
-    opacity: 0;
-    transition: background-color 0.3s;
-    padding: 10px;
-    margin-top: 0px;
-
-    &:hover {
-      color: red;
-      animation: pulse 10s infinite;
-    }
-
-    &--fade-in{
-      animation: fadeIn 1s ease-in-out forwards; 
-    }
-    &--fadeout{
-      animation: fadeOut 1s ease-in-out forwards; 
-    }
-  }
-}
-
-
-/* Keyframes for the pulse effect */
-@keyframes pulse {
-  0% {
-    font-size: 10em;
-    opacity: 1;
-  }
-  50% {
-    font-size: 15em;
-    opacity: 0.7;
-  }
-  100% {
-    font-size: 10em;
-    opacity: 1;
-  }
-}
 
 
 
-.sidebar {
-  width: 30%;
-  &--nav{
-  background-color: rgba(255, 165, 0, 0.8);
-  border: 4px solid rgba(255, 136, 0, 0.8);
-  padding: 20px;
-  padding-right: 60px;
-  width: fit-content;
-  border-radius: 10px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 5em;
-  top: 40%;
-  margin-left: 20px;
-  justify-content: space-evenly;
-  opacity: 0; /* Start with opacity 0 */
-  animation: fadeInSidebar 3s ease-in-out forwards; 
-  margin-left: auto;
-  .active{
-    background-color: rgba(153, 101, 5, 0.8);
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  li {
-    padding: 10px;
-    margin-bottom: 20px;
-    cursor: pointer;
-  }
-  
-  li:hover {
-    background-color: #ddd;
-  }
-  }
 
-}
 
-.main-content {
-  width: 65%;
 
-  .init__header {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    &--fadeout{
-      animation: fadeOutMain 0.5s ease-in forwards;
-    }
-  
-    &__bojeng{
-      cursor: pointer;
-      text-align: center;
-      font-family: 'Righteous', cursive;
-      color: orange;
-      font-size: 16em;
-      width: fit-content;
-      font-weight: bold;
-      padding: 10px;
-      margin-top: 10px;
-      opacity: 1;
-      // animation: none; /* Disable the animation on hover */
-      // transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
-      animation: zoomInitAnimation 3s ease-in forwards;
-
-    }
-  }
-}
 
 
 @keyframes fadeOutMain {
@@ -171,30 +52,6 @@ $thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
   }
 }
 
-
-@keyframes zoomInitAnimation {
-  0% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.5);
-
-  }
-  80% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.5);
-  }
-  85% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.6);
-  }
-  100% {
-    margin-top: 0px;
-    margin-left: 0px;
-    transform: scale(1);
-  }
-}
  
 
   
