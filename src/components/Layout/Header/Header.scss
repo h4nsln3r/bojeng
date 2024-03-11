@@ -1,0 +1,66 @@
+.header {
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  
+  height: 200px;
+  &__bojeng{
+    cursor: pointer;
+    font-family: 'Righteous', cursive;
+    font-size: 10em;
+    font-weight: bold;
+    color: orange;
+    opacity: 0;
+    transition: background-color 0.3s;
+    padding: 10px;
+    margin-top: 0px;
+
+    &:hover {
+      color: red;
+      animation: pulse 10s infinite;
+    }
+
+    &--fade-in{
+      animation: fadeIn 1s ease-in-out forwards; 
+    }
+    &--fadeout{
+      animation: fadeOut 1s ease-in-out forwards; 
+    }
+  }
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse {
+  0% {
+    font-size: 10em;
+    opacity: 1;
+  }
+  50% {
+    font-size: 15em;
+    opacity: 0.7;
+  }
+  100% {
+    font-size: 10em;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+  }
+   100% {
+    opacity: 1; /* Fade in to opacity 1 */
+  }
+}
+
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start with opacity 0 */
+
+  }
+  100% {
+    opacity: 0; /* Fade in to opacity 1 */
+    
+  }
+}
