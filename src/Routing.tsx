@@ -13,9 +13,9 @@ import TestPage from './pages/testpage/TestPage';
 export const PATHS = {
   // TODO
   INIT: '',
-  STARTPAGE: '/start',
+  STARTPAGE: '/bojeng/start',
   TESTPAGE: '/TESTPAGE',
-  ERRORPAGE: '/error'
+  ERRORPAGE: '/bojeng'
 };
 
 
