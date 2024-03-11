@@ -13,7 +13,7 @@ import TestPage from './pages/testpage/TestPage';
 export const PATHS = {
   // TODO
   INIT: '/init',
-  STARTPAGE: '/',
+  STARTPAGE: '/start',
   TESTPAGE: '/TESTPAGE',
   ERRORPAGE: '/error'
 };
