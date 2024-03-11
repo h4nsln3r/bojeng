@@ -8,10 +8,6 @@ interface Props {
 
 export default ({ targetCategory }: Props) => {
 
-
-
-
-
   return (
     <section className={`section ${targetCategory === "" ? '' : ''}`}>
       {targetCategory === "" && (
@@ -39,8 +35,8 @@ export default ({ targetCategory }: Props) => {
       <div className={`category Om ${targetCategory === "Om" ? 'category--active' : 'category-fadeout'}`} onClick={() => console.log("")}>
         <div className="category__section">
           <p>Bild</p>
-          {targetCategory}
-          <p>Kontakt</p>
+
+          <p>Kontakta?</p>
         </div>
       </div>
     </section>
