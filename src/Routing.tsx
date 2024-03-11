@@ -12,7 +12,7 @@ import TestPage from './pages/testpage/TestPage';
 
 export const PATHS = {
   // TODO
-  INIT: '/init',
+  INIT: '',
   STARTPAGE: '/start',
   TESTPAGE: '/TESTPAGE',
   ERRORPAGE: '/error'
@@ -37,6 +37,7 @@ const Routing = ({ }: Props) => { // Here
           <PersistGate loading={null} persistor={persistor}>
 
             <Routes>
+              <Route path={PATHS.INIT} element={<StartPage />} />
               <Route path={PATHS.STARTPAGE} element={<StartPage />} />
               <Route path={PATHS.TESTPAGE} element={<TestPage />} />
               <Route path={PATHS.ERRORPAGE} element={<ErrorPage />} />
