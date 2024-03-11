@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/bojeng/static/css/main.9788efe2.css",
-    "main.js": "/bojeng/static/js/main.8bb7cd6a.js",
+    "main.js": "/bojeng/static/js/main.5faa47a8.js",
     "static/media/Bojeng12.jpg": "/bojeng/static/media/Bojeng12.7e26e899e25d5eb7b8c0.jpg",
     "index.html": "/bojeng/index.html",
     "main.9788efe2.css.map": "/bojeng/static/css/main.9788efe2.css.map",
-    "main.8bb7cd6a.js.map": "/bojeng/static/js/main.8bb7cd6a.js.map"
+    "main.5faa47a8.js.map": "/bojeng/static/js/main.5faa47a8.js.map"
   },
   "entrypoints": [
     "static/css/main.9788efe2.css",
-    "static/js/main.8bb7cd6a.js"
+    "static/js/main.5faa47a8.js"
   ]
 }
