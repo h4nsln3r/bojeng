@@ -25,6 +25,8 @@ interface Props {
 // sagaMiddleware.run(sagas);
 
 const Routing = ({ }: Props) => { // Here
+
+  console.log("routing")
   return (
     <>
       <Helmet>
@@ -40,7 +42,7 @@ const Routing = ({ }: Props) => { // Here
               <Route path={PATHS.INIT} element={<StartPage />} />
               <Route path={PATHS.STARTPAGE} element={<StartPage />} />
               <Route path={PATHS.TESTPAGE} element={<TestPage />} />
-              <Route path={PATHS.ERRORPAGE} element={<ErrorPage />} />
+              <Route path={PATHS.ERRORPAGE} element={<StartPage />} />
               <Route path="*" element={<Navigate replace to={PATHS.ERRORPAGE} />} />
             </Routes>
 
