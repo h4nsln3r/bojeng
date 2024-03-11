@@ -1,5 +1,5 @@
 {
-  "homepage": "http://h4nsln3r.github.io/bojeng",
+  "homepage": "http://h4nsln3r.github.io/bojeng/",
   "name": "bojeng",
   "version": "0.1.0",
   "private": true,
@@ -14,7 +14,6 @@
     "@types/react-helmet": "^6.1.5",
     "classnames": "^2.3.1",
     "eslint-plugin-react-hooks": "^4.6.0-next-e531a4a62-20220505",
-    "gh-pages": "^6.1.1",
     "node-sass": "^7.0.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -54,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
