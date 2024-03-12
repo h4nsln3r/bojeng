@@ -32,6 +32,9 @@
 @media only screen and (max-width: 767px) {
 
     .header {
+      &--none{
+        display: none;
+      }
       height: 100px;
       &__bojeng{
         opacity: 1;

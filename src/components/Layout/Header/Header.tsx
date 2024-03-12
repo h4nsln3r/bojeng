@@ -7,7 +7,7 @@ interface Props {
 
 export default ({ targetCategory }: Props) => {
   return (
-    <header className={`header ${targetCategory === "" ? '' : ''}`}>
+    <header className={`header ${targetCategory === "" ? 'header--none' : ''}`}>
       <div className={`header__bojeng ${targetCategory === "" || targetCategory === "Musik" ? 'header__bojeng--fade-out' : 'header__bojeng--fade-in'}`} onClick={() => console.log("")}>
         BOJENG
       </div>
