@@ -20,9 +20,17 @@ export default ({ targetCategory }: Props) => {
 
       <div className={`category Musik ${targetCategory === "Musik" ? 'category--active' : 'category-fadeout'}`} onClick={() => console.log("")}>
         <div className="category__section">
-          {targetCategory}
-          <p>youtube</p>
-          <p>soundcloud</p>
+
+          <iframe className='soundcloud' width="100%" height="100" scrolling="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1771918968&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+          </iframe>
+          <iframe className='youtube' width="1060" height="485"
+            src="https://www.youtube.com/embed/gM_0TiszzB8?si=8izxcenRVc6O0Oc5" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+          </iframe>
+          <iframe className='soundcloud' width="100%" height="100" scrolling="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1771981572&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+          </iframe>
+
 
         </div>
       </div>

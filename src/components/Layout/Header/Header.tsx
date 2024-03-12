@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+import './header.scss';
 
 interface Props {
   targetCategory: string;
@@ -8,7 +8,7 @@ interface Props {
 export default ({ targetCategory }: Props) => {
   return (
     <header className={`header ${targetCategory === "" ? '' : ''}`}>
-      <div className={`header__bojeng ${targetCategory === "" ? 'header__bojeng--fade-out' : 'header__bojeng--fade-in'}`} onClick={() => console.log("")}>
+      <div className={`header__bojeng ${targetCategory === "" || targetCategory === "Musik" ? 'header__bojeng--fade-out' : 'header__bojeng--fade-in'}`} onClick={() => console.log("")}>
         BOJENG
       </div>
     </header>

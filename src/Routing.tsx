@@ -2,50 +2,38 @@ import Helmet from 'react-helmet';
 import { Provider as StoreProvider } from 'react-redux';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
-import store, { sagaMiddleware, persistor } from './store';
-import sagas from './store';
+import store, { persistor } from './store';
 import StartPage from './pages/startpage/';
-import ErrorPage from './pages/errorpage/ErrorPage';
 import './styles/main.scss';
 import './styles/variables.scss';
-import TestPage from './pages/testpage/TestPage';
 
 export const PATHS = {
-  // TODO
-  INIT: '',
-  STARTPAGE: '/bojeng/start',
-  TESTPAGE: '/TESTPAGE',
-  ERRORPAGE: '/bojeng'
+  INIT: '/bojeng/start',
+  STARTPAGE: '/bojeng'
 };
 
 
 
 interface Props {
 }
-// sagaMiddleware.run(sagas);
 
-const Routing = ({ }: Props) => { // Here
+const Routing = ({ }: Props) => {
 
   console.log("routing")
   return (
     <>
       <Helmet>
-        {/* <title>{t('_DocumentTitle')}</title> */}
-        <title>Hannesoo</title>
+        <title>BOJENG</title>
       </Helmet>
 
       <StoreProvider store={store}>
         <BrowserRouter>
           <PersistGate loading={null} persistor={persistor}>
-
             <Routes>
               <Route path={PATHS.INIT} element={<StartPage />} />
               <Route path={PATHS.STARTPAGE} element={<StartPage />} />
-              <Route path={PATHS.TESTPAGE} element={<TestPage />} />
-              <Route path={PATHS.ERRORPAGE} element={<StartPage />} />
-              <Route path="*" element={<Navigate replace to={PATHS.ERRORPAGE} />} />
+              <Route path="*" element={<Navigate replace to={PATHS.STARTPAGE} />} />
             </Routes>
-
           </PersistGate>
         </BrowserRouter>
       </StoreProvider>
