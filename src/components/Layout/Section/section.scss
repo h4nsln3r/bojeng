@@ -23,6 +23,35 @@
       animation: zoomInitAnimation 3s ease-in forwards;
     }
   }
+
+  &__socialmedia {
+    text-align: center;
+    a{
+      margin: 40px;
+      opacity: 0;
+      animation: fadeIn 6s ease-in forwards;
+        &:hover{
+          background-color: blue;
+        }
+        img{
+          width: auto;
+          height: 60px;
+      
+        
+      }
+    }
+    &--soundcloud {
+     
+    }
+    &--youtube {
+    
+  }
+    &--instagram {
+  
+  }
+
+  
+  }
   
   .category{
     display: none;
@@ -64,6 +93,23 @@
       margin-top: 10px;
       opacity: 1;
       animation: zoomInitAnimationMobileSmall 3s ease-in forwards;
+    }
+
+    &__socialmedia {
+      a{
+        img{
+          height: 40px;
+        }
+      }
+      &--soundcloud {
+
+      }
+      &--youtube {
+   
+    }
+      &--instagram {
+
+    }
     }
   }
     .category{
@@ -129,6 +175,25 @@
       opacity: 1;
       animation: zoomInitAnimationTablet 3s ease-in forwards;
     }
+
+
+  }
+
+  &__socialmedia {
+    a{
+      img{
+        height: 40px;
+      }
+    }
+    &--soundcloud {
+      left: 0%;
+    }
+    &--youtube {
+      left: 55%;
+  }
+    &--instagram {
+      left: 70%;
+  }
   }
     .category{
       &__section {
@@ -146,6 +211,7 @@
   .section {
     .init__header {}
   /* Additional desktop styles can be added here */
+
 }
 }
 

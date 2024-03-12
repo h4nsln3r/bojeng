@@ -1,7 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React from 'react';
 import './section.scss';
-
+import soundcloud from '../../../assets/soundcloud.png';
 interface Props {
   targetCategory: string;
 }
@@ -11,11 +11,18 @@ export default ({ targetCategory }: Props) => {
   return (
     <section className={`section ${targetCategory === "" ? '' : ''}`}>
       {targetCategory === "" && (
-        <div className={`init__header ${targetCategory === "" ? '' : 'init__header--fadeout'}`}>
-          <div className={`init__header__bojeng ${targetCategory === "" ? '' : 'init__header--fadeout'}`} onClick={() => console.log("")}>
-            BOJENG
+        <>
+          <div className={`init__header ${targetCategory === "" ? '' : 'init__header--fadeout'}`}>
+            <div className={`init__header__bojeng ${targetCategory === "" ? '' : 'init__header--fadeout'}`} onClick={() => console.log("")}>
+              BOJENG
+            </div>
           </div>
-        </div>
+          <div className='section__socialmedia'>
+            <a href="#" className='section__socialmedia--soundcloud'><img src={soundcloud} /></a>
+            <a className='section__section__socialmedia--youtube'><img src={soundcloud} /></a>
+            <a className='section__section__socialmedia--instagram'><img src={soundcloud} /></a>
+          </div>
+        </>
       )}
 
       <div className={`category Musik ${targetCategory === "Musik" ? 'category--active' : 'category-fadeout'}`} onClick={() => console.log("")}>
