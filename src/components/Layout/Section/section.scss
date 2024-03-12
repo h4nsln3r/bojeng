@@ -49,10 +49,42 @@
 
       }
       .youtube{
-        margin-top: 20px;
+        margin-bottom: -40px;
       }
     }
   }
+}
+
+
+
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+ 
+  .section {
+      width: 100%;
+
+      .category{
+        &__section {
+          margin-left: 0px;
+        }
+      }
+  }
+
+  /* Additional mobile styles can be added here */
+}
+
+/* Tablet Styles (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+  /* Additional tablet styles can be added here */
+}
+
+/* Desktop Styles (992px and above) */
+@media only screen and (min-width: 992px) {
+  /* No need to adjust container padding for desktop */
+
+  /* Additional desktop styles can be added here */
 }
 
 @keyframes zoomInitAnimation {

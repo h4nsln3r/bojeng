@@ -2,14 +2,14 @@
 .sidebar {
   width: 30%;
   &--nav{
+    text-align: center;
   background-color: rgba(255, 165, 0, 0.8);
   border: 4px solid rgba(255, 136, 0, 0.8);
   padding: 20px;
-  padding-right: 60px;
   width: fit-content;
   border-radius: 10px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 5em;
+  font-size: 4rem;
   top: 40%;
   margin-left: 20px;
   justify-content: space-evenly;
@@ -26,7 +26,7 @@
   
   li {
     padding: 10px;
-    margin-bottom: 20px;
+    
     cursor: pointer;
   }
   
@@ -35,4 +35,35 @@
   }
   }
 
+}
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+ 
+  .sidebar {
+ 
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      &--nav{
+        display: none;
+        width: 100%;
+      }
+  }
+
+  /* Additional mobile styles can be added here */
+}
+
+/* Tablet Styles (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+  /* Additional tablet styles can be added here */
+}
+
+/* Desktop Styles (992px and above) */
+@media only screen and (min-width: 992px) {
+  /* No need to adjust container padding for desktop */
+
+  /* Additional desktop styles can be added here */
 }

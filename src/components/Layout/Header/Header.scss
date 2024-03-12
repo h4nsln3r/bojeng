@@ -28,6 +28,44 @@
   }
 }
 
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+
+    .header {
+      height: 100px;
+      &__bojeng{
+        opacity: 1;
+        &--fadeout{
+          animation: fadeIn 1s ease-in-out forwards; 
+        }
+
+      }
+    }
+  
+
+  /* Additional mobile styles can be added here */
+}
+
+/* Tablet Styles (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content {
+
+  }
+
+  /* Additional tablet styles can be added here */
+}
+
+/* Desktop Styles (992px and above) */
+@media only screen and (min-width: 992px) {
+  /* No need to adjust container padding for desktop */
+  .content {
+    
+  }
+
+  /* Additional desktop styles can be added here */
+}
+
+
 /* Keyframes for the pulse effect */
 @keyframes pulse {
   0% {

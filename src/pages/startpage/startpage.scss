@@ -18,20 +18,41 @@ $thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
 }
 
 .content {
-  display: flex;
-  flex: 1;
-  flex-grow: 1;
-  align-items: center; /* Center items vertically */
-  margin-top: -200px;
+
 }
 
 
+/* Mobile Styles (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .content {
+    
+  }
 
+  /* Additional mobile styles can be added here */
+}
 
+/* Tablet Styles (768px to 991px) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content {
 
+  }
 
+  /* Additional tablet styles can be added here */
+}
 
+/* Desktop Styles (992px and above) */
+@media only screen and (min-width: 992px) {
+  /* No need to adjust container padding for desktop */
+  .content {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    align-items: center; /* Center items vertically */
+    margin-top: -200px;
+  }
 
+  /* Additional desktop styles can be added here */
+}
 
 @keyframes fadeOutMain {
   0% {
