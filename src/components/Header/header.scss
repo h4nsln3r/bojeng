@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Sooky70s';
+  src: url('/fonts/Sooky70s.ttf') format('truetype');
+}
+
 .header {
   display: flex; /* Use Flexbox */
   height: 100vh;
@@ -6,7 +11,7 @@
   
   &__bojeng{
     cursor: pointer;
-    font-family: 'Righteous', cursive;
+    font-family: 'Sooky70s', sans-serif;
     font-size: 20em;
     font-weight: bold;
     color: orange;
