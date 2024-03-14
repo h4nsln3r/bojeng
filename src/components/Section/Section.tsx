@@ -2,7 +2,6 @@
 import React from 'react';
 
 import './section.scss';
-import soundcloud from '../../../assets/soundcloud.png';
 interface Props {
   targetCategory: string;
 }

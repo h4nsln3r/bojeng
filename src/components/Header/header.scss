@@ -1,28 +1,37 @@
 @font-face {
   font-family: 'Sooky70s';
-  src: url('/fonts/Sooky70s.ttf') format('truetype');
+  src: url('../../../public/fonts/Sooky70s.ttf') format('truetype');
 }
 
 .header {
   display: flex; /* Use Flexbox */
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center; /*Center horizontally */
   align-items: center;
-  
+  flex-direction: column;
+  padding-top: 20px;
   &__bojeng{
     cursor: pointer;
     font-family: 'Sooky70s', sans-serif;
     font-size: 20em;
-    font-weight: bold;
+    
     color: orange;
-    padding: 10px;
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
+  }
+
+  .soundcloud{
+    width:800px; 
+    height:100px;
   }
   
   @media only screen and (max-width: 460px) { 
     &__bojeng {
-      font-size: 6em;
+      font-size: 8em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+    }
+    .soundcloud {
+      width: 100%; 
+      height: 100px;
     }
   }
   @media only screen and (min-width: 460px) and (max-width: 768px) { 
@@ -30,10 +39,18 @@
       font-size: 8em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
     }
+    .soundcloud {
+      width: 100%; 
+      height: 100px;
+    }
   }
   @media only screen and (min-width: 768px) and (max-width: 970px) {
     &__bojeng {
       font-size: 14em;
+    }
+    .soundcloud {
+      width: 100%; 
+      height: 100px;
     }
   }
   
@@ -41,12 +58,22 @@
     &__bojeng {
       font-size: 18em;
     }
+    .soundcloud {
+      width: 100%; 
+      max-width: 800px;
+      height: 100px;
+    }
   }
 
   @media only screen and (min-width:  1070px) {
     &__bojeng {
       font-size: 20em;
       animation: zoomHeaderDeskInitAnimation 3s ease-in forwards;
+    }
+    .soundcloud {
+      width: 100%; 
+      max-width: 800px;
+      height: 100px;
     }
   }
 }
@@ -63,7 +90,7 @@
     margin-top: 0%;
   }
   100% {
-    margin-top: -60%;
+    margin-top: 0%;
     transform: scale(1.2);
   }
 }
@@ -77,10 +104,8 @@
   }
   85% {
     transform: scale(1.5);
-    margin-top: 0%;
   }
   100% {
-    margin-top: -30%;
     transform: scale(1.2);
   }
 }
@@ -88,18 +113,20 @@
 @keyframes zoomHeaderDeskInitAnimation {
   0% {
     transform: scale(1.4);
+    margin-top: 20%;
 
   }
   80% {
     transform: scale(1.4);
+ 
   }
   85% {
     transform: scale(1.6);
-    margin-top: 0%;
+    margin-top: 20%;
   }
   100% {
     transform: scale(1.2);
-    margin-top: -20%;
+    margin-top: 0%;
   }
 }
 

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 100vh; /* Adjust height as needed */
+  height: 100px; /* Adjust height as needed */
 }
 
 .icon-column {
@@ -14,9 +14,39 @@
 }
 
 .icon {
-  font-size: 24px; /* Adjust icon size as needed */
+  margin: 0px 40px;
+  font-size: 10rem; /* Adjust icon size as needed */
   margin-bottom: 10px;
-  color: #000; /* Change icon color as needed */
+  color: orange; /* Change icon color as needed */
 }
 
 /* You can add more styling for the icons or container here */
+@media only screen and (max-width: 486px) { 
+  .icon {
+    font-size: 6rem;
+    margin: 0px 15px;
+  }
+}
+@media only screen and (min-width: 486px) and (max-width: 768px) { 
+  .icon {
+    font-size: 8rem;
+    margin: 0px 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 970px) {
+  .icon {
+    
+  }
+}
+
+@media only screen and (min-width: 970px) and (max-width: 1070px) {
+  .icon {
+    
+  }
+}
+
+@media only screen and (min-width:  1070px) {
+  .icon {
+    
+  }
+}
