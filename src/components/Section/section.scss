@@ -1,56 +1,5 @@
 .section {
-  width: 65%;
-
-  .init__header {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
-    &--fadeout{
-      animation: fadeOutMain 0.5s ease-in forwards;
-    }
-  
-    &__bojeng{
-      cursor: pointer;
-      text-align: center;
-      font-family: 'Righteous', cursive;
-      color: orange;
-      font-size: 16em;
-      width: fit-content;
-      font-weight: bold;
-      padding: 10px;
-      margin-top: 10px;
-      opacity: 1;
-      animation: zoomInitAnimation 3s ease-in forwards;
-    }
-  }
-
-  &__socialmedia {
-    text-align: center;
-    a{
-      margin: 40px;
-      opacity: 0;
-      animation: fadeIn 6s ease-in forwards;
-        &:hover{
-          background-color: blue;
-        }
-        img{
-          width: auto;
-          height: 60px;
-      
-        
-      }
-    }
-    &--soundcloud {
-     
-    }
-    &--youtube {
-    
-  }
-    &--instagram {
-  
-  }
-
-  
+  width: 100%;
   }
   
   .category{
@@ -65,24 +14,8 @@
       justify-content: space-evenly;
       animation: fadeIn 1s ease-in forwards;
     }
-    &__section {
-      // background-color: rgba(255, 181, 42, 0.3);
-
-      margin-left: 40px;
-      width: 100%;
-
-      .soundcloud--text{
-
-      }
-      .soundcloud{
-
-      }
-      .youtube{
-        margin-bottom: -40px;
-      }
-    }
   }
-}
+
 @media only screen and (max-width: 380px) {
   .section {
     width: 100%;
@@ -215,29 +148,7 @@
 }
 }
 
-@keyframes zoomInitAnimation {
-  0% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.5);
 
-  }
-  80% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.5);
-  }
-  85% {
-    margin-top: -200px;
-    margin-left: -500px;
-    transform: scale(2.6);
-  }
-  100% {
-    margin-top: 0px;
-    margin-left: 0px;
-    transform: scale(1);
-  }
-}
 
 @keyframes zoomInitAnimationTablet {
   0% {

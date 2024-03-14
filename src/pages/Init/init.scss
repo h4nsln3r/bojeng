@@ -1,20 +1,12 @@
 
-$startPage: url('../../assets/highQ/Bojeng12.jpg');
-$secondStartPage: url('../../assets/highQ/Bojeng12.jpg');
-$thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
+$background: url('../../assets/images/background.jpg');
 
 .container {
-  background-image: $startPage;
-  // scroll-snap-align: start;
+  background-image: $background;
   background-size: cover;      
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh;
-  scroll-behavior: smooth;
-  overflow: auto;
-  scroll-snap-type: y proximity;
-  display: flex;
-  flex-direction: column;
 }
 
 .content {
@@ -48,7 +40,7 @@ $thirdStartPage: url('../../assets/highQ/Bojeng12.jpg');
     flex: 1;
     flex-grow: 1;
     align-items: center; /* Center items vertically */
-    margin-top: -200px;
+    justify-content: center;
   }
 
   /* Additional desktop styles can be added here */

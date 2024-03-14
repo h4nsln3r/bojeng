@@ -1,0 +1,104 @@
+.header {
+  display: flex; /* Use Flexbox */
+  height: 100vh;
+  justify-content: center; /*Center horizontally */
+  align-items: center;
+  
+  &__bojeng{
+    cursor: pointer;
+    font-family: 'Righteous', cursive;
+    font-size: 20em;
+    font-weight: bold;
+    color: orange;
+    padding: 10px;
+    animation: zoomHeaderInitAnimation 3s ease-in forwards;
+  }
+  
+  @media only screen and (max-width: 460px) { 
+    &__bojeng {
+      font-size: 6em;
+      animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+    }
+  }
+  @media only screen and (min-width: 460px) and (max-width: 768px) { 
+    &__bojeng {
+      font-size: 8em;
+      animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 970px) {
+    &__bojeng {
+      font-size: 14em;
+    }
+  }
+  
+  @media only screen and (min-width: 970px) and (max-width: 1070px) {
+    &__bojeng {
+      font-size: 18em;
+    }
+  }
+
+  @media only screen and (min-width:  1070px) {
+    &__bojeng {
+      font-size: 20em;
+      animation: zoomHeaderDeskInitAnimation 3s ease-in forwards;
+    }
+  }
+}
+
+@keyframes zoomHeaderMobileInitAnimation {
+  0% {
+    transform: scale(1.4);
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  85% {
+    transform: scale(1.5);
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: -60%;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomHeaderInitAnimation {
+  0% {
+    transform: scale(1.4);
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  85% {
+    transform: scale(1.5);
+    margin-top: 0%;
+  }
+  100% {
+    margin-top: -30%;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomHeaderDeskInitAnimation {
+  0% {
+    transform: scale(1.4);
+
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  85% {
+    transform: scale(1.6);
+    margin-top: 0%;
+  }
+  100% {
+    transform: scale(1.2);
+    margin-top: -20%;
+  }
+}
+
+
+
+
+
