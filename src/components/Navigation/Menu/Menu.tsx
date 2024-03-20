@@ -1,11 +1,17 @@
 import React from 'react';
 import './menu.scss';
-const Menu = () => {
+
+interface Props {
+  targetCategory: string;
+  toggleMenu: (cat: string) => void;
+}
+
+const Menu = ({ targetCategory, toggleMenu }: Props) => {
   return (
     <ul className="menu">
-      <li className="menu-item">MUSIC</li>
-      <li className="menu-item">SHOWS</li>
-      <li className="menu-item">BAND</li>
+      <li className="menu-item" onClick={() => toggleMenu("MUSIC")}>MUSIC</li>
+      <li className="menu-item" onClick={() => toggleMenu("SHOWS")}>SHOWS</li>
+      <li className="menu-item" onClick={() => toggleMenu("BAND")}>BAND</li>
     </ul>
   );
 };

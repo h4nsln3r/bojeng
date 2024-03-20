@@ -19,7 +19,7 @@ const Init = ({ }: Props) => {
 
     return (
         <div className='container'>
-            <Header targetCategory={targetCategory} />
+            <Header targetCategory={targetCategory} toggleMenu={(cat: string) => toggleMenu(cat)} />
             <Sidebar />
             <main className="content">
                 <Section targetCategory={targetCategory} />

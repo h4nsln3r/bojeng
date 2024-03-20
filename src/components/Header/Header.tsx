@@ -4,9 +4,10 @@ import './header.scss';
 
 interface Props {
   targetCategory: string;
+  toggleMenu: (cat: string) => void;
 }
 
-const Header = ({ targetCategory }: Props) => {
+const Header = ({ targetCategory, toggleMenu }: Props) => {
   return (
     <header className="header">
       <div className="header__bojeng">
@@ -15,7 +16,7 @@ const Header = ({ targetCategory }: Props) => {
       {targetCategory === "init" && (
         <>
           <SocialMediaIcons className='header__social-media-icons' />
-          <Menu />
+          <Menu targetCategory={targetCategory} toggleMenu={(cat: string) => toggleMenu(cat)} />
         </>
       )}
     </header>

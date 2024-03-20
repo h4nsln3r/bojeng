@@ -99,21 +99,27 @@
 
 @keyframes zoomHeaderDeskInitAnimation {
   0% {
-    transform: scale(1.4);
-    margin-top: 20%;
-
+    transform: scale(2);
+    position: absolute;
+    top: 45%;
   }
   80% {
-    transform: scale(1.4);
- 
+    transform: scale(1.5);
+    position: absolute;
+    top: 45%;
   }
   85% {
     transform: scale(1.6);
-    margin-top: 20%;
+    position: absolute;
+    top: 45%;
+  }
+  99% {
+    transform: scale(1.2);
+    position: absolute;
+    top: 10%;
   }
   100% {
     transform: scale(1.2);
-    margin-top: 0%;
   }
 }
 
