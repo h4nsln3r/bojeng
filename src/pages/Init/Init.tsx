@@ -11,7 +11,7 @@ import Footer from '../../components/Footer/Footer';
 interface Props { }
 
 const Init = ({ }: Props) => {
-    const [targetCategory, setTargetCategory] = useState<string>("")
+    const [targetCategory, setTargetCategory] = useState<string>("init")
 
     const toggleMenu = (cat: string) => {
         setTargetCategory(cat)
@@ -19,12 +19,12 @@ const Init = ({ }: Props) => {
 
     return (
         <div className='container'>
-            <Header />
+            <Header targetCategory={targetCategory} />
             <Sidebar />
             <main className="content">
                 <Section targetCategory={targetCategory} />
             </main>
-            <Footer />
+            {targetCategory !== "init" && <Footer />}
         </div>
     )
 }

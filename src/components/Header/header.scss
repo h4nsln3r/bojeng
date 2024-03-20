@@ -6,10 +6,9 @@
 .header {
   display: flex; /* Use Flexbox */
   min-height: 100vh;
-  justify-content: center; /*Center horizontally */
+  justify-content: space-evenly; /*Center horizontally */
   align-items: center;
   flex-direction: column;
-  padding-top: 20px;
   &__bojeng{
     cursor: pointer;
     font-family: 'Sooky70s', sans-serif;
@@ -26,31 +25,19 @@
   
   @media only screen and (max-width: 460px) { 
     &__bojeng {
-      font-size: 8em;
+      font-size: 12em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
-    }
-    .soundcloud {
-      width: 100%; 
-      height: 100px;
     }
   }
   @media only screen and (min-width: 460px) and (max-width: 768px) { 
     &__bojeng {
-      font-size: 8em;
+      font-size: 14em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
-    }
-    .soundcloud {
-      width: 100%; 
-      height: 100px;
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 970px) {
     &__bojeng {
       font-size: 14em;
-    }
-    .soundcloud {
-      width: 100%; 
-      height: 100px;
     }
   }
   
@@ -58,11 +45,7 @@
     &__bojeng {
       font-size: 18em;
     }
-    .soundcloud {
-      width: 100%; 
-      max-width: 800px;
-      height: 100px;
-    }
+
   }
 
   @media only screen and (min-width:  1070px) {
@@ -70,28 +53,32 @@
       font-size: 20em;
       animation: zoomHeaderDeskInitAnimation 3s ease-in forwards;
     }
-    .soundcloud {
-      width: 100%; 
-      max-width: 800px;
-      height: 100px;
-    }
   }
 }
 
 @keyframes zoomHeaderMobileInitAnimation {
   0% {
-    transform: scale(1.4);
+    transform: scale(1);
+    position: absolute;
+    top: 45%;
   }
-  80% {
-    transform: scale(1.4);
+  70% {
+    transform: scale(1);
+    position: absolute;
+    top: 45%;
   }
   85% {
-    transform: scale(1.5);
-    margin-top: 0%;
+    transform: scale(1.3);
+    position: absolute;
+    top: 45%;
+  }
+  99% {
+    transform: scale(1);
+    position: absolute;
+    top: 5%;
   }
   100% {
-    margin-top: 0%;
-    transform: scale(1.2);
+    transform: scale(1);
   }
 }
 

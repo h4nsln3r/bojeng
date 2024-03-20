@@ -1,8 +1,8 @@
 .icon-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  height: 100px; /* Adjust height as needed */
+  height: 100px; /* Justera höjden efter behov */
 }
 
 .icon-column {
@@ -10,14 +10,42 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25%; /* 4 columns */
+  width: 25%; /* 4 kolumner */
+  /* Specificera animation för varje ikon med fördröjning */
+  opacity: 0; /* Börja med opacity 0 för att skapa fade-in-effekt */
+  animation: fade-in 0.5s ease-in-out forwards; /* Använd animation för fade-in */
+  color: orange; /* Ändra ikonens färg efter behov */
+  :hover {
+    cursor: pointer;
+    color: rgb(255, 123, 0);
+  }
 }
 
 .icon {
   margin: 0px 40px;
-  font-size: 10rem; /* Adjust icon size as needed */
-  margin-bottom: 10px;
-  color: orange; /* Change icon color as needed */
+  font-size: 10rem; /* Justera ikonens storlek efter behov */
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Specificera fördröjning för varje ikon */
+.icon-column:nth-child(1) {
+  animation-delay: 3s; /* Första ikonen efter 3 sekunder */
+}
+
+.icon-column:nth-child(2) {
+  animation-delay: 3.5s; /* Andra ikonen efter 3.5 sekunder */
+}
+
+.icon-column:nth-child(3) {
+  animation-delay: 4s; /* Tredje ikonen efter 4 sekunder */
+}
+
+.icon-column:nth-child(4) {
+  animation-delay: 4.5s; /* Fjärde ikonen efter 4.5 sekunder */
 }
 
 /* You can add more styling for the icons or container here */

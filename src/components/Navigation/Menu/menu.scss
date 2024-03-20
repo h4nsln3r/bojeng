@@ -15,8 +15,26 @@
   font-size: 14em;
   color: orange;
   border-radius: 5px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
+  opacity: 0; /* Börja med opacity 0 för att skapa fade-in-effekt */
+  animation: fade-in 0.5s ease-in-out forwards; /* Använd animation för fade-in */
+}
+
+/* Specificera fördröjning för varje ikon */
+.menu-item:nth-child(1) {
+  animation-delay: 4.6s; /* Första ikonen efter 3 sekunder */
+}
+
+.menu-item:nth-child(2) {
+  animation-delay: 4.8s; /* Andra ikonen efter 3.5 sekunder */
+}
+
+.menu-item:nth-child(3) {
+  animation-delay: 5s; /* Tredje ikonen efter 4 sekunder */
+}
+
+.menu-item:nth-child(4) {
+  animation-delay: 5.2s; /* Fjärde ikonen efter 4.5 sekunder */
 }
 
 .menu-item:hover {
