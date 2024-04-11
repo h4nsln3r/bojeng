@@ -13,9 +13,13 @@
     cursor: pointer;
     font-family: 'Sooky70s', sans-serif;
     font-size: 20em;
-    
+    margin-top: 40px;
     color: orange;
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
+
+    &--img{
+      height: 200px;
+    }
   }
 
   .soundcloud{

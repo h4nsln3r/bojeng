@@ -1,6 +1,7 @@
 import Menu from '../Navigation/Menu/Menu';
 import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons';
 import './header.scss';
+import boeng from '../../assets/logo-text/bojeng_logotyp_purple.png';
 
 interface Props {
   targetCategory: string;
@@ -11,7 +12,7 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
   return (
     <header className="header">
       <div className="header__bojeng">
-        BOJENG
+        <img className="header__bojeng--img" src={boeng} alt='boeng' />
       </div>
       {targetCategory === "init" && (
         <>

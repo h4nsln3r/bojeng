@@ -14,10 +14,10 @@
   /* Specificera animation för varje ikon med fördröjning */
   opacity: 0; /* Börja med opacity 0 för att skapa fade-in-effekt */
   animation: fade-in 0.5s ease-in-out forwards; /* Använd animation för fade-in */
-  color: orange; /* Ändra ikonens färg efter behov */
+  color: #bf10ff;; /* Ändra ikonens färg efter behov */
   :hover {
     cursor: pointer;
-    color: rgb(255, 123, 0);
+    color: white;
   }
 }
 
