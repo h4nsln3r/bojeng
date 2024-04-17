@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/bojeng/static/css/main.f4793a04.css",
+    "main.css": "/bojeng/static/css/main.fecb61a1.css",
     "main.js": "/bojeng/static/js/main.004cea36.js",
     "static/media/bojeng_logotyp_purple.png": "/bojeng/static/media/bojeng_logotyp_purple.82284fed40cda40538da.png",
     "static/media/Sooky70s.ttf": "/bojeng/static/media/Sooky70s.992479c1759da76ca8ad.ttf",
     "index.html": "/bojeng/index.html",
-    "main.f4793a04.css.map": "/bojeng/static/css/main.f4793a04.css.map",
+    "main.fecb61a1.css.map": "/bojeng/static/css/main.fecb61a1.css.map",
     "main.004cea36.js.map": "/bojeng/static/js/main.004cea36.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4793a04.css",
+    "static/css/main.fecb61a1.css",
     "static/js/main.004cea36.js"
   ]
 }
