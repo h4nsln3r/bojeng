@@ -1,3 +1,6 @@
+.header__social-media-icons{
+  
+
 .icon-container {
   display: flex;
   justify-content: space-evenly;
@@ -13,8 +16,8 @@
   width: 25%; /* 4 kolumner */
   /* Specificera animation för varje ikon med fördröjning */
   opacity: 0; /* Börja med opacity 0 för att skapa fade-in-effekt */
-  animation: fade-in 0.5s ease-in-out forwards; /* Använd animation för fade-in */
-  color: #bf10ff;; /* Ändra ikonens färg efter behov */
+  animation: fade-in 0.5s ease-in-out forwards; 
+  color: #bf10ff;
   :hover {
     cursor: pointer;
     color: white;
@@ -33,19 +36,19 @@
 
 /* Specificera fördröjning för varje ikon */
 .icon-column:nth-child(1) {
-  animation-delay: 3s; /* Första ikonen efter 3 sekunder */
+  animation-delay: 1s; /* Första ikonen efter 3 sekunder */
 }
 
 .icon-column:nth-child(2) {
-  animation-delay: 3.5s; /* Andra ikonen efter 3.5 sekunder */
+  animation-delay: 1.5s; /* Andra ikonen efter 3.5 sekunder */
 }
 
 .icon-column:nth-child(3) {
-  animation-delay: 4s; /* Tredje ikonen efter 4 sekunder */
+  animation-delay: 2s; /* Tredje ikonen efter 4 sekunder */
 }
 
 .icon-column:nth-child(4) {
-  animation-delay: 4.5s; /* Fjärde ikonen efter 4.5 sekunder */
+  animation-delay: 2.5s; /* Fjärde ikonen efter 4.5 sekunder */
 }
 
 /* You can add more styling for the icons or container here */
@@ -77,4 +80,5 @@
   .icon {
     
   }
+}
 }

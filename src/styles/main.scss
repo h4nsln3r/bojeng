@@ -26,3 +26,23 @@ button{
   top: 50%;
   transform: translate(-50%, -50%);
 }
+.commingsoon{
+  text-align: center;
+  font-family: 'Sooky70s', sans-serif;
+  font-size: 36px;
+  color: #bf10ff;
+  margin-bottom: 10px;
+  animation: fadeOut 5s forwards; /* Apply fade-out animation */
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 0; /* Start with full opacity */
+  }
+  80%{
+    opacity: 0; /* Start with full opacity */
+  }
+  100% {
+    opacity: 1; /* Fade to completely transparent */
+  }
+}

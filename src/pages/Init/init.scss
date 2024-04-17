@@ -2,7 +2,8 @@
 $background: url('../../assets/images/background.jpg');
 
 .container {
-  background-image: $background;
+  // background-image: $background;
+  background-color: black;
   background-size: cover;      
   background-repeat: no-repeat;
   width: 100%;
@@ -31,6 +32,8 @@ $background: url('../../assets/images/background.jpg');
 
   /* Additional tablet styles can be added here */
 }
+
+
 
 /* Desktop Styles (992px and above) */
 @media only screen and (min-width: 992px) {
@@ -101,3 +104,62 @@ $background: url('../../assets/images/background.jpg');
       
     }
   }
+
+
+  // Define variables
+$star-count: 150; // Number of stars
+$star-size: 2px; // Size of each star
+$animation-duration: 20s; // Duration of animation
+
+// Mixin for generating random positions
+@mixin random-position {
+  $x: random(100);
+  $y: random(100);
+  position: absolute;
+  top: $y + vh;
+  left: $x + vw;
+}
+
+// Mixin for animating stars
+// @mixin animate-star {
+//   animation: twinkling $animation-duration infinite;
+// }
+
+// Keyframes for twinkling animation
+// @keyframes twinkling {
+//   0%, 100% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0.5;
+//   }
+// }
+
+// Generate stars
+@for $i from 1 through $star-count {
+  .star#{$i} {
+    @include random-position;
+    width: $star-size;
+    height: $star-size;
+    background-color: white;
+    color: white;
+    border-radius: 50%;
+    // @include animate-star;
+  }
+}
+
+// Generate starry sky background
+.starry-sky {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+
+  .star {
+    &:nth-child(2n) {
+      width: $star-size * 0.8; // Make some stars smaller for variety
+      height: $star-size * 0.8;
+    }
+  }
+}

@@ -13,6 +13,11 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
     <header className="header">
       <div className="header__bojeng">
         <img className="header__bojeng--img" src={boeng} alt='boeng' />
+        <div className="commingsoon">
+          Is about too happen...
+        </div>
+        <SocialMediaIcons className='header__social-media-icons' />
+
       </div>
       {targetCategory === "init" && (
         <>
