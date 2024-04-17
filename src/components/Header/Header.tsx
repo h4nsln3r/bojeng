@@ -16,6 +16,9 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
         <div className="commingsoon">
           Is about too happen...
         </div>
+        <div className="commingsoon2">
+          til then ↓
+        </div>
         <SocialMediaIcons className='header__social-media-icons' />
 
       </div>
