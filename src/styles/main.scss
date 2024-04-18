@@ -44,6 +44,29 @@ button{
   animation: fadeOut 4s forwards; /* Apply fade-out animation */
 }
 
+.contact{
+  margin-top: 40px;
+  font-size: 32px;
+  color: #bf10ff;
+  opacity: 0;
+  animation: fade-in-contact 0.5s ease-in-out forwards; /* Använd animation för fade-in */
+  animation-delay: 6s;
+}
+
+
+@media only screen and (max-width: 460px) { 
+  .contact{
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+
+
+@keyframes fade-in-contact {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 0; /* Start with full opacity */

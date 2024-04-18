@@ -17,10 +17,12 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
           Is about too happen...
         </div>
         <div className="commingsoon2">
-          til then ↓
+          til then
         </div>
         <SocialMediaIcons className='header__social-media-icons' />
-
+        <div className="contact">
+          CONTACT: BOJENGTHEBAND@GMAIL.COM
+        </div>
       </div>
       {targetCategory === "init" && (
         <>
@@ -33,3 +35,5 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
 };
 
 export default Header;
+
+//Todo fixa blinckande bild i bakgrunden
