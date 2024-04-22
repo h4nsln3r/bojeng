@@ -17,6 +17,7 @@
     color: orange;
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
     text-align: center;
+    z-index: 1;
     &--img{
       height: 200px;
       align-items: center;
