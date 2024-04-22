@@ -1,7 +1,7 @@
 import './backgroundimage.scss';
 
 type Props = {
-    imageUrl: string;
+    imageUrl: any;
     showImage: boolean;
 }
 

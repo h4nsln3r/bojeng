@@ -8,6 +8,8 @@ import './init.scss';
 import Footer from '../../components/Footer/Footer';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 
+import bigimageofbojeng from '../../assets/images/background.jpg'
+
 
 interface Props { }
 
@@ -19,9 +21,11 @@ const Init = ({ }: Props) => {
     };
 
     const [images, setImages] = useState([
+        'https://bymby.wordpress.com/wp-content/uploads/2014/03/testbild-3.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TV_noise.jpg/1200px-TV_noise.jpg',
+        'https://bymby.wordpress.com/wp-content/uploads/2014/03/testbild-3.jpg',
         'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TV_noise.jpg/1200px-TV_noise.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TV_noise.jpg/1200px-TV_noise.jpg',
+        bigimageofbojeng,
         // Add more image URLs here
     ]);
 
@@ -43,13 +47,13 @@ const Init = ({ }: Props) => {
         // Initial delay before first show
         setTimeout(() => {
             showRandomImage();
-        }, 5000); // Wait 5 seconds before first show
+        }, 10000); // Wait 5 seconds before first show
 
         return () => clearInterval(interval);
     }, []);
 
     const getRandomInterval = () => {
-        return Math.floor(Math.random() * (10000 - 100)) + 100; // Random interval between 0.1 to 10 seconds
+        return Math.floor(Math.random() * (10000 - 1000)) + 1000; // Random interval between 1 to 10 seconds
     };
 
     const getRandomDuration = () => {
