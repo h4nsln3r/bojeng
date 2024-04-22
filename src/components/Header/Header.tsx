@@ -14,10 +14,10 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
       <div className="header__bojeng">
         <img className="header__bojeng--img" src={boeng} alt='boeng' />
         <div className="commingsoon">
-          Is about too happen...
+          Is about to happen...
         </div>
         <div className="commingsoon2">
-          til then
+          till then
         </div>
         <SocialMediaIcons className='header__social-media-icons' />
         <div className="contact">
