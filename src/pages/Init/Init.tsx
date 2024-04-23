@@ -8,7 +8,17 @@ import './init.scss';
 import Footer from '../../components/Footer/Footer';
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 
-import bigimageofbojeng from '../../assets/images/background.jpg'
+import _dscf0296 from '../../assets/bwimages/_dscf0296.png';
+import dscf0160 from '../../assets/bwimages/dscf0160.png';
+import dscf0170 from '../../assets/bwimages/dscf0170.png'
+import dscf0172 from '../../assets/bwimages/dscf0172.png'
+import dscf0254 from '../../assets/bwimages/dscf0254.png'
+import dscf0298 from '../../assets/bwimages/dscf0298.png'
+import dscf0316 from '../../assets/bwimages/dscf0316.png'
+import dscf0322 from '../../assets/bwimages/dscf0322.png'
+import dscf0330 from '../../assets/bwimages/dscf0330.png'
+import dscf0339 from '../../assets/bwimages/dscf0339.png'
+import dscf03329 from '../../assets/bwimages/dscf0330.png'
 
 
 interface Props { }
@@ -21,12 +31,17 @@ const Init = ({ }: Props) => {
     };
 
     const [images, setImages] = useState([
-        'https://bymby.wordpress.com/wp-content/uploads/2014/03/testbild-3.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TV_noise.jpg/1200px-TV_noise.jpg',
-        'https://bymby.wordpress.com/wp-content/uploads/2014/03/testbild-3.jpg',
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/TV_noise.jpg/1200px-TV_noise.jpg',
-        bigimageofbojeng,
-        // Add more image URLs here
+        _dscf0296,
+        dscf0160,
+        dscf0170,
+        dscf0172,
+        dscf0254,
+        dscf0298,
+        dscf0316,
+        dscf0322,
+        dscf0330,
+        dscf0339,
+        dscf03329
     ]);
 
     const [showImage, setShowImage] = useState(false);
@@ -53,11 +68,11 @@ const Init = ({ }: Props) => {
     }, []);
 
     const getRandomInterval = () => {
-        return Math.floor(Math.random() * (10000 - 1000)) + 1000; // Random interval between 1 to 10 seconds
+        return Math.floor(Math.random() * (6000 - 2000)) + 2000;
     };
 
     const getRandomDuration = () => {
-        return Math.floor(Math.random() * (1000 - 200)) + 200; // Random duration between 200 to 1000 milliseconds
+        return Math.floor(Math.random() * (1000 - 200)) + 200;
     };
 
     return (

@@ -6,6 +6,9 @@ type Props = {
 }
 
 const BackgroundImage = ({ imageUrl, showImage }: Props) => {
+
+
+
     return (
         <div className={`background-container ${showImage ? 'show' : ''}`}>
             <div className="background-image" style={{ backgroundImage: `url(${imageUrl})` }} />
