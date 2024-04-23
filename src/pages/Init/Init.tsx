@@ -62,7 +62,7 @@ const Init = ({ }: Props) => {
         // Initial delay before first show
         setTimeout(() => {
             showRandomImage();
-        }, 10000); // Wait 5 seconds before first show
+        }, 6000); // Wait 5 seconds before first show
 
         return () => clearInterval(interval);
     }, []);
@@ -72,7 +72,7 @@ const Init = ({ }: Props) => {
     };
 
     const getRandomDuration = () => {
-        return Math.floor(Math.random() * (1000 - 200)) + 200;
+        return Math.floor(Math.random() * (1200 - 200)) + 200;
     };
 
     return (
