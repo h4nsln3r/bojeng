@@ -1,5 +1,5 @@
 import Menu from '../Navigation/Menu/Menu';
-import SocialMediaIcons from '../SocialMediaIcons/SocialMediaIcons';
+import SocialMediaIcons from '../Icons/SocialMediaIcons/SocialMediaIcons';
 import './header.scss';
 import boeng from '../../assets/logo-text/bojeng_logotyp_purple.png';
 
@@ -12,21 +12,15 @@ const Header = ({ targetCategory, toggleMenu }: Props) => {
   return (
     <header className="header">
       <div className="header__bojeng">
-        <img className="header__bojeng--img" src={boeng} alt='boeng' />
-        <div className="commingsoon">
-          Is about to happen...
-        </div>
-        <div className="commingsoon2">
-          till then
-        </div>
-        <SocialMediaIcons className='header__social-media-icons' />
-        <div className="contact">
-          CONTACT: BOJENGTHEBAND@GMAIL.COM
-        </div>
+        <img className="header__bojeng--img" src={boeng} alt="boeng" />
+        <div className="commingsoon">Is about to happen...</div>
+        <div className="commingsoon2">till then</div>
+        <SocialMediaIcons className="header__social-media-icons" />
+        <div className="contact">CONTACT: BOJENGTHEBAND@GMAIL.COM</div>
       </div>
-      {targetCategory === "init" && (
+      {targetCategory === 'init' && (
         <>
-          <SocialMediaIcons className='header__social-media-icons' />
+          <SocialMediaIcons className="header__social-media-icons" />
           <Menu targetCategory={targetCategory} toggleMenu={(cat: string) => toggleMenu(cat)} />
         </>
       )}
