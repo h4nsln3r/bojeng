@@ -2,3 +2,8 @@
 Strukurera upp med
 Gör en fil med hjälp klasser utils
 
+2. FIxa så att AI filmen ligger på en hel sida
+
+3. Gör en cool animering med alla loggor och dom olika färgerna
+
+4. Klipp ut zucchinin
