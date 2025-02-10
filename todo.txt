@@ -1,0 +1,4 @@
+1. Rensa upp scssen så att det inte är dubbelt osv. 
+Strukurera upp med
+Gör en fil med hjälp klasser utils
+

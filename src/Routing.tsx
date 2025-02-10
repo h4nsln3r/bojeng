@@ -1,10 +1,11 @@
 import Helmet from 'react-helmet';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import StartPage from './pages/Init/Init';
+import StartPage from './pages/Intro/Intro';
 import './styles/main.scss';
 
 export const PATHS = {
-  INIT: '/bojeng',
+  INTRO: '/bojeng',
+  ZUCCINI: '/zucchini'
 };
 
 
@@ -21,8 +22,9 @@ const Routing = ({ }: Props) => {
       </Helmet>
       <BrowserRouter>
         <Routes>
-          <Route path={PATHS.INIT} element={<StartPage />} />
-          <Route path="*" element={<Navigate replace to={PATHS.INIT} />} />
+          <Route path={PATHS.INTRO} element={<StartPage />} />
+          <Route path={PATHS.ZUCCINI} element={<StartPage />} />
+          {/* <Route path="*" element={<Navigate replace to={PATHS.INIT} />} /> */}
         </Routes>
       </BrowserRouter>
     </>
