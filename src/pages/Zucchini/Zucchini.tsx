@@ -10,7 +10,7 @@ interface Props {}
 
 const Zucchini = ({}: Props) => {
   const [targetCategory, setTargetCategory] = useState<string>('music');
-  
+
   const [showImage, setShowImage] = useState(false);
 
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -49,20 +49,17 @@ const Zucchini = ({}: Props) => {
 
   return (
     <div className="container">
-      {/* <BackgroundImage imageUrl={images[Math.floor(Math.random() * images.length)]} showImage={showImage} />
+      {/* <BackgroundImage imageUrl={images[Math.floor(Math.random() * images.length)]} showImage={showImage} /> */}
       <Header targetCategory={targetCategory} toggleMenu={(cat: string) => toggleMenu(cat)} />
       <Sidebar />
       <main className="content">
         <Section targetCategory={targetCategory} />
-      </main> */}
+      </main>
       {/* {targetCategory !== "init" && <Footer />} */}
 
-      TEST
-{/* 
-      <video className="w-full h-full object-cover" autoPlay loop muted>
+      {/* <video className="w-full h-full object-cover" autoPlay loop muted>
         <source src="/assets/dancingzucchini.mp4" type="video/mp4" />
       </video> */}
-
     </div>
   );
 };
