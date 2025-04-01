@@ -6,16 +6,12 @@ import './styles/main.scss';
 
 export const PATHS = {
   INTRO: '/bojeng',
-  ZUCCINI: '/zucchini'
+  ZUCCINI: '/zucchini',
 };
 
+interface Props {}
 
-
-interface Props {
-}
-
-const Routing = ({ }: Props) => {
-
+const Routing = ({}: Props) => {
   return (
     <>
       <Helmet>
@@ -29,7 +25,7 @@ const Routing = ({ }: Props) => {
         </Routes>
       </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
 export default Routing;
