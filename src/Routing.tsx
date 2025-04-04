@@ -21,7 +21,7 @@ const Routing = ({}: Props) => {
         <Routes>
           <Route path={PATHS.INTRO} element={<StartPage />} />
           <Route path={PATHS.ZUCCINI} element={<ZucchiniPage />} />
-          {/* <Route path="*" element={<Navigate replace to={PATHS.INIT} />} /> */}
+          {/* <Route path="*" element={<Navigate replace to={PATHS.INIT} />} /> asd */}
         </Routes>
       </BrowserRouter>
     </>
