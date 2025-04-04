@@ -13,21 +13,21 @@ html {
 
 html {
   font-size: 10px;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
 }
 
-button{
+button {
   text-transform: uppercase;
 }
 
-.center{
+.center {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
 
-.commingsoon{
+.commingsoon {
   text-align: center;
   font-family: 'Sooky70s', sans-serif;
   font-size: 36px;
@@ -36,7 +36,7 @@ button{
   animation: fadeOut 2s forwards; /* Apply fade-out animation */
 }
 
-.commingsoon2{
+.commingsoon2 {
   text-align: center;
   font-family: 'Sooky70s', sans-serif;
   font-size: 36px;
@@ -45,27 +45,13 @@ button{
   animation: fadeOut 4s forwards; /* Apply fade-out animation */
 }
 
-.contact{
-  margin-top: 40px;
-  font-size: 32px;
-  color: #bf10ff;
-  opacity: 0;
-  animation: fade-in-contact 0.5s ease-in-out forwards; /* Använd animation för fade-in */
-  animation-delay: 6s;
-}
-
-
-@media only screen and (max-width: 460px) { 
-  .contact{
-    margin-top: 20px;
-    font-size: 16px;
+@keyframes fade-in {
+  0% {
+    opacity: 0;
   }
-}
-
-
-@keyframes fade-in-contact {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
@@ -84,7 +70,7 @@ button{
   0% {
     opacity: 0; /* Start with full opacity */
   }
-  80%{
+  80% {
     opacity: 0; /* Start with full opacity */
   }
   100% {

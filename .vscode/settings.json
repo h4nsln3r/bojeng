@@ -1,0 +1,35 @@
+{
+    // Formatera automatiskt vid varje save
+    "editor.formatOnSave": true,
+  
+    // Använd Prettier som formatter
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  
+    // Tabs till spaces (vanligt i JS/TS/SCSS)
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+  
+    // Specifika formatter-regler för språk
+    "[javascript]": {
+      "editor.formatOnSave": true
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+      "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true
+    },
+    "[scss]": {
+      "editor.formatOnSave": true
+    },
+  
+    // Prettier-specifika inställningar (valfria men nice)
+    "prettier.singleQuote": true,
+    "prettier.semi": true,
+    "prettier.trailingComma": "es5",
+    "prettier.printWidth": 100
+  }
+  
