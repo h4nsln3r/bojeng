@@ -1,39 +1,111 @@
-
 $background: url('../../assets/images/background.jpg');
 
 .container {
   // background-image: $background;
   background-color: black;
-  background-size: cover;      
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
 }
 
 .content {
-
 }
-
 
 /* Mobile Styles (up to 767px) */
 @media only screen and (max-width: 767px) {
   .content {
-    
   }
 
   /* Additional mobile styles can be added here */
 }
 
+@font-face {
+  font-family: 'Sooky70s';
+  src: url('../../../public/fonts/Sooky70s.ttf') format('truetype');
+}
+
+.header {
+  display: flex; /* Use Flexbox */
+  min-height: 100vh;
+  justify-content: space-evenly; /*Center horizontally */
+  align-items: center;
+  flex-direction: column;
+  &__bojeng {
+    cursor: pointer;
+    font-family: 'Sooky70s', sans-serif;
+    font-size: 20em;
+    margin-top: 40px;
+    color: orange;
+    animation: zoomHeaderInitAnimation 3s ease-in forwards;
+    text-align: center;
+    z-index: 1;
+    &--img {
+      height: 200px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .soundcloud {
+    width: 800px;
+    height: 100px;
+  }
+
+  @media only screen and (max-width: 460px) {
+    &__bojeng {
+      font-size: 12em;
+      animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+      &--img {
+        height: 100px;
+      }
+    }
+  }
+  @media only screen and (min-width: 460px) and (max-width: 768px) {
+    &__bojeng {
+      font-size: 14em;
+      animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+      &--img {
+        height: 140px;
+      }
+    }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 970px) {
+    &__bojeng {
+      font-size: 14em;
+      &--img {
+        height: 170px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 970px) and (max-width: 1070px) {
+    &__bojeng {
+      font-size: 18em;
+      &--img {
+        height: 190px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1070px) {
+    &__bojeng {
+      font-size: 20em;
+      animation: zoomHeaderDeskInitAnimation 3s ease-in forwards;
+      &--img {
+        height: 200px;
+      }
+    }
+  }
+}
+
 /* Tablet Styles (768px to 991px) */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .content {
-
   }
 
   /* Additional tablet styles can be added here */
 }
-
-
 
 /* Desktop Styles (992px and above) */
 @media only screen and (min-width: 992px) {
@@ -54,7 +126,6 @@ $background: url('../../assets/images/background.jpg');
     opacity: 1;
     position: absolute;
     margin-left: 31rem;
-
   }
   90% {
     opacity: 0;
@@ -68,45 +139,37 @@ $background: url('../../assets/images/background.jpg');
   }
 }
 
- 
-
-  
-  @keyframes fadeInSidebar {
-    0% {
-      opacity: 0; /* Start with opacity 0 */
-    }
-    85% {
-      opacity: 0; /* Start with opacity 0 */
-    }
-    100% {
-      opacity: 1; /* Fade in to opacity 1 */
-    }
+@keyframes fadeInSidebar {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
   }
-
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0; /* Start with opacity 0 */
-    }
-     100% {
-      opacity: 1; /* Fade in to opacity 1 */
-    }
+  85% {
+    opacity: 0; /* Start with opacity 0 */
   }
-
-
-  @keyframes fadeOut {
-    0% {
-      opacity: 1; /* Start with opacity 0 */
-
-    }
-    100% {
-      opacity: 0; /* Fade in to opacity 1 */
-      
-    }
+  100% {
+    opacity: 1; /* Fade in to opacity 1 */
   }
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  100% {
+    opacity: 1; /* Fade in to opacity 1 */
+  }
+}
 
-  // Define variables
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* Start with opacity 0 */
+  }
+  100% {
+    opacity: 0; /* Fade in to opacity 1 */
+  }
+}
+
+// Define variables
 $star-count: 150; // Number of stars
 $star-size: 2px; // Size of each star
 $animation-duration: 20s; // Duration of animation
