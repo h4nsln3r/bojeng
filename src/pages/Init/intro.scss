@@ -1,12 +1,13 @@
 $background: url('../../assets/images/background.jpg');
 
 .container {
-  // background-image: $background;
   background-color: black;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  min-height: 100vh; // ändrat från height
+  display: flex;
+  flex-direction: column;
 }
 
 @font-face {
@@ -14,13 +15,14 @@ $background: url('../../assets/images/background.jpg');
   src: url('../../../public/fonts/Sooky70s.ttf') format('truetype');
 }
 
-.header {
-  height: 100vh;
+.content {
+  flex: 1;
   background-color: black;
-  display: flex; /* Use Flexbox */
-  justify-content: space-evenly; /*Center horizontally */
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+
   &__bojeng {
     cursor: pointer;
     font-family: 'Sooky70s', sans-serif;
@@ -30,6 +32,7 @@ $background: url('../../assets/images/background.jpg');
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
     text-align: center;
     z-index: 1;
+
     &--img {
       height: 200px;
       align-items: center;
@@ -37,32 +40,32 @@ $background: url('../../assets/images/background.jpg');
     }
   }
 
-  .soundcloud {
-    width: 800px;
-    height: 100px;
-  }
-
   @media only screen and (max-width: 460px) {
     &__bojeng {
       font-size: 12em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+
       &--img {
         height: 100px;
       }
     }
   }
+
   @media only screen and (min-width: 460px) and (max-width: 768px) {
     &__bojeng {
       font-size: 14em;
       animation: zoomHeaderMobileInitAnimation 3s ease-in forwards;
+
       &--img {
         height: 140px;
       }
     }
   }
+
   @media only screen and (min-width: 768px) and (max-width: 970px) {
     &__bojeng {
       font-size: 14em;
+
       &--img {
         height: 170px;
       }
@@ -72,6 +75,7 @@ $background: url('../../assets/images/background.jpg');
   @media only screen and (min-width: 970px) and (max-width: 1070px) {
     &__bojeng {
       font-size: 18em;
+
       &--img {
         height: 190px;
       }
@@ -82,6 +86,7 @@ $background: url('../../assets/images/background.jpg');
     &__bojeng {
       font-size: 20em;
       animation: zoomHeaderDeskInitAnimation 3s ease-in forwards;
+
       &--img {
         height: 200px;
       }
@@ -89,130 +94,10 @@ $background: url('../../assets/images/background.jpg');
   }
 }
 
-/* Tablet Styles (768px to 991px) */
+// Tablet Styles (768px to 991px)
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .content {
-  }
-
-  /* Additional tablet styles can be added here */
 }
 
-/* Desktop Styles (992px and above) */
+// Desktop Styles (992px and above)
 @media only screen and (min-width: 992px) {
-  /* No need to adjust container padding for desktop */
-  .content {
-    display: flex;
-    flex: 1;
-    flex-grow: 1;
-    align-items: center; /* Center items vertically */
-    justify-content: center;
-  }
-
-  /* Additional desktop styles can be added here */
-}
-
-@keyframes fadeOutMain {
-  0% {
-    opacity: 1;
-    position: absolute;
-    margin-left: 31rem;
-  }
-  90% {
-    opacity: 0;
-    position: absolute;
-    margin-left: 31rem;
-  }
-  100% {
-    opacity: 0;
-    display: none;
-    margin-left: 31rem;
-  }
-}
-
-@keyframes fadeInSidebar {
-  0% {
-    opacity: 0; /* Start with opacity 0 */
-  }
-  85% {
-    opacity: 0; /* Start with opacity 0 */
-  }
-  100% {
-    opacity: 1; /* Fade in to opacity 1 */
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; /* Start with opacity 0 */
-  }
-  100% {
-    opacity: 1; /* Fade in to opacity 1 */
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1; /* Start with opacity 0 */
-  }
-  100% {
-    opacity: 0; /* Fade in to opacity 1 */
-  }
-}
-
-// Define variables
-$star-count: 150; // Number of stars
-$star-size: 2px; // Size of each star
-$animation-duration: 20s; // Duration of animation
-
-// Mixin for generating random positions
-@mixin random-position {
-  $x: random(100);
-  $y: random(100);
-  position: absolute;
-  top: $y + vh;
-  left: $x + vw;
-}
-
-// Mixin for animating stars
-// @mixin animate-star {
-//   animation: twinkling $animation-duration infinite;
-// }
-
-// Keyframes for twinkling animation
-// @keyframes twinkling {
-//   0%, 100% {
-//     opacity: 1;
-//   }
-//   50% {
-//     opacity: 0.5;
-//   }
-// }
-
-// Generate stars
-@for $i from 1 through $star-count {
-  .star#{$i} {
-    @include random-position;
-    width: $star-size;
-    height: $star-size;
-    background-color: white;
-    color: white;
-    border-radius: 50%;
-    // @include animate-star;
-  }
-}
-
-// Generate starry sky background
-.starry-sky {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
-
-  .star {
-    &:nth-child(2n) {
-      width: $star-size * 0.8; // Make some stars smaller for variety
-      height: $star-size * 0.8;
-    }
-  }
 }

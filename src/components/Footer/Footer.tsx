@@ -23,7 +23,12 @@ const Footer = () => {
       </div>
 
       <div className="footer__column footer__column--right">
-        <div className="foto">Foto: Urban</div>
+        <div className="foto">
+          Foto:{' '}
+          <a href="https://www.instagram.com/urbanan/" target="true">
+            Urban Anjar
+          </a>
+        </div>
       </div>
     </footer>
   );

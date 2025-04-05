@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.digital-timer {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 6rem;
+  color: #bf10ff;
+  background-color: transparent; // <-- här gör vi den transparent
+  padding: 20px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 10px #39ff14; // ger glow-effekt utan box
+}
