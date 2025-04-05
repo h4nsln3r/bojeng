@@ -45,15 +45,6 @@ button {
   animation: fadeOut 4s forwards; /* Apply fade-out animation */
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes fadeOut {
   0% {
     opacity: 0; /* Start with full opacity */
