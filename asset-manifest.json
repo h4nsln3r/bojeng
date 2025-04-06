@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bojeng/static/css/main.196f6b03.css",
+    "main.css": "/bojeng/static/css/main.243ffd97.css",
     "main.js": "/bojeng/static/js/main.6155b3f5.js",
     "static/media/dscf0322.png": "/bojeng/static/media/dscf0322.342f0f1c6ba383cb9222.png",
     "static/media/dscf0339.png": "/bojeng/static/media/dscf0339.cda00b1b2279dbd3a474.png",
@@ -15,11 +15,11 @@
     "static/media/bojeng_logotyp_purple.png": "/bojeng/static/media/bojeng_logotyp_purple.82284fed40cda40538da.png",
     "static/media/Sooky70s.ttf": "/bojeng/static/media/Sooky70s.992479c1759da76ca8ad.ttf",
     "index.html": "/bojeng/index.html",
-    "main.196f6b03.css.map": "/bojeng/static/css/main.196f6b03.css.map",
+    "main.243ffd97.css.map": "/bojeng/static/css/main.243ffd97.css.map",
     "main.6155b3f5.js.map": "/bojeng/static/js/main.6155b3f5.js.map"
   },
   "entrypoints": [
-    "static/css/main.196f6b03.css",
+    "static/css/main.243ffd97.css",
     "static/js/main.6155b3f5.js"
   ]
 }
