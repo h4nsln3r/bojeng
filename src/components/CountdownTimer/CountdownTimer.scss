@@ -2,13 +2,25 @@
 
 .digital-timer {
   font-family: 'Orbitron', sans-serif;
-  font-size: 6rem;
+  font-size: 2.5rem; // Mobile-first storlek
   color: #bf10ff;
-  background-color: transparent; // <-- här gör vi den transparent
+  background-color: transparent;
   padding: 20px 30px;
   border-radius: 10px;
   display: inline-block;
   letter-spacing: 2px;
   text-align: center;
-  text-shadow: 0 0 10px #39ff14; // ger glow-effekt utan box
+  text-shadow: 0 0 10px #39ff14;
+
+  @media (min-width: 480px) {
+    font-size: 4rem; // lite större för små tablets
+  }
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 6rem; // din gamla desktopstorlek
+  }
 }
