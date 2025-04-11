@@ -8,6 +8,7 @@ const init = () => {
   return (
     <div className="container">
       <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={6000} />
+
       <main className="content">
         <div className="content__bojeng">
           <img className="content__bojeng--img" src={boeng} alt="boeng" />
@@ -17,6 +18,7 @@ const init = () => {
           <div className="commingsoon2">till then</div> */}
         </div>
       </main>
+
       <Footer />
     </div>
   );

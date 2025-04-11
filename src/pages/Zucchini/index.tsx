@@ -59,7 +59,7 @@ const Zucchini = () => {
             className="video-iframe"></iframe> */}
         </div>
       ) : (
-        <>
+        <div className="test">
           {/* LOGGA */}
           <header className="logo-header">
             <img src={boeng} alt="Bojeng logo" className="logo-img" />
@@ -83,7 +83,7 @@ const Zucchini = () => {
           <br />
 
           <Footer />
-        </>
+        </div>
       )}
     </div>
   );

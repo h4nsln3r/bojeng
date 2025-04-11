@@ -9,7 +9,7 @@ $background: url('../../assets/images/background.jpg');
   display: flex;
   flex-direction: column;
 
-  > * {
+  > .test {
     z-index: 1;
   }
 }
@@ -35,7 +35,7 @@ $background: url('../../assets/images/background.jpg');
     color: orange;
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
     text-align: center;
-
+    z-index: 1;
     &--img {
       height: 200px;
       align-items: center;
