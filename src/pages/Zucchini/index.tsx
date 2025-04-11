@@ -4,6 +4,7 @@ import boeng from '../../assets/logo-text/bojeng_logotyp_purple.png';
 import './zucchini.scss';
 import Merch from '../../components/Merch';
 import Footer from '../../components/Footer/Footer';
+import ImageRotator from '../../components/ImageRotator/ImageRotator';
 const gigs = [
   { date: '2025-05-03', time: '20:00', location: 'Pustervik, Göteborg' },
   { date: '2025-06-15', time: '21:30', location: 'Debaser, Stockholm' },
@@ -27,6 +28,7 @@ const Zucchini = () => {
 
   return (
     <div className="container">
+      <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={6000} />
       {showVideo ? (
         <div className="video-overlay">
           <YouTube
