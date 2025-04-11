@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import YouTube from 'react-youtube';
 import boeng from '../../assets/logo-text/bojeng_logotyp_purple.png';
+import zuc from '../../assets/zuc.gif';
 import './zucchini.scss';
 import Merch from '../../components/Merch';
 import Footer from '../../components/Footer/Footer';
@@ -13,52 +14,68 @@ const gigs = [
 ];
 
 const Zucchini = () => {
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
+  const [showIntro, setShowIntro] = useState(false);
+  // useEffect(() => {
+  //   const hasSeenVideo = localStorage.getItem('bojeng_intro_played');
+  //   if (!hasSeenVideo) {
+  //     setShowVideo(true);
+  //   }
+  // }, []);
+
+  // const handleVideoEnd = () => {
+  //   localStorage.setItem('bojeng_intro_played', 'true');
+  //   setShowVideo(false);
+  // };
 
   useEffect(() => {
-    const hasSeenVideo = localStorage.getItem('bojeng_intro_played');
-    if (!hasSeenVideo) {
-      setShowVideo(true);
+    const hasSeenIntro = sessionStorage.getItem('bojeng_intro_played');
+    if (!hasSeenIntro) {
+      setShowIntro(true);
+      const timer = setTimeout(() => {
+        sessionStorage.setItem('bojeng_intro_played', 'true');
+        setShowIntro(false);
+      }, 6000);
+
+      return () => clearTimeout(timer);
     }
   }, []);
-
-  const handleVideoEnd = () => {
-    localStorage.setItem('bojeng_intro_played', 'true');
-    setShowVideo(false);
-  };
 
   return (
     <div className="container">
       <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={6000} />
-      {showVideo ? (
-        <div className="video-overlay">
-          <YouTube
-            videoId="7eKy6U2WhfM" // Byt ut mot er riktiga video
-            opts={{
-              width: '100vw',
-              height: '100vh',
-              playerVars: {
-                autoplay: 1, // spela automatiskt
-                controls: 0, // inga kontroller
-                rel: 0, // inga relaterade videos
-                showinfo: 0, // ingen info i början
-                modestbranding: 1, // minimerad YouTube-branding
-                fs: 0, // ingen helskärmsknapp
-                iv_load_policy: 3, // inga annotations
-                mute: 1, // mutad autoplay (vissa browsers kräver det)
-              },
-            }}
-            onEnd={handleVideoEnd}
-          />
-          {/* <iframe
-            src="https://www.youtube.com/embed/7eKy6U2WhfM?si=qVvTAYpwMZMBpvua"
-            title="Bojeng intro"
-            frameBorder="0"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            className="video-iframe"></iframe> */}
+      {showIntro ? (
+        <div className="gif-overlay">
+          <img src={zuc} alt="Intro GIF" className="intro-gif" />
         </div>
       ) : (
+        // <div className="video-overlay">
+        //   <YouTube
+        //     videoId="7eKy6U2WhfM" // Byt ut mot er riktiga video
+        //     opts={{
+        //       width: '100vw',
+        //       height: '100vh',
+        //       playerVars: {
+        //         autoplay: 1, // spela automatiskt
+        //         controls: 0, // inga kontroller
+        //         rel: 0, // inga relaterade videos
+        //         showinfo: 0, // ingen info i början
+        //         modestbranding: 1, // minimerad YouTube-branding
+        //         fs: 0, // ingen helskärmsknapp
+        //         iv_load_policy: 3, // inga annotations
+        //         mute: 1, // mutad autoplay (vissa browsers kräver det)
+        //       },
+        //     }}
+        //     onEnd={handleVideoEnd}
+        //   />
+        //   {/* <iframe
+        //     src="https://www.youtube.com/embed/7eKy6U2WhfM?si=qVvTAYpwMZMBpvua"
+        //     title="Bojeng intro"
+        //     frameBorder="0"
+        //     allow="autoplay; fullscreen"
+        //     allowFullScreen
+        //     className="video-iframe"></iframe> */}
+        // </div>
         <div className="test">
           {/* LOGGA */}
           <header className="logo-header">
