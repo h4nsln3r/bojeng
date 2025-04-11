@@ -6,7 +6,7 @@ import './styles/main.scss';
 
 export const PATHS = {
   INTRO: '/bojeng',
-  ZUCCINI: '/zucchini',
+  ZUCCINI: '/bojeng/zucchini',
 };
 
 interface Props {}
