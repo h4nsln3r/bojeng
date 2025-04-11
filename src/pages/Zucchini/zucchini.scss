@@ -1,0 +1,141 @@
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .video-overlay {
+//   position: fixed;
+//   inset: 0;
+//   z-index: 999;
+//   background: black;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+.video-iframe {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+}
+
+.logo-header {
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo-img {
+  max-width: 200px;
+  width: 80%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+.spotify-section {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #121212;
+}
+
+.gig-section {
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+}
+
+.gig-heading {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.gig-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.gig-table th,
+.gig-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+@media (max-width: 600px) {
+  .gig-table thead {
+    display: none;
+  }
+
+  .gig-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    background: #111;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .gig-table td {
+    display: block;
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .gig-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+.merch-section {
+  padding: 1rem;
+  background-color: #111;
+  color: #fff;
+}
+
+.merch-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.merch-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.merch-item {
+  background: #222;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.merch-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.merch-title {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.merch-price {
+  color: #bbb;
+  margin-top: 0.25rem;
+}
