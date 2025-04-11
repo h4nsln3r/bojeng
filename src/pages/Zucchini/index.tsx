@@ -67,7 +67,7 @@ const Zucchini = () => {
 
           <section className="spotify-section">
             <iframe
-              src="https://open.spotify.com/embed/album/3XeMJ9HYmSV7UD7rVnOP9K?utm_source=generator"
+              src="https://open.spotify.com/embed/album/4ltAOqHT2ypmKPxyC8XaTk?utm_source=generator"
               width="100%"
               height="152"
               frameBorder="0"
