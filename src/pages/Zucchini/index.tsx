@@ -5,6 +5,7 @@ import './zucchini.scss';
 import Merch from '../../components/Merch';
 import Footer from '../../components/Footer/Footer';
 import ImageRotator from '../../components/ImageRotator/ImageRotator';
+import Gigs from '../../components/Gigs';
 const gigs = [
   { date: '2025-05-03', time: '20:00', location: 'Pustervik, Göteborg' },
   { date: '2025-06-15', time: '21:30', location: 'Debaser, Stockholm' },
@@ -75,27 +76,7 @@ const Zucchini = () => {
               title="Spotify Player"></iframe>
           </section>
 
-          <section className="gig-section">
-            <h2 className="gig-heading">Kommande spelningar</h2>
-            <table className="gig-table">
-              <thead>
-                <tr>
-                  <th>Datum</th>
-                  <th>Tid</th>
-                  <th>Plats</th>
-                </tr>
-              </thead>
-              <tbody>
-                {gigs.map((gig, index) => (
-                  <tr key={index}>
-                    <td>{gig.date}</td>
-                    <td>{gig.time}</td>
-                    <td>{gig.location}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </section>
+          <Gigs />
           <Merch />
           <br />
           <br />

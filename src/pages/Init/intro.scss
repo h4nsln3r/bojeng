@@ -8,6 +8,10 @@ $background: url('../../assets/images/background.jpg');
   min-height: 100vh; // ändrat från height
   display: flex;
   flex-direction: column;
+
+  > * {
+    z-index: 1;
+  }
 }
 
 @font-face {
@@ -31,7 +35,6 @@ $background: url('../../assets/images/background.jpg');
     color: orange;
     animation: zoomHeaderInitAnimation 3s ease-in forwards;
     text-align: center;
-    z-index: 1;
 
     &--img {
       height: 200px;
