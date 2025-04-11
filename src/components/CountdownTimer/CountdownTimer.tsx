@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './CountdownTimer.scss';
+import { useNavigate } from 'react-router-dom';
+import { PATHS } from '../../Routing';
 
 interface TimeLeft {
   days: string;
@@ -45,11 +47,15 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
     return () => clearInterval(timer);
   }, []);
-
+  const navigate = useNavigate();
+  const handleGoToZucchini = () => {
+    navigate(PATHS.ZUCCINI);
+  };
   return (
     <div className="digital-timer">
       {/* <span>{timeLeft.days}</span>d :<span>{timeLeft.hours}</span>h :<span>{timeLeft.minutes}</span>m :<span>{timeLeft.seconds}</span>s */}
-      <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> : <span>{timeLeft.seconds}</span>
+      <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> :{' '}
+      <span onClick={handleGoToZucchini}>{timeLeft.seconds}</span>
     </div>
   );
 };
