@@ -7,7 +7,7 @@ import CountdownTimer from '../../components/CountdownTimer/CountdownTimer';
 const init = () => {
   return (
     <div className="container">
-      <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={3000} />
+      <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={2000} />
 
       <main className="content">
         <div className="content__bojeng">
