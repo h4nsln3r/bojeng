@@ -12,9 +12,10 @@ interface TimeLeft {
 
 interface CountdownTimerProps {
   targetDate: string;
+  onClickStart: () => void;
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
+const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, onClickStart }) => {
   const calculateTimeLeft = (): TimeLeft => {
     const difference = +new Date(targetDate) - +new Date();
     let timeLeft: TimeLeft;
@@ -47,15 +48,11 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
     return () => clearInterval(timer);
   }, []);
-  const navigate = useNavigate();
-  const handleGoToZucchini = () => {
-    navigate(PATHS.ZUCCINI);
-  };
+
   return (
     <div className="digital-timer">
       {/* <span>{timeLeft.days}</span>d :<span>{timeLeft.hours}</span>h :<span>{timeLeft.minutes}</span>m :<span>{timeLeft.seconds}</span>s */}
-      <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> :{' '}
-      <span onClick={handleGoToZucchini}>{timeLeft.seconds}</span>
+      <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> : <span onClick={onClickStart}>{timeLeft.seconds}</span>
     </div>
   );
 };
