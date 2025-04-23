@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Sooky70s';
+  src: url('../../../public/fonts/Sooky70s.ttf') format('truetype');
+}
+
+.container {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > .z-index--1 {
+    z-index: 1;
+  }
+}
+
+.content {
+  flex: 1;
+  display: flex;
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.bojeng__logo {
+  height: 420px;
+
+  @media only screen and (max-width: 500px) {
+    height: 100px;
+  }
+
+  @media only screen and (min-width: 500px) and (max-width: 800px) {
+    height: 150px;
+  }
+
+  @media only screen and (min-width: 800px) and (max-width: 1300px) {
+    height: 250px;
+  }
+
+  @media only screen and (min-width: 1300px) and (max-width: 1628px) {
+    height: 400px;
+  }
+}
+
+.gif-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

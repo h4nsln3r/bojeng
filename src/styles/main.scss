@@ -27,44 +27,28 @@ button {
   transform: translate(-50%, -50%);
 }
 
-.commingsoon {
-  text-align: center;
-  font-family: 'Sooky70s', sans-serif;
-  font-size: 36px;
-  color: #bf10ff;
-  margin-bottom: 20px;
-  animation: fadeOut 2s forwards; /* Apply fade-out animation */
-}
+.flex {
+  display: flex;
+  &--3 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
 
-.commingsoon2 {
-  text-align: center;
-  font-family: 'Sooky70s', sans-serif;
-  font-size: 36px;
-  color: #bf10ff;
-  margin-bottom: 20px;
-  animation: fadeOut 4s forwards; /* Apply fade-out animation */
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 0; /* Start with full opacity */
-  }
-  20% {
-    opacity: 0; /* Start with full opacity */
-  }
-  100% {
-    opacity: 1; /* Fade to completely transparent */
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 0; /* Start with full opacity */
-  }
-  80% {
-    opacity: 0; /* Start with full opacity */
-  }
-  100% {
-    opacity: 1; /* Fade to completely transparent */
+.margin {
+  &__bottom {
+    &--2 {
+      margin-bottom: 20px;
+    }
+    &--4 {
+      margin-bottom: 40px;
+    }
   }
 }

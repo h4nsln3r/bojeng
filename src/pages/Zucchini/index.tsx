@@ -14,94 +14,33 @@ const gigs = [
 ];
 
 const Zucchini = () => {
-  // const [showVideo, setShowVideo] = useState(false);
-  const [showIntro, setShowIntro] = useState(false);
-  // useEffect(() => {
-  //   const hasSeenVideo = localStorage.getItem('bojeng_intro_played');
-  //   if (!hasSeenVideo) {
-  //     setShowVideo(true);
-  //   }
-  // }, []);
-
-  // const handleVideoEnd = () => {
-  //   localStorage.setItem('bojeng_intro_played', 'true');
-  //   setShowVideo(false);
-  // };
-
-  useEffect(() => {
-    const hasSeenIntro = sessionStorage.getItem('bojeng_intro_played');
-    if (!hasSeenIntro) {
-      setShowIntro(true);
-      const timer = setTimeout(() => {
-        sessionStorage.setItem('bojeng_intro_played', 'true');
-        setShowIntro(false);
-      }, 6000);
-
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
   return (
     <div className="container">
       <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={6000} />
-      {showIntro ? (
-        <div className="gif-overlay">
-          <img src={zuc} alt="Intro GIF" className="intro-gif" />
-        </div>
-      ) : (
-        // <div className="video-overlay">
-        //   <YouTube
-        //     videoId="7eKy6U2WhfM" // Byt ut mot er riktiga video
-        //     opts={{
-        //       width: '100vw',
-        //       height: '100vh',
-        //       playerVars: {
-        //         autoplay: 1, // spela automatiskt
-        //         controls: 0, // inga kontroller
-        //         rel: 0, // inga relaterade videos
-        //         showinfo: 0, // ingen info i början
-        //         modestbranding: 1, // minimerad YouTube-branding
-        //         fs: 0, // ingen helskärmsknapp
-        //         iv_load_policy: 3, // inga annotations
-        //         mute: 1, // mutad autoplay (vissa browsers kräver det)
-        //       },
-        //     }}
-        //     onEnd={handleVideoEnd}
-        //   />
-        //   {/* <iframe
-        //     src="https://www.youtube.com/embed/7eKy6U2WhfM?si=qVvTAYpwMZMBpvua"
-        //     title="Bojeng intro"
-        //     frameBorder="0"
-        //     allow="autoplay; fullscreen"
-        //     allowFullScreen
-        //     className="video-iframe"></iframe> */}
-        // </div>
-        <div className="test">
-          {/* LOGGA */}
-          <header className="logo-header">
-            <img src={boeng} alt="Bojeng logo" className="logo-img" />
-          </header>
+      <div className="z-index--1">
+        {/* LOGGA */}
+        <header className="logo-header">
+          <img src={boeng} alt="Bojeng logo" className="logo-img" />
+        </header>
 
-          <section className="spotify-section">
+        <div className="flex--3 max-width--800 margin__bottom--4">
+          <section className="section__spotify">
             <iframe
-              src="https://open.spotify.com/embed/album/4ltAOqHT2ypmKPxyC8XaTk?utm_source=generator"
+              src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
               width="100%"
-              height="152"
+              height="420px"
               frameBorder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
               title="Spotify Player"></iframe>
           </section>
-
+          <div className="mitt-logo">
+            <img src={boeng} alt="Bojeng logo" className="logo-img" />
+          </div>
           <Gigs />
-          <Merch />
-          <br />
-          <br />
-          <br />
-
-          <Footer />
         </div>
-      )}
+        <Merch />
+      </div>
     </div>
   );
 };

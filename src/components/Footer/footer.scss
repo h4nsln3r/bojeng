@@ -7,8 +7,7 @@
   align-items: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  z-index: 1000;
+  z-index: 1;
   flex-wrap: wrap;
 
   .footer__column {
@@ -32,19 +31,19 @@
     a {
       font-size: 32px;
       margin: 10px 10px;
-      color: #bf10ff;
+      color: white;
     }
   }
 
   .contact {
     font-size: 16px;
-    color: #bf10ff;
+    color: white;
     font-family: 'Sooky70s', sans-serif;
   }
 
   .foto {
     font-size: 16px;
-    color: #bf10ff;
+    color: white;
     font-family: 'Sooky70s', sans-serif;
   }
 

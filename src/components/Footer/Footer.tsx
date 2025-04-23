@@ -11,24 +11,24 @@ const Footer = () => {
         <a href="https://soundcloud.com/bojengband?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" className="icon-column">
           <FaSoundcloud className="icon" />
         </a>
-        <a href="https://www.youtube.com/@bojengband" target="_blank" className="icon-column">
+        <a href="https://www.youtube.com/@bojengband" target="_blank">
           <FaYoutube className="icon" />
         </a>
-        <a href="https://www.instagram.com/bojengband" target="_blank" className="icon-column">
+        <a href="https://www.instagram.com/bojengband" target="_blank">
           <FaInstagram className="icon" />
         </a>
-        <a href="https://www.facebook.com/bojengtheband" target="_blank" className="icon-column">
+        <a href="https://www.facebook.com/bojengtheband" target="_blank">
           <FaFacebook className="icon" />
         </a>
       </div>
 
       <div className="footer__column footer__column--right">
-        <div className="foto">
+        {/* <div className="foto">
           Foto:{' '}
           <a href="https://www.instagram.com/urbanan/" target="true">
             Urban Anjar
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
