@@ -32,7 +32,7 @@ const Init = () => {
           <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={2000} />
 
           <main className="content content--center z-index--1">
-            <img className="bojeng__logo" src={BojengLogo} alt="Bojeng-Logo" />
+            <img className="bojeng__logo--large" src={BojengLogo} alt="Bojeng-Logo" />
             <CountdownTimer targetDate="2025-06-06T00:00:00" onClickStart={handleCountdownClick} />
           </main>
         </>
