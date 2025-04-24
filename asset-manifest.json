@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bojeng/static/css/main.1758d84e.css",
-    "main.js": "/bojeng/static/js/main.cc7e91cf.js",
+    "main.css": "/bojeng/static/css/main.059ebe54.css",
+    "main.js": "/bojeng/static/js/main.d9e46bb9.js",
     "static/media/zuc.gif": "/bojeng/static/media/zuc.b53d952cc11cd406049a.gif",
     "static/media/dscf0322.png": "/bojeng/static/media/dscf0322.342f0f1c6ba383cb9222.png",
     "static/media/dscf0339.png": "/bojeng/static/media/dscf0339.cda00b1b2279dbd3a474.png",
@@ -13,16 +13,17 @@
     "static/media/dscf0172.png": "/bojeng/static/media/dscf0172.6ef39154961535b1199d.png",
     "static/media/dscf0330.png": "/bojeng/static/media/dscf0330.a91f8271e78fb1e2b065.png",
     "static/media/dscf0170.png": "/bojeng/static/media/dscf0170.21028593651ca88e7f2d.png",
+    "static/media/zucchini_bojeng.png": "/bojeng/static/media/zucchini_bojeng.9560aa78dd2b96fdf43b.png",
     "static/media/merchv1.jpg": "/bojeng/static/media/merchv1.03fb2313e48b802daaa8.jpg",
-    "static/media/bojeng_logotyp_purple.png": "/bojeng/static/media/bojeng_logotyp_purple.82284fed40cda40538da.png",
+    "static/media/bojeng_logotyp_white.png": "/bojeng/static/media/bojeng_logotyp_white.e44c0668d513d6b14aad.png",
     "static/media/marcusv1.jpg": "/bojeng/static/media/marcusv1.6199e336150541951320.jpg",
     "static/media/Sooky70s.ttf": "/bojeng/static/media/Sooky70s.992479c1759da76ca8ad.ttf",
     "index.html": "/bojeng/index.html",
-    "main.1758d84e.css.map": "/bojeng/static/css/main.1758d84e.css.map",
-    "main.cc7e91cf.js.map": "/bojeng/static/js/main.cc7e91cf.js.map"
+    "main.059ebe54.css.map": "/bojeng/static/css/main.059ebe54.css.map",
+    "main.d9e46bb9.js.map": "/bojeng/static/js/main.d9e46bb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.1758d84e.css",
-    "static/js/main.cc7e91cf.js"
+    "static/css/main.059ebe54.css",
+    "static/js/main.d9e46bb9.js"
   ]
 }
