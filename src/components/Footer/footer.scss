@@ -1,14 +1,15 @@
 .footer {
-  position: sticky;
-  bottom: 0;
   width: 100%;
   display: flex;
+  position: fixed; // ändra till fixed!
+  bottom: 0; // placera längst ner!
+  left: 0;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8); // Gör gärna lite mörkare så den "ligger över" bra
   flex-wrap: wrap;
+  z-index: 10; // högre så den ligger över allt annat
 
   .footer__column {
     flex: 1;
@@ -32,15 +33,15 @@
       font-size: 32px;
       margin: 10px 10px;
       color: white;
+      transition: transform 0.3s ease; // snygg hover
+
+      &:hover {
+        transform: scale(1.2); // liten "pop" effekt
+      }
     }
   }
 
-  .contact {
-    font-size: 16px;
-    color: white;
-    font-family: 'Sooky70s', sans-serif;
-  }
-
+  .contact,
   .foto {
     font-size: 16px;
     color: white;
@@ -61,15 +62,7 @@
       }
 
       &--center {
-        order: -1; // Flyttar sociala medier överst
-      }
-
-      &--left {
-        order: 0;
-      }
-
-      &--right {
-        order: 1;
+        order: -1; // sociala ikoner överst på mobil
       }
     }
 

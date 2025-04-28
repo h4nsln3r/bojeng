@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'Sooky70s';
+  src: url('../../public/fonts/Sooky70s.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,17 +32,114 @@ button {
   transform: translate(-50%, -50%);
 }
 
+.container {
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > .z-index--1 {
+    z-index: 1;
+  }
+}
+
+.start-content {
+  flex: 1;
+  display: flex;
+
+  header {
+    margin: 20px;
+  }
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.background__bojeng-album {
+  position: absolute;
+  width: 100%;
+}
+
+.gif-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-gif {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.bojeng__logo {
+  height: 76px;
+  margin: 0px auto;
+
+  &--large {
+    height: 420px;
+
+    @media only screen and (max-width: 500px) {
+      height: 100px;
+    }
+
+    @media only screen and (min-width: 500px) and (max-width: 800px) {
+      height: 150px;
+    }
+
+    @media only screen and (min-width: 800px) and (max-width: 1300px) {
+      height: 250px;
+    }
+
+    @media only screen and (min-width: 1300px) and (max-width: 1628px) {
+      height: 400px;
+    }
+  }
+}
+
+.gigs-section {
+  margin: 40px 10px 10px 20px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+    margin: 0px 0px 0px 0px;
+  }
+}
+
 .flex {
   display: flex;
-  &--3 {
+  &--row {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    iframe {
+      height: 420px;
+      max-width: 500px;
+      margin: 40px 10px 10px 20px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+        margin: 140px 0px 0px 0px;
+      }
     }
   }
 }

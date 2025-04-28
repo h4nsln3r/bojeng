@@ -1,8 +1,7 @@
 .gigs-section {
   color: white;
   text-align: center;
-  margin-top: -20px;
-  margin-right: 5rem;
+  width: 100%;
   @media (max-width: 1000px) {
     margin-right: 0rem;
   }
@@ -48,6 +47,10 @@
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  font-size: 10px;
+  @media (min-width: 1000px) {
+    font-size: 40px;
+  }
 }
 
 .gig-row:hover {
