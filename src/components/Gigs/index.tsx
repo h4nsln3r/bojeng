@@ -41,7 +41,7 @@ const Gigs = () => {
 
   return (
     <section className="gigs-section">
-      <h2 className="gigs-title">Kommande spelningar</h2>
+      <h2 className="gigs-title">Spelningar</h2>
       <div className="gigs-table">
         {gigs.map((gig, index) => (
           <div className="gig-row" key={index} onClick={() => setSelectedGig(gig)}>

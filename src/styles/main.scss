@@ -64,6 +64,9 @@ button {
 .background__bojeng-album {
   position: absolute;
   width: 100%;
+  @media (max-width: 768px) {
+    position: relative;
+  }
 }
 
 .gif-overlay {
@@ -107,16 +110,6 @@ button {
   }
 }
 
-.gigs-section {
-  margin: 40px 10px 10px 20px;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-    margin: 0px 0px 0px 0px;
-  }
-}
-
 .flex {
   display: flex;
   &--row {
@@ -130,15 +123,25 @@ button {
       align-items: center;
     }
 
-    iframe {
+    iframe.spotify-player {
       height: 420px;
       max-width: 500px;
       margin: 40px 10px 10px 20px;
 
       @media (max-width: 768px) {
         width: 100%;
+        height: 100px;
+        margin: 20px 0px 0px 0px;
+      }
+    }
+
+    .gigs-section {
+      margin: -130px 10px 10px 20px;
+
+      @media (max-width: 768px) {
+        width: 100%;
         height: 100%;
-        margin: 140px 0px 0px 0px;
+        margin: 0px 0px 0px 0px;
       }
     }
   }

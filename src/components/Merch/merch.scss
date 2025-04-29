@@ -1,6 +1,5 @@
 .merch-section {
   padding: 1rem;
-  background-color: #111;
   color: #fff;
   text-align: center;
 }
@@ -9,6 +8,18 @@
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: left;
+  color: #07611a;
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: 'Sooky70s', sans-serif;
+  text-align: left;
+  letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    font-size: 5rem;
+    // margin-left: 20px;
+    margin: auto;
+  }
 }
 
 .merch-slider {
