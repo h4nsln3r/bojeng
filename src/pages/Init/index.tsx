@@ -6,6 +6,10 @@ import Footer from '../../components/Footer/Footer';
 import BojengLogo from '../../assets/logo-text/bojeng_logotyp_white.png';
 import ZucchiniGif from '../../assets/zuc.gif';
 import Zucchini from '../Zucchini';
+import Gigs from '../../components/Gigs';
+import Merch from '../../components/Merch';
+
+import BojengAlbum from '../../assets/images/zucchini_bojeng.png';
 
 const Init = () => {
   const [showGif, setShowGif] = useState(false);
@@ -36,7 +40,27 @@ const Init = () => {
             </main>
           </>
         ) : (
-          <Zucchini />
+          <>
+            <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
+            <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
+            <main className="flex--row z-index--1">
+              <div className="flex--row--col margin__bottom--auto">
+                <iframe
+                  className="spotify-player"
+                  src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
+                  width="100%"
+                  height="420px"
+                  frameBorder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                  title="Spotify Player"></iframe>
+              </div>
+              <div className="flex--row--col">
+                <Gigs />
+                <Merch />
+              </div>
+            </main>
+          </>
         )}
       </div>
       <Footer />

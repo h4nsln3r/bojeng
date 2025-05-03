@@ -7,10 +7,10 @@ import Footer from '../../components/Footer/Footer';
 
 const Zucchini = () => {
   return (
-    <div className="container">
+    <div className="z-index--1">
       <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
       <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album" />
-      <main className="z-index--1">
+      <main className="">
         <div className="flex--row">
           <iframe
             className="spotify-player"
@@ -21,12 +21,13 @@ const Zucchini = () => {
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             title="Spotify Player"></iframe>
-
-          <Gigs />
         </div>
-        <Merch />
+        <div className="flex--row--col">
+          <Gigs />
+          <Merch />
+        </div>
       </main>
-      <Footer /> {/* Footer kommer alltid sist */}
+      <Footer />
     </div>
   );
 };
