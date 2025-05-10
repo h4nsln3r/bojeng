@@ -119,13 +119,19 @@ button {
 
   &--row {
     display: flex;
-    align-items: center;
     flex-direction: column;
+
     width: 100%;
     gap: 20px;
+
+    &--start {
+      align-items: start;
+    }
+
     @media (max-width: 768px) {
       gap: 0px;
     }
+
     &--col {
       display: flex;
       flex-direction: column;
@@ -148,6 +154,13 @@ button {
         flex-grow: 1;
         margin: 10px 0px 0px 0px;
       }
+    }
+
+    iframe.youtube-player {
+      margin: auto;
+      border-radius: 2px;
+      width: 80%;
+      height: 400px;
     }
 
     .gigs-section {

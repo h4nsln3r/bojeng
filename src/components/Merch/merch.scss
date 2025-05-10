@@ -2,6 +2,8 @@
   padding: 1rem;
   color: #fff;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.4); // Gör gärna lite mörkare så den "ligger över" bra
+  border-radius: 2px;
 }
 
 .merch-heading {
@@ -25,24 +27,40 @@
 .merch-slider {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   gap: 0.5rem;
   position: relative;
+
+  @media (max-width: 768px) {
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .slider-button {
   background: none;
   border: none;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 10rem;
+  color: #22d14e;
+  margin-right: 20;
   cursor: pointer;
+  &:hover {
+    color: #07611a;
+  }
 }
 
 .merch-image {
-  width: 250px;
-  border-radius: 8px;
+  max-width: 300px;
+  min-width: 250px;
+  max-height: 200px;
+  border-radius: 2px;
   cursor: pointer;
   transition: transform 0.2s;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 }
 
 .merch-image:hover {
@@ -50,13 +68,18 @@
 }
 
 .merch-title {
-  font-weight: bold;
-  margin-top: 1rem;
+  // font-weight: bold;
+  font-size: 5rem;
+}
+.merch-info {
+  margin-bottom: auto;
+  font-family: 'Sooky70s', sans-serif;
+  text-align: left;
 }
 
 .merch-price {
   color: #bbb;
-  margin-top: 0.25rem;
+  font-size: 4rem;
 }
 
 .modal-backdrop {
@@ -79,12 +102,15 @@
   display: inline-block;
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;
-  background-color: #00ffae;
+  background-color: #07611a;
   color: #000;
-  font-weight: bold;
+  // font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
   transition: background-color 0.2s;
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
 }
 
 .order-button:hover {

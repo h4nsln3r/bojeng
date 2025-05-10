@@ -22,6 +22,15 @@ const Zucchini = () => {
             loading="lazy"
             title="Spotify Player"></iframe>
         </div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/xCPSnubQclw?si=ZMHVPkJweiJ70Jrw"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen></iframe>
         <div className="flex--row--col">
           <Gigs />
           <Merch />

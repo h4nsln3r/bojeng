@@ -43,18 +43,27 @@ const Init = () => {
           <>
             <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
             <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
-            <main className="flex--row z-index--1">
+            <main className="flex--row flex--start z-index--1">
               <div className="flex--row--col margin__bottom--auto">
                 <iframe
                   className="spotify-player"
                   src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
-                  width="100%"
-                  height="420px"
                   frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
                   title="Spotify Player"></iframe>
+                <iframe
+                  className="youtube-player"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/xCPSnubQclw?si=ZMHVPkJweiJ70Jrw"
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen></iframe>
               </div>
+
               <div className="flex--row--col">
                 <Gigs />
                 <Merch />
@@ -63,6 +72,16 @@ const Init = () => {
           </>
         )}
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Footer />
     </>
   );
