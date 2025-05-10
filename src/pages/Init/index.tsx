@@ -43,8 +43,8 @@ const Init = () => {
           <>
             <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
             <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
-            <main className="flex--row flex--start z-index--1">
-              <div className="flex--row--col margin__bottom--auto">
+            <main className="flex__row z-index--1">
+              <div className="flex__row--col margin__bottom--auto">
                 <iframe
                   className="spotify-player"
                   src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
@@ -64,24 +64,25 @@ const Init = () => {
                   allowFullScreen></iframe>
               </div>
 
-              <div className="flex--row--col">
+              <div className="flex__row--col flex__row--start">
                 <Gigs />
                 <Merch />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
               </div>
             </main>
           </>
         )}
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <Footer />
     </>
   );

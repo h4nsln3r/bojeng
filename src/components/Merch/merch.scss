@@ -1,16 +1,23 @@
 .merch-section {
-  padding: 1rem;
+  margin-top: 10px;
+  padding: 0rem;
   color: #fff;
   text-align: center;
   background-color: rgba(0, 0, 0, 0.4); // Gör gärna lite mörkare så den "ligger över" bra
   border-radius: 2px;
+  width: 100%;
+  @media (min-width: 768px) {
+    padding: 1rem;
+    margin-top: 0px;
+  }
 }
 
 .merch-heading {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   text-align: left;
-  color: #07611a;
+  color: #fff;
+
   font-size: 3rem;
   font-weight: 100;
   font-family: 'Sooky70s', sans-serif;

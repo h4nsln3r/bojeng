@@ -21,7 +21,7 @@ const Merch = () => {
   return (
     <section className="merch-section">
       <h2 className="merch-heading">Merch</h2>
-      <div className="flex--row flex--center">
+      <div className="flex__row flex--center">
         <div className="merch-slider">
           <button onClick={prevImage} className="slider-button">
             ‹

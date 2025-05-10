@@ -11,7 +11,7 @@ const Zucchini = () => {
       <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
       <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album" />
       <main className="">
-        <div className="flex--row">
+        <div className="flex__row">
           <iframe
             className="spotify-player"
             src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
@@ -31,7 +31,7 @@ const Zucchini = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen></iframe>
-        <div className="flex--row--col">
+        <div className="flex__row--col">
           <Gigs />
           <Merch />
         </div>

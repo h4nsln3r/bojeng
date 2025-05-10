@@ -117,20 +117,11 @@ button {
 .flex {
   display: flex;
 
-  &--row {
+  &__row {
     display: flex;
-    flex-direction: column;
-
+    flex-direction: row;
     width: 100%;
     gap: 20px;
-
-    &--start {
-      align-items: start;
-    }
-
-    @media (max-width: 768px) {
-      gap: 0px;
-    }
 
     &--col {
       display: flex;
@@ -138,9 +129,16 @@ button {
       width: 100%;
     }
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      align-items: center;
+    &--start {
+      justify-content: start;
+    }
+
+    @media (max-width: 768px) {
+      gap: 0px;
+      flex-direction: column;
+      &--start {
+        align-items: center;
+      }
     }
 
     iframe.spotify-player {
