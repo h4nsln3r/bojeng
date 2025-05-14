@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bojeng/static/css/main.d7c013be.css",
-    "main.js": "/bojeng/static/js/main.4a4f9c05.js",
+    "main.css": "/bojeng/static/css/main.af0c9796.css",
+    "main.js": "/bojeng/static/js/main.11ee6550.js",
     "static/media/zuc.gif": "/bojeng/static/media/zuc.b53d952cc11cd406049a.gif",
     "static/media/dscf0322.png": "/bojeng/static/media/dscf0322.342f0f1c6ba383cb9222.png",
     "static/media/dscf0339.png": "/bojeng/static/media/dscf0339.cda00b1b2279dbd3a474.png",
@@ -18,12 +18,13 @@
     "static/media/bojeng_logotyp_white.png": "/bojeng/static/media/bojeng_logotyp_white.e44c0668d513d6b14aad.png",
     "static/media/marcusv1.jpg": "/bojeng/static/media/marcusv1.6199e336150541951320.jpg",
     "static/media/Sooky70s.ttf": "/bojeng/static/media/Sooky70s.992479c1759da76ca8ad.ttf",
+    "static/media/TerminaTest-Black.otf": "/bojeng/static/media/TerminaTest-Black.b76d9318e4743a03755e.otf",
     "index.html": "/bojeng/index.html",
-    "main.d7c013be.css.map": "/bojeng/static/css/main.d7c013be.css.map",
-    "main.4a4f9c05.js.map": "/bojeng/static/js/main.4a4f9c05.js.map"
+    "main.af0c9796.css.map": "/bojeng/static/css/main.af0c9796.css.map",
+    "main.11ee6550.js.map": "/bojeng/static/js/main.11ee6550.js.map"
   },
   "entrypoints": [
-    "static/css/main.d7c013be.css",
-    "static/js/main.4a4f9c05.js"
+    "static/css/main.af0c9796.css",
+    "static/js/main.11ee6550.js"
   ]
 }
