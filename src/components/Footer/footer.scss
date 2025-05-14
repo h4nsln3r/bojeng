@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'TerminaTest';
+  src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
+  font-weight: 900; // eller vad som är korrekt för just den fonten
+  font-style: normal;
+}
+
 .footer {
   width: 100%;
   display: flex;
@@ -28,6 +35,12 @@
     }
   }
 
+  .icon {
+    &:hover {
+      color: #22d14e;
+    }
+  }
+
   &__icons {
     a {
       font-size: 32px;
@@ -43,15 +56,18 @@
 
   .contact,
   .foto {
-    font-size: 16px;
+    font-size: 14px;
     color: white;
-    font-family: 'Sooky70s', sans-serif;
+    font-family: 'TerminaTest', sans-serif;
   }
 
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     text-align: center;
-
+    .contact,
+    .foto {
+      font-size: 10px;
+    }
     .footer__column {
       padding: 0.5rem 0;
 
