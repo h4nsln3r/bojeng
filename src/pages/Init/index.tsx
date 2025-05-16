@@ -19,7 +19,7 @@ const Init = () => {
     setShowGif(true);
     setTimeout(() => {
       setShowGif(false);
-      setShowZucchiniPage(true);
+      // setShowZucchiniPage(true);
     }, 6000);
   };
 
@@ -32,14 +32,14 @@ const Init = () => {
           </div>
         ) : !showZucchiniPage ? (
           <>
-            <ImageRotator intervalRange={[2000, 4000]} durationRange={[1000, 5000]} initialDelay={2000} />
+            <ImageRotator intervalRange={[2000, 4000]} durationRange={[2500, 6000]} initialDelay={2000} />
 
             <main className="start-content start-content--center z-index--1">
               <img className="bojeng__logo--large" src={BojengLogo} alt="Bojeng-Logo" />
-              <CountdownTimer targetDate="2025-05-25T00:00:00" onClickStart={handleCountdownClick} />
-              <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
+              <CountdownTimer targetDate="2025-05-24T15:05:00" onClickStart={handleCountdownClick} />
+              {/* <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
                 Presave
-              </a>
+              </a> */}
             </main>
           </>
         ) : (
