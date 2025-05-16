@@ -36,7 +36,7 @@ const Init = () => {
 
             <main className="start-content start-content--center z-index--1">
               <img className="bojeng__logo--large" src={BojengLogo} alt="Bojeng-Logo" />
-              <CountdownTimer targetDate="2025-05-24T15:05:00" onClickStart={handleCountdownClick} />
+              <CountdownTimer targetDate="2025-05-25T00:00:00" onClickStart={handleCountdownClick} />
               {/* <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
                 Presave
               </a> */}
