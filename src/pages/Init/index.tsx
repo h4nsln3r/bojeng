@@ -35,7 +35,7 @@ const Init = () => {
 
             <main className="start-content start-content--center z-index--1">
               <img className="bojeng__logo--large" src={BojengLogo} alt="Bojeng-Logo" />
-              <CountdownTimer targetDate="2025-05-23T00:00:00" onClickStart={handleCountdownClick} />
+              <CountdownTimer targetDate="2025-05-25T00:00:00" onClickStart={handleCountdownClick} />
             </main>
           </>
         ) : (
