@@ -2,9 +2,8 @@ import { useState } from 'react';
 import './merch.scss';
 
 import merchv1 from '../../assets/images/merchv1.jpg';
-import marcusv1 from '../../assets/images/marcusv1.jpg';
 
-const merchImages = [merchv1, marcusv1];
+const merchImages = [merchv1];
 
 const Merch = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

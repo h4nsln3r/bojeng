@@ -47,9 +47,26 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, onClickStar
     return () => clearInterval(timer);
   }, []);
 
+  console.log('timeLeft', timeLeft);
+
   return (
     <div className="digital-timer">
-      <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> : <span onClick={onClickStart}>{timeLeft.seconds}</span>
+      {timeLeft.days === '00' && timeLeft.hours === '00' && timeLeft.minutes === '00' && timeLeft.seconds === '00' ? (
+        <>
+          {' '}
+          <button className="presave__button" onClick={onClickStart}>
+            Enter
+          </button>
+        </>
+      ) : (
+        <>
+          <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> : <span>{timeLeft.seconds}</span>
+          <br />
+          <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
+            Presave
+          </a>
+        </>
+      )}
     </div>
   );
 };

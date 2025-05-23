@@ -5,7 +5,6 @@ import Footer from '../../components/Footer/Footer';
 
 import BojengLogo from '../../assets/logo-text/bojeng_logotyp_white.png';
 import ZucchiniGif from '../../assets/zuc.gif';
-import Zucchini from '../Zucchini';
 import Gigs from '../../components/Gigs';
 import Merch from '../../components/Merch';
 
@@ -19,7 +18,7 @@ const Init = () => {
     setShowGif(true);
     setTimeout(() => {
       setShowGif(false);
-      // setShowZucchiniPage(true);
+      setShowZucchiniPage(true);
     }, 6000);
   };
 
@@ -36,10 +35,7 @@ const Init = () => {
 
             <main className="start-content start-content--center z-index--1">
               <img className="bojeng__logo--large" src={BojengLogo} alt="Bojeng-Logo" />
-              <CountdownTimer targetDate="2025-05-25T00:00:00" onClickStart={handleCountdownClick} />
-              <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
-                Presave
-              </a>
+              <CountdownTimer targetDate="2025-05-23T00:00:00" onClickStart={handleCountdownClick} />
             </main>
           </>
         ) : (
