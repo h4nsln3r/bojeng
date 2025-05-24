@@ -1,38 +1,36 @@
 import { useState } from 'react';
 import './gigs.scss';
+
+import fyledalen from '../../assets/gigs/fyledalen.png';
+import ratte from '../../assets/gigs/ratte.png';
+import bojengalbum from '../../assets/images/zucchini_bojeng.png';
 interface Gig {
   date: string;
   event: string;
-  location: string;
-  time: string;
-  address: string;
-  image: string;
+  location?: string;
+  time?: string;
+  address?: string;
+  image?: string;
 }
 
 const gigs: Gig[] = [
   {
-    date: '31/8',
-    event: 'FOLKÖL OCH DUNKADUNKA',
-    location: 'Malmö',
-    time: '20:00',
-    address: 'Folkölsgatan 12, Malmö',
-    image: '/images/folkol.png',
+    date: '7/6',
+    event: 'FYLEDALSFESTIVALEN',
+    location: 'Skåne',
+    image: fyledalen,
   },
   {
-    date: '13–14/9',
-    event: 'NGBG-FESTIVALEN',
-    location: 'Malmö',
-    time: '18:00',
-    address: 'Södra Skolgatan, Malmö',
-    image: '/images/ngbg.png',
+    date: '25/7',
+    event: 'RÄTTELÖVSFESTIVALEN',
+    location: 'Skåne',
+    image: ratte,
   },
   {
-    date: '21/9',
-    event: 'LUNDS KULTURNATT',
-    location: 'Malmö',
-    time: '17:00',
-    address: 'Stortorget, Lund',
-    image: '/images/lund.png',
+    date: '23/8',
+    event: 'RELEASEFEST',
+    location: 'Mässingshornet',
+    image: bojengalbum,
   },
 ];
 
@@ -59,15 +57,21 @@ const Gigs = () => {
             <p>
               <strong>Datum:</strong> {selectedGig.date}
             </p>
-            <p>
-              <strong>Tid:</strong> {selectedGig.time}
-            </p>
-            <p>
-              <strong>Plats:</strong> {selectedGig.location}
-            </p>
-            <p>
-              <strong>Adress:</strong> {selectedGig.address}
-            </p>
+            {selectedGig.time && (
+              <p>
+                <strong>Tid:</strong> {selectedGig.time}
+              </p>
+            )}
+            {selectedGig.location && (
+              <p>
+                <strong>Plats:</strong> {selectedGig.location}
+              </p>
+            )}
+            {selectedGig.address && (
+              <p>
+                <strong>Adress:</strong> {selectedGig.address}
+              </p>
+            )}
             <img src={selectedGig.image} alt={selectedGig.event} className="gig-modal-img" />
           </div>
         </div>
