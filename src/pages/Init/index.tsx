@@ -44,13 +44,13 @@ const Init = () => {
             <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
             <main className="flex__row z-index--1">
               <div className="flex__row--col margin__bottom--auto">
-                <iframe
+                {/* <iframe
                   className="spotify-player"
                   src="https://open.spotify.com/embed/album/0xtOxVRRaA0kW7X4PlbtuP?utm_source=generator"
                   frameBorder="0"
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                   loading="lazy"
-                  title="Spotify Player"></iframe>
+                  title="Spotify Player"></iframe> */}
                 <iframe
                   className="youtube-player"
                   width="560"
