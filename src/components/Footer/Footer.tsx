@@ -17,7 +17,7 @@ const Footer = () => {
         <a href="https://www.instagram.com/bojengband" target="_blank">
           <FaInstagram className="icon" />
         </a>
-        <a href="https://www.facebook.com/bojengtheband" target="_blank">
+        <a href="https://www.facebook.com/bojengband" target="_blank">
           <FaFacebook className="icon" />
         </a>
       </div>
