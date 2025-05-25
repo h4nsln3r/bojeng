@@ -35,7 +35,7 @@ const Merch = () => {
           <p className="merch-price">200 kr</p>
 
           <a
-            href="mailto:BOJENGBAND@GMAIL.COM?subject=Beställning%20av%20Bojeng%20T-shirt&body=Hej%2C%0A%0Ajag%20vill%20köpa%20denna%20t-shirt%20och%20jag%20älskar%20Bojeng!%0A%0A//%20Namn%3A%20%5Bfyll%20i%5D%0A//%20Storlek%3A%20%5Bfyll%20i%5D"
+            href="mailto:BOJENGTHEBAND@GMAIL.COM?subject=Beställning%20av%20Bojeng%20T-shirt&body=Hej%2C%0A%0Ajag%20vill%20köpa%20denna%20t-shirt%20och%20jag%20älskar%20Bojeng!%0A%0A//%20Namn%3A%20%5Bfyll%20i%5D%0A//%20Storlek%3A%20%5Bfyll%20i%5D"
             className="order-button">
             Kom & köp!
           </a>
