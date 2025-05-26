@@ -1,12 +1,12 @@
-Läggg Zucchinin i intro istället så den laddas in innan man har bytt sida sen bytar man bara till en färdigladdad!!
+Fixa spelningar columenen 
+designa lite snyggare med max width osv
 
 
-1. Rensa upp scssen så att det inte är dubbelt osv. 
-Strukurera upp med
-Gör en fil med hjälp klasser utils
+Egen section för misery?
+Misery: 
+bit.ly/43cCvuu 
+1 L'gg till texten snyggt till misery
 
-2. FIxa så att AI filmen ligger på en hel sida
 
-3. Gör en cool animering med alla loggor och dom olika färgerna
+Banner för hela skivan
 
-4. Klipp ut zucchinin
