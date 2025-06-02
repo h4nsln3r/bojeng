@@ -1,5 +1,6 @@
 import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube, FaSpotify } from 'react-icons/fa';
 import './footer.scss';
+import Icon from '../Icon';
 
 const Footer = () => {
   return (
@@ -8,21 +9,14 @@ const Footer = () => {
         <div className="contact">CONTACT: BOJENGTHEBAND@GMAIL.COM</div>
       </div>
       <div className="footer__column footer__column--center footer__icons">
-        <a href="https://soundcloud.com/bojengband?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" target="_blank" className="icon-column">
-          <FaSoundcloud className="icon" />
-        </a>
-        <a href="https://www.youtube.com/@bojengband" target="_blank">
-          <FaYoutube className="icon" />
-        </a>
-        <a href="https://www.instagram.com/bojengband" target="_blank">
-          <FaInstagram className="icon" />
-        </a>
-        <a href="https://www.facebook.com/bojengband" target="_blank">
-          <FaFacebook className="icon" />
-        </a>
-        <a href="https://open.spotify.com/artist/1BFiTHDwBWhaxVJ7JDi0fh?si=lf7AvMFTSg6xLO4ZO0fR-w" target="_blank">
-          <FaSpotify className="icon" />
-        </a>
+        <Icon
+          link={'https://soundcloud.com/bojengband?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing'}
+          icon={<FaSoundcloud className="icon" />}
+        />
+        <Icon link={'https://www.youtube.com/@bojengband'} icon={<FaYoutube className="icon" />} />
+        <Icon link={'https://www.instagram.com/bojengband'} icon={<FaInstagram className="icon" />} />
+        <Icon link={'https://www.facebook.com/bojengband'} icon={<FaFacebook className="icon" />} />
+        <Icon link={'https://open.spotify.com/artist/1BFiTHDwBWhaxVJ7JDi0fh?si=lf7AvMFTSg6xLO4ZO0fR-w'} icon={<FaSpotify className="icon" />} />
       </div>
 
       <div className="footer__column footer__column--right">
