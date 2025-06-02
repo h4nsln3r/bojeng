@@ -82,7 +82,6 @@ const Init = () => {
           </>
         )}
       </div>
-
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube, FaSpotify } from 'react-icons/fa';
 import './footer.scss';
 
 const Footer = () => {
@@ -19,6 +19,9 @@ const Footer = () => {
         </a>
         <a href="https://www.facebook.com/bojengband" target="_blank">
           <FaFacebook className="icon" />
+        </a>
+        <a href="https://open.spotify.com/artist/1BFiTHDwBWhaxVJ7JDi0fh?si=lf7AvMFTSg6xLO4ZO0fR-w" target="_blank">
+          <FaSpotify className="icon" />
         </a>
       </div>
 
