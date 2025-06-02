@@ -10,3 +10,11 @@ bit.ly/43cCvuu
 
 Banner för hela skivan
 
+{
+  /* <div className="foto">
+          Foto:{' '}
+          <a href="https://www.instagram.com/urbanan/" target="true">
+            Urban Anjar
+          </a>
+        </div> */
+}
