@@ -1,6 +1,7 @@
 import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube, FaSpotify } from 'react-icons/fa';
-import './footer.scss';
 import Icon from '../Icon';
+
+import './footer.scss';
 
 const LINKS = {
   Soundcloud: 'https://soundcloud.com/bojengband?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
