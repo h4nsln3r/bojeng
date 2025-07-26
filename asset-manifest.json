@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bojeng/static/css/main.30f0137e.css",
-    "main.js": "/bojeng/static/js/main.2c743bd6.js",
+    "main.css": "/bojeng/static/css/main.2421a588.css",
+    "main.js": "/bojeng/static/js/main.00f735fc.js",
     "static/media/zuc.gif": "/bojeng/static/media/zuc.b53d952cc11cd406049a.gif",
     "static/media/dscf0322.png": "/bojeng/static/media/dscf0322.342f0f1c6ba383cb9222.png",
     "static/media/dscf0339.png": "/bojeng/static/media/dscf0339.cda00b1b2279dbd3a474.png",
@@ -14,6 +14,7 @@
     "static/media/dscf0330.png": "/bojeng/static/media/dscf0330.a91f8271e78fb1e2b065.png",
     "static/media/dscf0170.png": "/bojeng/static/media/dscf0170.21028593651ca88e7f2d.png",
     "static/media/zucchini_bojeng.png": "/bojeng/static/media/zucchini_bojeng.9560aa78dd2b96fdf43b.png",
+    "static/media/BOJENG_POSTER_RELEASEFEST.jpg": "/bojeng/static/media/BOJENG_POSTER_RELEASEFEST.2f1ab08f6abfaeb77f10.jpg",
     "static/media/fyledalen.png": "/bojeng/static/media/fyledalen.417c2faae0aee5e76937.png",
     "static/media/ratte.png": "/bojeng/static/media/ratte.ce855b68f50e74425b3f.png",
     "static/media/bojengrelease.jpg": "/bojeng/static/media/bojengrelease.5f77342c21366ef82812.jpg",
@@ -23,11 +24,11 @@
     "static/media/Sooky70s.ttf": "/bojeng/static/media/Sooky70s.992479c1759da76ca8ad.ttf",
     "static/media/TerminaTest-Black.otf": "/bojeng/static/media/TerminaTest-Black.b76d9318e4743a03755e.otf",
     "index.html": "/bojeng/index.html",
-    "main.30f0137e.css.map": "/bojeng/static/css/main.30f0137e.css.map",
-    "main.2c743bd6.js.map": "/bojeng/static/js/main.2c743bd6.js.map"
+    "main.2421a588.css.map": "/bojeng/static/css/main.2421a588.css.map",
+    "main.00f735fc.js.map": "/bojeng/static/js/main.00f735fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.30f0137e.css",
-    "static/js/main.2c743bd6.js"
+    "static/css/main.2421a588.css",
+    "static/js/main.00f735fc.js"
   ]
 }
