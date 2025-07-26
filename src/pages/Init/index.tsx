@@ -9,6 +9,7 @@ import Gigs from '../../components/Gigs';
 import Merch from '../../components/Merch';
 
 import BojengAlbum from '../../assets/images/zucchini_bojeng.png';
+import BojengReleaseDesk from '../../assets/images/bojengrelease.jpg';
 
 const Init = () => {
   const [showGif, setShowGif] = useState(false);
@@ -19,7 +20,7 @@ const Init = () => {
     setTimeout(() => {
       setShowGif(false);
       setShowZucchiniPage(true);
-    }, 6000);
+    }, 3000);
   };
 
   return (
@@ -72,6 +73,7 @@ const Init = () => {
               </div>
 
               <div className="flex__row--col flex__row--start">
+                <img src={BojengReleaseDesk} alt="Bojeng logo" className="bojeng__release" />
                 <Gigs />
                 <Merch />
                 <br />

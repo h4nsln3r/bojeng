@@ -3,7 +3,9 @@ import './gigs.scss';
 
 import fyledalen from '../../assets/gigs/fyledalen.png';
 import ratte from '../../assets/gigs/ratte.png';
-import bojengalbum from '../../assets/images/zucchini_bojeng.png';
+import medley from '../../assets/images/medley.jpg';
+
+import bojengrelease from '../../assets/images/bojengrelease.jpg';
 interface Gig {
   date: string;
   event: string;
@@ -11,14 +13,23 @@ interface Gig {
   time?: string;
   address?: string;
   image?: string;
+  link?: string;
 }
 
 const gigs: Gig[] = [
   {
+    date: '13/8',
+    event: 'Maya Wahlberg + BOJENG',
+    location: 'MEDLEY MALMÖ',
+    image: medley,
+    link: 'https://www.facebook.com/events/1205289701274095',
+  },
+  {
     date: '23/8',
     event: 'RELEASEFEST',
     location: 'Mässingshornet',
-    image: bojengalbum,
+    image: bojengrelease,
+    link: 'https://www.facebook.com/events/702256985855269',
   },
 ];
 
