@@ -9,7 +9,7 @@ import Gigs from '../../components/Gigs';
 import Merch from '../../components/Merch';
 
 import BojengAlbum from '../../assets/images/zucchini_bojeng.png';
-import BojengReleaseDesk from '../../assets/images/bojengrelease.jpg';
+import BojengReleaseDesk from '../../assets/images/BOJENG_POSTER_RELEASEFEST.jpg';
 
 const Init = () => {
   const [showGif, setShowGif] = useState(false);
@@ -49,9 +49,12 @@ const Init = () => {
             <main className="flex__row z-index--1">
               <div className="flex__row--col margin__bottom--auto">
                 <div className="flex__row--col--1">
+                  <Gigs />
+
                   <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
                     Presave new songs on spotify
                   </a>
+                  <br />
                   <iframe
                     className="spotify-player"
                     src="https://open.spotify.com/embed/album/0Dw2aWUJQGwvLu7cUxb9Oj?utm_source=generator"
@@ -73,8 +76,12 @@ const Init = () => {
               </div>
 
               <div className="flex__row--col flex__row--start">
-                <img src={BojengReleaseDesk} alt="Bojeng logo" className="bojeng__release" />
-                <Gigs />
+                <a className="bojeng__release" href="https://www.facebook.com/events/702256985855269" rel="noreferrer" target="_blank">
+                  <img src={BojengReleaseDesk} alt="Bojeng logo" className="bojeng__release--img" />
+                </a>
+                <br />
+                <br />
+                <br />
                 <Merch />
                 <br />
                 <br />

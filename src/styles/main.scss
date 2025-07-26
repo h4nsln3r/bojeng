@@ -190,6 +190,7 @@ button {
 }
 
 .presave__button {
+  border: 2px solid black;
   background-color: white;
   color: #070707;
   font-weight: bold;
@@ -256,9 +257,15 @@ button {
 }
 
 .bojeng__release {
-  width: 100%;
-  margin-top: 5px;
   margin-right: 10px;
+  &--img {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+  }
 }
 
 .bojeng__presave {
