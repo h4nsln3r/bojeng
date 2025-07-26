@@ -54,7 +54,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, onClickStar
       {timeLeft.days === '00' && timeLeft.hours === '00' && timeLeft.minutes === '00' && timeLeft.seconds === '00' ? (
         <>
           {' '}
-          <button className="presave__button" onClick={onClickStart}>
+          <button className="enter__button margin__top--2" onClick={onClickStart}>
             Enter
           </button>
         </>
@@ -62,7 +62,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, onClickStar
         <>
           <span>{timeLeft.days}</span> : <span>{timeLeft.hours}</span> : <span>{timeLeft.minutes}</span> : <span>{timeLeft.seconds}</span>
           <br />
-          <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
+          <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button margin__top--2" rel="noreferrer" target="_blank">
             Presave
           </a>
         </>

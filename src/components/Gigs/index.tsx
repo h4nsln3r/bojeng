@@ -15,6 +15,15 @@ interface Gig {
 
 const gigs: Gig[] = [
   {
+    date: '23/8',
+    event: 'RELEASEFEST',
+    location: 'Mässingshornet',
+    image: bojengalbum,
+  },
+];
+
+const prevGigs: Gig[] = [
+  {
     date: '7/6',
     event: 'FYLEDALSFESTIVALEN',
     location: 'Skåne',
@@ -25,12 +34,6 @@ const gigs: Gig[] = [
     event: 'RÄTTELÖVSFESTIVALEN',
     location: 'Skåne',
     image: ratte,
-  },
-  {
-    date: '23/8',
-    event: 'RELEASEFEST',
-    location: 'Mässingshornet',
-    image: bojengalbum,
   },
 ];
 
@@ -49,6 +52,17 @@ const Gigs = () => {
           </div>
         ))}
       </div>
+
+      {/* <h4 className="gigs-title margin__top--2">Tidigare Spelningar</h4>
+      <div className="gigs-table">
+        {prevGigs.map((gig, index) => (
+          <div className="gig-row" key={index} onClick={() => setSelectedGig(gig)}>
+            <div className="gig-date">{gig.date}</div>
+            <div className="gig-event">{gig.event}</div>
+            <div className="gig-location">{gig.location}</div>
+          </div>
+        ))}
+      </div> */}
 
       {selectedGig && (
         <div className="gig-modal" onClick={() => setSelectedGig(null)}>

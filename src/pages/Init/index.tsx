@@ -40,18 +40,25 @@ const Init = () => {
           </>
         ) : (
           <>
-            <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
+            <a className="bojeng__presave" href="https://share.amuse.io/L6SzIW2vf00b" target="_blank" rel="noopener noreferrer">
+              <span className="bojeng__presave--text">Presave</span>
+              <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
+            </a>
             <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
             <main className="flex__row z-index--1">
               <div className="flex__row--col margin__bottom--auto">
-                <iframe
-                  className="spotify-player"
-                  src="https://open.spotify.com/embed/album/0Dw2aWUJQGwvLu7cUxb9Oj?utm_source=generator"
-                  frameBorder="0"
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  title="Spotify Player"></iframe>
-
+                <div className="flex__row--col--1">
+                  <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
+                    Presave new songs on spotify
+                  </a>
+                  <iframe
+                    className="spotify-player"
+                    src="https://open.spotify.com/embed/album/0Dw2aWUJQGwvLu7cUxb9Oj?utm_source=generator"
+                    frameBorder="0"
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    title="Spotify Player"></iframe>
+                </div>
                 <iframe
                   className="youtube-player"
                   width="560"
