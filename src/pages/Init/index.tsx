@@ -51,13 +51,13 @@ const Init = () => {
                 <div className="flex__row--col--1">
                   <Gigs />
 
-                  <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
+                  {/* <a href="https://share.amuse.io/track/bojeng-misery" className="presave__button" rel="noreferrer" target="_blank">
                     Presave new songs on spotify
-                  </a>
-                  <br />
+                  </a> */}
+                  {/* <br /> */}
                   <iframe
                     className="spotify-player"
-                    src="https://open.spotify.com/embed/album/0Dw2aWUJQGwvLu7cUxb9Oj?utm_source=generator"
+                    src="https://open.spotify.com/embed/album/0qN0CLMdj5unnYayYnl4FT?utm_source=generator"
                     frameBorder="0"
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy"

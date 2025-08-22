@@ -18,16 +18,16 @@ interface Gig {
 
 const gigs: Gig[] = [
   {
-    date: '13/8',
-    event: 'Maya Wahlberg + BOJENG',
-    location: 'MEDLEY MALMÖ',
-    image: medley,
-    link: 'https://www.facebook.com/events/1205289701274095',
-  },
-  {
     date: '23/8',
     event: 'RELEASEFEST',
     location: 'Mässingshornet',
+    image: bojengrelease,
+    link: 'https://www.facebook.com/events/702256985855269',
+  },
+  {
+    date: '5/9',
+    event: 'NGBG',
+    location: 'Norragrängetsbersfestivalen',
     image: bojengrelease,
     link: 'https://www.facebook.com/events/702256985855269',
   },
@@ -45,6 +45,13 @@ const prevGigs: Gig[] = [
     event: 'RÄTTELÖVSFESTIVALEN',
     location: 'Skåne',
     image: ratte,
+  },
+  {
+    date: '13/8',
+    event: 'Maya Wahlberg + BOJENG',
+    location: 'MEDLEY MALMÖ',
+    image: medley,
+    link: 'https://www.facebook.com/events/1205289701274095',
   },
 ];
 
