@@ -41,8 +41,12 @@ const Init = () => {
           </>
         ) : (
           <>
-            <a className="bojeng__presave" href="https://share.amuse.io/L6SzIW2vf00b" target="_blank" rel="noopener noreferrer">
-              <span className="bojeng__presave--text">Presave</span>
+            <a
+              className="bojeng__presave"
+              href="https://open.spotify.com/album/0qN0CLMdj5unnYayYnl4FT?si=fkSyAxenRIWf5-5IglwMLQ"
+              target="_blank"
+              rel="noopener noreferrer">
+              <span className="bojeng__presave--text">go&listen</span>
               <img src={BojengAlbum} alt="Bojeng logo" className="background__bojeng-album z-index--1" />
             </a>
             <ImageRotator intervalRange={[4000, 4000]} durationRange={[500, 1000]} initialDelay={4000} />
