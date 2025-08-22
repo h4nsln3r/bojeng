@@ -90,6 +90,27 @@ const Init = () => {
                 <br />
                 <br />
                 <br />
+                <section className="merch-section">
+                  <h2 className="merch-heading">BUY ALBUM</h2>
+                  <div className="flex__row flex--center">
+                    <div className="merch-slider">
+                      <img src={''} alt={`Bojeng T-shirt $`} className="merch-image" />
+                    </div>
+                    <div className="merch-info">
+                      <p className="merch-title">BOJENG</p>
+                      <p className="merch-price">200 kr</p>
+
+                      <a
+                        href="mailto:BOJENGBAND@GMAIL.COM?subject=Beställning%20av%20Bojeng%20T-shirt&body=Hej%2C%0A%0Ajag%20vill%20köpa%20denna%20t-shirt%20och%20jag%20älskar%20Bojeng!%0A%0A//%20Namn%3A%20%5Bfyll%20i%5D%0A//%20Storlek%3A%20%5Bfyll%20i%5D"
+                        className="order-button">
+                        Kom & köp!
+                      </a>
+                    </div>
+                  </div>
+                </section>
+                <br />
+                <br />
+                <br />
                 <br />
                 <br />
                 <br />

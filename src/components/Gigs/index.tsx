@@ -5,6 +5,7 @@ import fyledalen from '../../assets/gigs/fyledalen.png';
 import ratte from '../../assets/gigs/ratte.png';
 import medley from '../../assets/images/medley.jpg';
 import bojengrelease from '../../assets/images/bojengrelease.jpg';
+import ngbg from '../../assets/images/ngbg.jpg';
 
 interface Gig {
   date: string;
@@ -29,7 +30,7 @@ const gigs: Gig[] = [
     date: '5/9',
     event: 'BOJENG @ NGBG festival 2025',
     location: 'Malmö',
-    image: bojengrelease,
+    image: ngbg,
     address: 'Norra Grängesbergsgatan 16',
     description: 'SCEN 10 (https://maps.app.goo.gl/indAXp6TY64HXSEA7) https://ngbg.se/',
     link: 'https://www.facebook.com/events/1826640428277070/',
