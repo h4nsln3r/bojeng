@@ -6,6 +6,8 @@ import ratte from '../../assets/gigs/ratte.png';
 import medley from '../../assets/images/medley.jpg';
 import bojengrelease from '../../assets/images/bojengrelease.jpg';
 import ngbg from '../../assets/images/ngbg.jpg';
+import Icon from '../Icon';
+import { FaFacebook } from 'react-icons/fa';
 
 interface Gig {
   date: string;
@@ -106,7 +108,6 @@ const Gigs = () => {
   const renderTable = (list: Gig[]) => (
     <div className="gigs-table" role="list">
       {list.map((gig, index) => {
-        const hasExtras = gig.time || gig.address || gig.link || gig.description;
         return (
           <div
             className="gig-row"
@@ -119,20 +120,6 @@ const Gigs = () => {
 
             <div className="gig-event">
               <div className="gig-event-title">{gig.event}</div>
-
-              {/* Sekundära detaljer i raden så att alla fält "renderas" */}
-              {hasExtras && (
-                <div className="gig-event-extras">
-                  {/* {gig.time && <span className="gig-badge">kl {gig.time}</span>} */}
-                  {/* {gig.address && <span className="gig-address-inline">{gig.address}</span>}
-                  {gig.link && (
-                    <a className="gig-link-inline" href={gig.link} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
-                      Länk
-                    </a>
-                  )} */}
-                  {/* {gig.description && <span className="gig-description-inline">{linkify(gig.description)}</span>} */}
-                </div>
-              )}
             </div>
 
             <div className="gig-location">{gig.location ?? ''}</div>
@@ -168,11 +155,12 @@ const Gigs = () => {
 
             <div className="modal-body">
               <h3 className="modal-title">{selectedGig.event}</h3>
+              {selectedGig.link && <Icon link={selectedGig.link} icon={<FaFacebook className="icon" />} />}
 
               {/* inline-rad med chips/pills */}
               <ul className="modal-meta">
                 <li className="meta-item meta-date">
-                  <strong>Datum</strong> {selectedGig.date}
+                  <strong>Datum: </strong> {selectedGig.date}
                 </li>
                 {selectedGig.time && (
                   <li className="meta-item meta-time">
@@ -192,12 +180,6 @@ const Gigs = () => {
               </ul>
 
               {selectedGig.description && <p className="modal-description">{linkify(selectedGig.description)}</p>}
-
-              {selectedGig.link && (
-                <a className="gig-link large" href={selectedGig.link} target="_blank" rel="noopener noreferrer">
-                  Öppna länk
-                </a>
-              )}
             </div>
           </div>
         </div>

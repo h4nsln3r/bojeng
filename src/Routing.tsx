@@ -1,6 +1,7 @@
 import Helmet from 'react-helmet';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Init from './pages/Init/';
+import Init from './pages/2025';
+import Init2 from './pages/2026';
 
 import './styles/main.scss';
 
