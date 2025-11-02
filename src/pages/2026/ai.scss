@@ -1,17 +1,35 @@
-/* Bas – typografi, layout */
+/* =========================================================
+   Bojeng – App styles (full file)
+   - Fast (fixed) header med scroll-shadow
+   - Scrollspy-highlight av aktiv meny (klass .active)
+   - Välbalanserad typografi, grid-kort, ratio-containers
+   - Anchor-offset: scroll-margin-top för alla sektioner
+   ========================================================= */
+
+/* -------- Tokens / Theme -------- */
 :root {
   --bg: #0a0a0a;
   --bg-soft: #121212;
   --card: #161616;
   --text: #f4f4f5;
   --muted: #b4b4b7;
-  --brand: #7cf4e2; /* accent – byt om ni har färgprofil */
+  --brand: #7cf4e2; /* accent – byt vid behov */
   --ring: rgba(124, 244, 226, 0.35);
   --radius: 16px;
   --radius-lg: 28px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  /* Headerhöjd för offset – justera om din header blir högre */
+  --header-h: 58px;
 }
 
+@media (max-width: 640px) {
+  :root {
+    --header-h: 64px;
+  }
+}
+
+/* -------- Resets / Base -------- */
 * {
   box-sizing: border-box;
 }
@@ -35,27 +53,54 @@ img {
   max-width: 100%;
   display: block;
 }
+a {
+  color: inherit;
+}
 
+/* Gör plats så innehållet inte hamnar under fixed header */
+main {
+  padding-top: var(--header-h);
+}
+
+/* Ankarlänkar ska inte hamna under headern */
+section {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
+/* -------- Layout helpers -------- */
 .container {
   width: min(1100px, 92vw);
   margin-inline: auto;
 }
 
-/* Header */
+/* =========================================================
+   Header (fixed + scroll shadow + active link)
+   ========================================================= */
 .site-header {
-  position: sticky;
+  position: fixed; /* robustare än sticky här */
   top: 0;
-  z-index: 50;
-  backdrop-filter: blur(8px);
-  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.6));
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 10, 0.85);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  isolation: isolate; /* säkerställ överlapp ovanför hero */
 }
+
+.site-header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .site-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0;
+  padding: 12px 0;
 }
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -63,6 +108,7 @@ img {
   color: var(--text);
   text-decoration: none;
 }
+
 .brand__logo {
   width: 14px;
   height: 14px;
@@ -71,6 +117,7 @@ img {
   box-shadow: 0 0 0 6px var(--ring);
   animation: pulse 2.4s ease-in-out infinite;
 }
+
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 var(--ring);
@@ -82,34 +129,60 @@ img {
     box-shadow: 0 0 0 0 rgba(124, 244, 226, 0);
   }
 }
+
 .brand__text {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
+/* Nav + active state från scrollspy */
 .nav {
   display: flex;
   gap: 20px;
 }
+
 .nav a {
-  color: var(--text);
+  position: relative;
+  color: var(--muted);
   text-decoration: none;
-  opacity: 0.9;
   padding: 8px 10px;
   border-radius: 10px;
+  font-weight: 500;
+  transition: color 0.2s ease, background 0.2s ease;
 }
+
 .nav a:hover {
+  color: var(--text);
   background: rgba(255, 255, 255, 0.06);
 }
 
-/* Hero */
+.nav a.active {
+  color: var(--brand);
+}
+
+.nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand);
+  border-radius: 2px;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
 .hero {
   position: relative;
   display: grid;
   place-items: center;
   min-height: 72vh;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 1; /* säkerställ under headern */
 }
+
 .hero__bg {
   position: absolute;
   inset: 0;
@@ -117,27 +190,32 @@ img {
     radial-gradient(600px 300px at 80% 20%, rgba(180, 120, 255, 0.1), transparent 55%), linear-gradient(#0a0a0a, #0a0a0a);
   filter: saturate(120%);
 }
+
 .hero__inner {
   position: relative;
   padding: 72px 0 64px;
   text-align: center;
 }
+
 .hero__title {
   font-size: clamp(48px, 9vw, 108px);
   margin: 0;
   letter-spacing: 0.02em;
   line-height: 0.95;
 }
+
 .hero__subtitle {
   margin: 14px 0 28px;
   color: var(--muted);
   font-size: clamp(16px, 2.6vw, 22px);
 }
+
 .hero__cta {
   display: inline-flex;
   gap: 12px;
 }
 
+/* -------- Buttons -------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -151,17 +229,21 @@ img {
   transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
   will-change: transform;
 }
+
 .btn:hover {
   transform: translateY(-1px);
 }
+
 .btn--solid {
   background: var(--brand);
   color: #062b26;
   border-color: transparent;
 }
+
 .btn--solid:hover {
   background: #9ef7eb;
 }
+
 .btn--ghost {
   background: rgba(255, 255, 255, 0.06);
 }
@@ -169,7 +251,9 @@ img {
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Sektioner */
+/* =========================================================
+   Sections (Listen / Watch / Shows / Press / Contact)
+   ========================================================= */
 .section {
   padding: 72px 0;
 }
@@ -187,14 +271,17 @@ img {
   margin-top: 8px;
 }
 
+/* Listen */
 .section--listen {
   background: var(--bg);
 }
+
 .players {
   display: grid;
   gap: 18px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
 .player-card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -202,18 +289,22 @@ img {
   padding: 14px;
   box-shadow: var(--shadow);
 }
+
 .player-card h3 {
   margin: 6px 6px 10px;
   font-size: 16px;
   color: var(--muted);
 }
+
+/* Ratio container – generisk och video-variant */
 .ratio {
   position: relative;
   width: 100%;
-  padding-top: 152px;
+  padding-top: 152px; /* Spotify/Apple/SoundCloud-embed */
   overflow: hidden;
   border-radius: 12px;
 }
+
 .ratio iframe {
   position: absolute;
   inset: 0;
@@ -221,10 +312,12 @@ img {
   height: 100%;
   border: 0;
 }
+
 .ratio--video {
   padding-top: 56.25%;
 } /* 16:9 */
 
+/* Watch */
 .section--watch {
   background: var(--bg-soft);
 }
@@ -232,9 +325,11 @@ img {
   margin-top: 10px;
 }
 
+/* Shows */
 .section--shows {
   background: var(--bg);
 }
+
 .shows-list {
   list-style: none;
   margin: 0;
@@ -242,6 +337,7 @@ img {
   display: grid;
   gap: 10px;
 }
+
 .shows-list__item {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -252,6 +348,7 @@ img {
   align-items: center;
   gap: 14px;
 }
+
 .shows-list__date {
   font-variant-numeric: tabular-nums;
   font-weight: 700;
@@ -263,10 +360,18 @@ img {
 .shows-list__venue {
   color: var(--muted);
 }
+
+.shows-list__item .btn {
+  justify-self: end;
+}
+
 @media (max-width: 680px) {
   .shows-list__item {
     grid-template-columns: 120px 1fr;
-    grid-template-areas: 'date action' 'city city' 'venue venue';
+    grid-template-areas:
+      'date action'
+      'city city'
+      'venue venue';
     gap: 8px;
   }
   .shows-list__date {
@@ -280,29 +385,33 @@ img {
   }
   .shows-list__item .btn {
     grid-area: action;
-    justify-self: end;
   }
 }
 
+/* Press */
 .section--press {
   background: var(--bg-soft);
 }
+
 .press-grid {
   display: grid;
   gap: 12px;
   margin: 10px 0 22px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
+
 .press-grid__item {
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.06);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
 .press-grid__item:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow);
 }
+
 .press-grid__item img {
   width: 100%;
   height: 100%;
@@ -314,6 +423,7 @@ img {
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
+
 .press-card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -322,19 +432,23 @@ img {
   box-shadow: var(--shadow);
 }
 
+/* Contact */
 .section--contact {
   background: var(--bg);
 }
+
 .contact-card {
   background: linear-gradient(180deg, rgba(124, 244, 226, 0.08), rgba(124, 244, 226, 0));
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 20px;
 }
+
 .link-underline {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
 .socials {
   display: flex;
   gap: 14px;
@@ -342,6 +456,7 @@ img {
   margin: 14px 0 0;
   list-style: none;
 }
+
 .socials a {
   color: var(--text);
   text-decoration: none;
@@ -353,20 +468,46 @@ img {
   text-underline-offset: 3px;
 }
 
-/* Footer */
+/* =========================================================
+   Footer
+   ========================================================= */
 .site-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg);
 }
+
 .site-footer__inner {
   padding: 22px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .back-to-top {
   color: var(--muted);
   text-decoration: none;
 }
 .back-to-top:hover {
   color: var(--text);
+}
+
+/* =========================================================
+   Utilities
+   ========================================================= */
+.hidden {
+  display: none !important;
+}
+.fade-in {
+  animation: fade-in 0.35s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

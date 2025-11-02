@@ -1,5 +1,5 @@
 import Helmet from 'react-helmet';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Init from './pages/2026';
 import Ai from './pages/2026/ai';
 
@@ -18,7 +18,7 @@ const Routing = ({}: Props) => {
       <BrowserRouter>
         <Routes>
           <Route path={PATHS.START} element={<Ai />} />
-          {/* <Route path="*" element={<Navigate replace to={PATHS.INIT} />} /> */}
+          <Route path="*" element={<Navigate replace to={PATHS.START} />} />
         </Routes>
       </BrowserRouter>
     </>

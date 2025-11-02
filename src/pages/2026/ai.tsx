@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './ai.scss';
+import { useScrollSpy } from '../../hooks/useScrollSpy';
 
 // === Dummy data – byt till riktiga länkar/filer ===
 const LATEST_SINGLE = {
@@ -209,10 +210,13 @@ export default function Ai() {
 }
 
 function Header() {
+  const sectionIds = ['listen', 'watch', 'shows', 'press', 'contact'];
+  const activeId = useScrollSpy(sectionIds, 100); // 100px offset för headern
+
   return (
     <header className="site-header">
       <div className="container site-header__inner">
-        <a href="/" className="brand">
+        <a href="#top" className="brand">
           <span className="brand__logo" aria-hidden="true">
             ●
           </span>
@@ -220,15 +224,32 @@ function Header() {
         </a>
 
         <nav className="nav">
-          <a href="#listen">Lyssna</a>
-          <a href="#watch">Se</a>
-          <a href="#shows">Spelningar</a>
-          <a href="#press">Press</a>
-          <a href="#contact">Kontakt</a>
+          {sectionIds.map((id) => (
+            <a key={id} href={`#${id}`} className={activeId === id ? 'active' : ''}>
+              {navLabel(id)}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
   );
+}
+
+function navLabel(id: string) {
+  switch (id) {
+    case 'listen':
+      return 'Lyssna';
+    case 'watch':
+      return 'Se';
+    case 'shows':
+      return 'Spelningar';
+    case 'press':
+      return 'Press';
+    case 'contact':
+      return 'Kontakt';
+    default:
+      return id;
+  }
 }
 
 function Hero() {
