@@ -18,7 +18,7 @@ const Routing = ({}: Props) => {
       <BrowserRouter>
         <Routes>
           <Route path={PATHS.START} element={<Init />} />
-          {/* <Route path="*" element={<Navigate replace to={PATHS.START} />} /> */}
+          <Route path="*" element={<Navigate replace to={PATHS.START} />} />
         </Routes>
       </BrowserRouter>
     </>
