@@ -17,8 +17,8 @@ const Routing = ({}: Props) => {
       </Helmet>
       <BrowserRouter>
         <Routes>
-          <Route path={PATHS.START} element={<Ai />} />
-          <Route path="*" element={<Navigate replace to={PATHS.START} />} />
+          <Route path={PATHS.START} element={<Init />} />
+          {/* <Route path="*" element={<Navigate replace to={PATHS.START} />} /> */}
         </Routes>
       </BrowserRouter>
     </>
