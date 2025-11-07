@@ -1,27 +1,30 @@
 import { useEffect, useState } from 'react';
 
-export function useScrollSpy(sectionIds: string[], offset = 80) {
-  const [activeId, setActiveId] = useState<string>('');
+export function useScrollSpy(ids: string[], offset = 0) {
+  const [active, setActive] = useState<string>('');
 
   useEffect(() => {
-    const handleScroll = () => {
+    const sections = ids
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => !!el);
+
+    const handler = () => {
+      const scrollPos = window.scrollY + offset + 1;
       let current = '';
-      for (const id of sectionIds) {
-        const section = document.getElementById(id);
-        if (!section) continue;
-        const rect = section.getBoundingClientRect();
-        if (rect.top - offset <= 0 && rect.bottom - offset > 0) {
-          current = id;
-          break;
-        }
+      for (const el of sections) {
+        if (el.offsetTop <= scrollPos) current = el.id;
       }
-      setActiveId(current);
+      setActive(current);
+
+      // header shadow
+      const header = document.querySelector('.site-header');
+      if (header) header.classList.toggle('scrolled', window.scrollY > 6);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // kör direkt vid start
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [sectionIds, offset]);
+    handler();
+    window.addEventListener('scroll', handler, { passive: true });
+    return () => window.removeEventListener('scroll', handler);
+  }, [ids, offset]);
 
-  return activeId;
+  return active;
 }

@@ -1,90 +1,14 @@
-@font-face {
-  font-family: 'TerminaTest';
-  src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
-  font-weight: 900; // eller vad som är korrekt för just den fonten
-  font-style: normal;
-}
-
+/* =========================================================
+   Footer
+   ========================================================= */
 .footer {
-  width: 100%;
-  display: flex;
-  position: fixed; // ändra till fixed!
-  bottom: 0; // placera längst ner!
-  left: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.8); // Gör gärna lite mörkare så den "ligger över" bra
-  flex-wrap: wrap;
-  z-index: 10; // högre så den ligger över allt annat
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg);
 
-  .footer__column {
-    flex: 1;
-    padding: 0 1rem;
-
-    &--left {
-      text-align: left;
-    }
-
-    &--center {
-      text-align: center;
-    }
-
-    &--right {
-      text-align: right;
-    }
-  }
-
-  .icon {
-    &:hover {
-      color: #22d14e;
-    }
-  }
-
-  &__icons {
-    a {
-      font-size: 32px;
-      margin: 10px 10px;
-      color: white;
-      transition: transform 0.3s ease; // snygg hover
-
-      &:hover {
-        transform: scale(1.2); // liten "pop" effekt
-      }
-    }
-  }
-
-  .contact,
-  .foto {
-    font-size: 14px;
-    color: white;
-    font-family: 'TerminaTest', sans-serif;
-  }
-
-  @media only screen and (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
-    .contact,
-    .foto {
-      font-size: 10px;
-    }
-    .footer__column {
-      padding: 0.5rem 0;
-
-      &--left,
-      &--center,
-      &--right {
-        text-align: center;
-      }
-
-      &--center {
-        order: -1; // sociala ikoner överst på mobil
-      }
-    }
-
-    .contact,
-    .foto {
-      margin-top: 10px;
-    }
+  &__inner {
+    padding: 22px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
