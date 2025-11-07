@@ -1,0 +1,43 @@
+/* =========================================================
+   Hero
+   ========================================================= */
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 72vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  z-index: 1;
+
+  &__bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(600px 300px at 20% 10%, rgba(124, 244, 140, 0.12), transparent 60%),
+      radial-gradient(600px 300px at 80% 20%, rgba(180, 120, 255, 0.1), transparent 55%),
+      linear-gradient(#0a0a0a, #0a0a0a);
+    filter: saturate(120%);
+  }
+  & > &__inner {
+    position: relative;
+    padding: 72px 0 64px;
+    text-align: center;
+  }
+  &__title {
+    font-size: clamp(48px, 9vw, 108px);
+    margin: 0;
+    letter-spacing: 0.02em;
+    line-height: 0.95;
+  }
+
+  &__subtitle {
+    margin: 14px 0 28px;
+    color: var(--muted);
+    font-size: clamp(16px, 2.6vw, 22px);
+  }
+
+  &__cta {
+    display: inline-flex;
+    gap: 12px;
+  }
+}
