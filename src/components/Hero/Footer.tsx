@@ -2,6 +2,7 @@ import React from 'react';
 import './hero.scss';
 import Icon from '../Icon';
 import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube, FaSpotify } from 'react-icons/fa';
+import { SlArrowDown } from 'react-icons/sl';
 const LINKS = {
   Soundcloud:
     'https://soundcloud.com/bojengband?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
@@ -20,7 +21,11 @@ const HeroFooter = () => {
         <Icon link={LINKS.Facebook} icon={<FaFacebook className="icon" />} />
         <Icon link={LINKS.Spotify} icon={<FaSpotify className="icon" />} />
       </div>
-      <div className="hero__footer__nav">V</div>
+      <div className="hero__footer__nav">
+        <a href="#listen">
+          <SlArrowDown />
+        </a>
+      </div>
       <div className="hero__footer__mail">
         <a className="">CONTACT: BOJENGBAND@GMAIL.COM</a>
       </div>

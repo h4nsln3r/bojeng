@@ -67,6 +67,7 @@
     &__icons {
       font-size: 36px;
       margin-left: 10px;
+      z-index: 5;
       > * {
         margin: 0 16px;
         &:hover {
@@ -87,7 +88,7 @@
     &__nav {
       font-family: 'TerminaTest', sans-serif;
       margin: 10px 0 0 0;
-      font-size: 20px;
+      font-size: 30px;
       &:hover {
         color: green;
       }
