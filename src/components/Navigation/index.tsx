@@ -5,8 +5,6 @@ function navLabel(id: string) {
   switch (id) {
     case 'listen':
       return 'Lyssna';
-    case 'watch':
-      return 'Se';
     case 'shows':
       return 'Spelningar';
     case 'press':
@@ -19,7 +17,7 @@ function navLabel(id: string) {
 }
 
 const Navigation = () => {
-  const sectionIds = ['listen', 'watch', 'shows', 'press', 'contact'];
+  const sectionIds = ['listen', 'shows', 'press', 'contact'];
   const activeId = useScrollSpy(sectionIds, 100); // 100px offset för headern
 
   return (
