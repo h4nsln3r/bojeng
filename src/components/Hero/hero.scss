@@ -1,33 +1,40 @@
-/* =========================================================
-   Hero
-   ========================================================= */
 .hero {
   position: relative;
   display: grid;
   place-items: center;
-  min-height: 72vh;
+  min-height: 86vh;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
   z-index: 1;
 
   &__bg {
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(600px 300px at 20% 10%, rgba(124, 244, 140, 0.12), transparent 60%),
-      radial-gradient(600px 300px at 80% 20%, rgba(120, 255, 163, 0.1), transparent 55%),
-      linear-gradient(#0a0a0a, #0a0a0a);
-    filter: saturate(120%);
+    background-image: url('../../assets/gif/zuc.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; // valfritt: ger snygg parallax-effekt
+    z-index: -1;
+    filter: brightness(0.8) saturate(120%); // lite toning för kontrast
   }
-  & > &__inner {
+
+  &__inner {
     position: relative;
     padding: 72px 0 64px;
     text-align: center;
   }
+
   &__title {
     font-size: clamp(48px, 9vw, 108px);
     margin: 0;
     letter-spacing: 0.02em;
     line-height: 0.95;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__subtitle {
@@ -37,7 +44,7 @@
   }
 
   &__cta {
-    margin: 16px 0 0 0;
+    margin-top: 16px;
     display: inline-flex;
     gap: 12px;
   }
