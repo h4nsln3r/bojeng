@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'TerminaTest';
+  src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
+  font-weight: 900; // eller vad som är korrekt för just den fonten
+  font-style: normal;
+}
 .hero {
   position: relative;
   display: grid;
@@ -47,5 +53,44 @@
     margin-top: 16px;
     display: inline-flex;
     gap: 12px;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    > *:hover {
+      cursor: pointer;
+    }
+
+    &__icons {
+      font-size: 36px;
+      margin-left: 10px;
+      > * {
+        margin: 0 16px;
+        &:hover {
+          color: green;
+        }
+      }
+    }
+
+    &__mail {
+      font-family: 'TerminaTest', sans-serif;
+      font-size: 14px;
+      margin: 16px 10px 0 0;
+      &:hover {
+        color: green;
+      }
+    }
+
+    &__nav {
+      font-family: 'TerminaTest', sans-serif;
+      margin: 10px 0 0 0;
+      font-size: 20px;
+      &:hover {
+        color: green;
+      }
+    }
   }
 }
