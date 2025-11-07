@@ -3,6 +3,7 @@ import './App.scss';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Button from './components/Button';
 
 // === Dummy data – byt till riktiga länkar/filer ===
 const LATEST_SINGLE = {
@@ -120,13 +121,13 @@ export default function App() {
                   <span className="shows-list__date">{formatDate(s.date)}</span>
                   <span className="shows-list__city">{s.city}</span>
                   <span className="shows-list__venue">{s.venue}</span>
-                  <a
-                    className="btn btn--ghost"
-                    href={s.link}
-                    aria-label={`Biljetter: ${s.city} – ${s.venue}`}
+                  <Button
+                    variant="ghost"
+                    href="https://example.com"
+                    ariaLabel="Biljetter: Malmö – KB"
                   >
                     Biljetter
-                  </a>
+                  </Button>
                 </li>
               ))}
             </ul>

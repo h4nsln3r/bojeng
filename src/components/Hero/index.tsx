@@ -2,6 +2,7 @@ import React from 'react';
 import './hero.scss';
 import BojengLogo from '../../assets/logo-text/bojeng_logotyp_white.png';
 import HeroFooter from './Footer';
+import Button from '../Button';
 
 const Hero = () => {
   return (
@@ -15,12 +16,12 @@ const Hero = () => {
           </h1>
           {/* <p className="hero__subtitle">Ny musik ute nu</p> */}
           <div className="hero__cta">
-            <a className="btn btn--solid" href="#listen">
+            <Button href="#listen" ariaLabel="Biljetter: Malmö – KB">
               Lyssna
-            </a>
-            <a className="btn btn--ghost" href="#shows">
+            </Button>
+            <Button href="#shows" variant="ghost" ariaLabel="Biljetter: Malmö – KB">
               Biljetter
-            </a>
+            </Button>
           </div>
         </div>
       </section>

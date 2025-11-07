@@ -83,45 +83,6 @@ section {
   margin-inline: auto;
 }
 
-/* -------- Buttons -------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 18px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  transition:
-    transform 0.15s ease,
-    background 0.15s ease,
-    border-color 0.15s ease;
-  will-change: transform;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn--solid {
-  background: var(--brand);
-  color: #062b26;
-  border-color: transparent;
-}
-
-.btn--solid:hover {
-  background: #49f271;
-}
-
-.btn--ghost {
-  background: rgba(255, 255, 255, 0.06);
-}
-.btn--ghost:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
-
 /* =========================================================
    Sections (Listen / Watch / Shows / Press / Contact)
    ========================================================= */
