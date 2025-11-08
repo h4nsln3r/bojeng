@@ -4,14 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Button from './components/Button';
-
-// === Dummy data – byt till riktiga länkar/filer ===
-const LATEST_SINGLE = {
-  title: 'Ny singel: ”Ljus över Bojeng”',
-  spotify: 'https://open.spotify.com/embed/track/XXXXXXXXXXXX', // byt
-  apple: 'https://embed.music.apple.com/se/album/XXXXXXXXXXXX', // byt
-  soundcloud: 'https://w.soundcloud.com/player/?url=XXXXXXXXXX', // byt
-};
+import Listen from './components/Sections/Listen';
 
 const VIDEO = {
   mux: 'https://player.mux.com/XXXXXXXXXXXX?autoplay=0&muted=0&loop=0',
@@ -55,44 +48,7 @@ export default function App() {
         <Hero />
 
         <section id="listen" className="section section--listen">
-          <div className="container">
-            <h2 className="section__title">Lyssna</h2>
-            <p className="section__lede">{LATEST_SINGLE.title}</p>
-
-            <div className="players">
-              {LATEST_SINGLE.spotify && (
-                <div className="player-card">
-                  <h3>Spotify</h3>
-                  <div className="ratio">
-                    <iframe
-                      title="Spotify"
-                      src={LATEST_SINGLE.spotify}
-                      loading="lazy"
-                      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    />
-                  </div>
-                </div>
-              )}
-
-              {LATEST_SINGLE.apple && (
-                <div className="player-card">
-                  <h3>Apple Music</h3>
-                  <div className="ratio">
-                    <iframe title="Apple Music" src={LATEST_SINGLE.apple} loading="lazy" />
-                  </div>
-                </div>
-              )}
-
-              {LATEST_SINGLE.soundcloud && (
-                <div className="player-card">
-                  <h3>SoundCloud</h3>
-                  <div className="ratio">
-                    <iframe title="SoundCloud" src={LATEST_SINGLE.soundcloud} loading="lazy" />
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
+          <Listen />
         </section>
 
         <section id="watch" className="section section--watch">
