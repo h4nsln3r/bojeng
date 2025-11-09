@@ -1,0 +1,11 @@
+iframe.spotify-player {
+  height: 420px;
+  min-width: 364px;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    height: 100px;
+    flex-grow: 1;
+    margin: 10px 0px 0px 0px;
+  }
+}

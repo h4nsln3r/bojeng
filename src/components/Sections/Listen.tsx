@@ -1,4 +1,5 @@
 import BojengImage from '../../assets/photos/listen.jpg';
+import SpotifyPlayer from '../Players/Spotify';
 import './sections.scss';
 // === Dummy data – byt till riktiga länkar/filer ===
 const LATEST_SINGLE = {
@@ -13,16 +14,9 @@ const Header = () => {
       <div className="section__row section__row--space-between">
         <div className="section__col">
           <h2 className="section__title">Lyssna</h2>
-          <iframe
-            className="spotify-player"
-            src="https://open.spotify.com/embed/album/0qN0CLMdj5unnYayYnl4FT?utm_source=generator"
-            frameBorder="0"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
-            title="Spotify Player"
-          ></iframe>
+          <SpotifyPlayer />
         </div>
-        <img src={BojengImage} />
+        <img className="section__img--maxwidth-720" src={BojengImage} />
       </div>
       <br />
       <div className="players">

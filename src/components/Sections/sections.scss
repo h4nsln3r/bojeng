@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'TerminaTest';
   src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
-  font-weight: 900; // eller vad som är korrekt för just den fonten
+  font-weight: 900;
   font-style: normal;
 }
 .section {
@@ -15,10 +15,6 @@
     flex-direction: row;
     &--space-between {
       justify-content: space-between;
-    }
-    //TODO REMOVE
-    img {
-      max-width: 720px;
     }
   }
   &__col {
@@ -42,16 +38,12 @@
     font-size: 14px;
     margin-top: 8px;
   }
-}
 
-iframe.spotify-player {
-  height: 420px;
-  min-width: 364px;
-  justify-content: flex-start;
-
-  @media (max-width: 768px) {
-    height: 100px;
-    flex-grow: 1;
-    margin: 10px 0px 0px 0px;
+  &__img {
+    &--maxwidth {
+      &-720 {
+        max-width: 720px;
+      }
+    }
   }
 }
