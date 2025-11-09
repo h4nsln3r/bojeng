@@ -3,19 +3,9 @@ import './App.scss';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Button from './components/Button';
 import Listen from './components/Sections/Listen';
-
-const VIDEO = {
-  mux: 'https://player.mux.com/XXXXXXXXXXXX?autoplay=0&muted=0&loop=0',
-  youtube: 'https://www.youtube.com/embed/XXXXXXXXXXX',
-};
-
-const SHOWS = [
-  { date: '2025-12-05', city: 'Malmö', venue: 'Plan B', link: '#' },
-  { date: '2026-01-17', city: 'Göteborg', venue: 'Pustervik (lilla)', link: '#' },
-  { date: '2026-02-08', city: 'Stockholm', venue: 'Debaser', link: '#' },
-];
+import Watch from './components/Sections/Watch';
+import Shows from './components/Sections/Shows';
 
 const PRESS_PHOTOS = [
   // Lägg högupplösta bilder i /public/press eller /src/assets/press och uppdatera vägarna
@@ -52,45 +42,11 @@ export default function App() {
         </section>
 
         <section id="watch" className="section section--watch">
-          <div className="container">
-            <h2 className="section__title">Se</h2>
-            <div className="video-wrap">
-              <div className="ratio ratio--video">
-                <iframe
-                  title="Video"
-                  src={VIDEO.mux || VIDEO.youtube}
-                  allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                  allowFullScreen
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
+          <Watch />
         </section>
 
         <section id="shows" className="section section--shows">
-          <div className="container">
-            <h2 className="section__title">Spelningar</h2>
-            <ul className="shows-list">
-              {SHOWS.map((s) => (
-                <li key={s.date} className="shows-list__item">
-                  <span className="shows-list__date">{formatDate(s.date)}</span>
-                  <span className="shows-list__city">{s.city}</span>
-                  <span className="shows-list__venue">{s.venue}</span>
-                  <Button
-                    variant="ghost"
-                    href="https://example.com"
-                    ariaLabel="Biljetter: Malmö – KB"
-                  >
-                    Biljetter
-                  </Button>
-                </li>
-              ))}
-            </ul>
-            <p className="section__fineprint">
-              Fler datum släpps löpande – följ oss i sociala kanaler.
-            </p>
-          </div>
+          <Shows />
         </section>
 
         <section id="press" className="section section--press">
@@ -180,9 +136,4 @@ export default function App() {
       <Footer />
     </>
   );
-}
-
-function formatDate(input: string) {
-  const d = new Date(input + 'T12:00:00');
-  return d.toLocaleDateString('sv-SE', { year: 'numeric', month: 'short', day: '2-digit' });
 }

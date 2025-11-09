@@ -8,7 +8,7 @@ const LATEST_SINGLE = {
   apple: 'https://embed.music.apple.com/se/album/XXXXXXXXXXXX', // byt
   soundcloud: 'https://w.soundcloud.com/player/?url=XXXXXXXXXX', // byt
 };
-const Header = () => {
+const Listen = () => {
   return (
     <div className="container">
       <div className="section__row section__row--space-between">
@@ -56,4 +56,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Listen;
