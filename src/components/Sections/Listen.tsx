@@ -1,3 +1,5 @@
+import BojengImage from '../../assets/photos/listen.jpg';
+import './sections.scss';
 // === Dummy data – byt till riktiga länkar/filer ===
 const LATEST_SINGLE = {
   title: 'Ny singel: ”Ljus över Bojeng”',
@@ -8,18 +10,22 @@ const LATEST_SINGLE = {
 const Header = () => {
   return (
     <div className="container">
-      <h2 className="section__title">Lyssna</h2>
-      <p className="section__lede">{LATEST_SINGLE.title}</p>
-
+      <div className="section__row section__row--space-between">
+        <div className="section__col">
+          <h2 className="section__title">Lyssna</h2>
+          <iframe
+            className="spotify-player"
+            src="https://open.spotify.com/embed/album/0qN0CLMdj5unnYayYnl4FT?utm_source=generator"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+            title="Spotify Player"
+          ></iframe>
+        </div>
+        <img src={BojengImage} />
+      </div>
+      <br />
       <div className="players">
-        <iframe
-          className="spotify-player"
-          src="https://open.spotify.com/embed/album/0qN0CLMdj5unnYayYnl4FT?utm_source=generator"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="lazy"
-          title="Spotify Player"
-        ></iframe>
         {LATEST_SINGLE.spotify && (
           <div className="player-card">
             <h3>Spotify</h3>

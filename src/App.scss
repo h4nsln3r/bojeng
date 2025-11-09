@@ -83,26 +83,6 @@ section {
   margin-inline: auto;
 }
 
-/* =========================================================
-   Sections (Listen / Watch / Shows / Press / Contact)
-   ========================================================= */
-.section {
-  padding: 72px 0;
-}
-.section__title {
-  font-size: clamp(28px, 4.8vw, 36px);
-  margin: 0 0 16px;
-}
-.section__lede {
-  color: var(--muted);
-  margin: 6px 0 22px;
-}
-.section__fineprint {
-  color: var(--muted);
-  font-size: 14px;
-  margin-top: 8px;
-}
-
 /* Listen */
 .section--listen {
   background: var(--bg);

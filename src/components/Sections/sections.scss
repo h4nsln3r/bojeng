@@ -1,0 +1,57 @@
+/* =========================================================
+   Sections (Listen / Watch / Shows / Press / Contact)
+   ========================================================= */
+@font-face {
+  font-family: 'TerminaTest';
+  src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
+  font-weight: 900; // eller vad som är korrekt för just den fonten
+  font-style: normal;
+}
+.section {
+  padding: 10px 0;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    &--space-between {
+      justify-content: space-between;
+    }
+    //TODO REMOVE
+    img {
+      max-width: 720px;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: clamp(28px, 4.8vw, 36px);
+    margin: 0px 0 4px 0;
+    font-family: 'TerminaTest', sans-serif;
+  }
+
+  &__lede {
+    color: var(--muted);
+    margin: 6px 0 22px;
+  }
+
+  &__fineprint {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+
+iframe.spotify-player {
+  height: 420px;
+  min-width: 364px;
+  justify-content: flex-start;
+
+  @media (max-width: 768px) {
+    height: 100px;
+    flex-grow: 1;
+    margin: 10px 0px 0px 0px;
+  }
+}
