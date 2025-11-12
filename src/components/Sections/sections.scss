@@ -10,6 +10,10 @@
 .section {
   padding: 10px 0;
 
+  &--listen {
+    background: var(--bg);
+  }
+
   &__row {
     display: flex;
     flex-direction: row;
@@ -20,6 +24,10 @@
   &__col {
     display: flex;
     flex-direction: column;
+  }
+
+  &--align-items-center {
+    align-items: center;
   }
 
   &__title {
@@ -38,12 +46,22 @@
     font-size: 14px;
     margin-top: 8px;
   }
-
+  svg {
+  }
   &__img {
     &--maxwidth {
       &-720 {
         max-width: 720px;
       }
+    }
+  }
+}
+.previosgigs {
+  margin-bottom: 16px;
+  .section__title {
+    &:hover {
+      cursor: pointer;
+      color: var(--brand);
     }
   }
 }
