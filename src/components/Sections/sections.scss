@@ -47,6 +47,8 @@
     margin-top: 8px;
   }
   svg {
+    font-size: 28px;
+    font-weight: bolder;
   }
   &__img {
     &--maxwidth {
@@ -58,7 +60,7 @@
 }
 .previosgigs {
   margin-bottom: 16px;
-  .section__title {
+  * {
     &:hover {
       cursor: pointer;
       color: var(--brand);

@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Listen from './components/Sections/Listen';
-import Watch from './components/Sections/Watch';
+// import Watch from './components/Sections/Watch';
 import Shows from './components/Sections/Shows';
 
 const PRESS_PHOTOS = [
@@ -41,9 +41,10 @@ export default function App() {
           <Listen />
         </section>
 
-        <section id="watch" className="section section--watch">
+        {/* TODO gör det snyggt */}
+        {/* <section id="watch" className="section section--watch">
           <Watch />
-        </section>
+        </section> */}
 
         <section id="shows" className="section section--shows">
           <Shows />

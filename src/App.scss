@@ -134,7 +134,8 @@ section {
 
 /* Shows */
 .section--shows {
-  background: var(--bg);
+  // background: var(--bg);
+  background: var(--bg-soft);
 }
 
 .shows-list {
@@ -197,7 +198,8 @@ section {
 
 /* Press */
 .section--press {
-  background: var(--bg-soft);
+  // background: var(--bg-soft);
+  background: var(--bg);
 }
 
 .press-grid {
@@ -243,7 +245,8 @@ section {
 
 /* Contact */
 .section--contact {
-  background: var(--bg);
+  // background: var(--bg);
+  background: var(--bg-soft);
 }
 
 .contact-card {
