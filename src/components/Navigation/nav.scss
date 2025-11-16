@@ -1,16 +1,29 @@
-/* Nav + active state från scrollspy */
+/* =========================================================
+   Navigation – desktop + mobil drawer
+   ========================================================= */
+
 @font-face {
   font-family: 'TerminaTest';
   src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
-  font-weight: 900; // eller vad som är korrekt för just den fonten
+  font-weight: 900;
   font-style: normal;
 }
+
 .nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* ------- Länkar (desktop) ------- */
+
+.nav__links {
   display: flex;
   gap: 20px;
 }
 
-.nav a {
+.nav__links a {
   font-family: 'TerminaTest', sans-serif;
   position: relative;
   color: var(--muted);
@@ -23,16 +36,16 @@
     background 0.2s ease;
 }
 
-.nav a:hover {
+.nav__links a:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
 }
 
-.nav a.active {
+.nav__links a.active {
   color: var(--brand);
 }
 
-.nav a.active::after {
+.nav__links a.active::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -41,4 +54,124 @@
   height: 2px;
   background: var(--brand);
   border-radius: 2px;
+}
+
+/* ------- Toggle (hamburger-knapp) ------- */
+
+.nav__toggle {
+  display: none; /* syns bara på mobil */
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.9);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav__toggle svg {
+  display: block;
+  /* ikonen är Lucide Menu/X, automatiskt centrerad */
+}
+
+.nav__toggle:hover {
+  background: rgba(20, 20, 20, 0.96);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+/* ------- Overlay + Drawer (mobil) ------- */
+
+.nav__overlay {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  z-index: 40;
+  height: 100vh;
+  width: 100vh;
+}
+
+/* Drawer sitter fast i höger sida */
+.nav__drawer {
+  position: fixed;
+  inset-block: 0;
+  right: 0;
+  width: min(180px, 80vw);
+  background: radial-gradient(circle at top left, #141414 0, #050505 60%);
+  box-shadow: -24px 0 60px rgba(0, 0, 0, 0.8);
+  z-index: 50;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__drawer-inner {
+  padding: 24px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav__drawer-inner a {
+  font-family: 'TerminaTest', sans-serif;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 4px;
+  text-align: right;
+  transition:
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav__drawer-inner a:hover {
+  color: var(--text);
+  transform: translateX(-2px);
+}
+
+.nav__drawer-inner a.active {
+  color: var(--brand);
+}
+
+/* liten underline även i drawer */
+.nav__drawer-inner a.active::after {
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  width: 14px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brand);
+}
+
+/* =========================================================
+   Responsivitet
+   ========================================================= */
+
+/* Mobil */
+@media (max-width: 768px) {
+  .nav__links--desktop {
+    display: none;
+  }
+
+  .nav__toggle {
+    display: inline-flex;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+  .nav__drawer,
+  .nav__overlay {
+    display: none;
+  }
 }
