@@ -1,4 +1,4 @@
-import './sections.scss';
+import './_sections.scss';
 
 const VIDEO = {
   mux: 'https://player.mux.com/XXXXXXXXXXXX?autoplay=0&muted=0&loop=0',

@@ -1,5 +1,5 @@
 import { SlArrowDown, SlArrowUp } from 'react-icons/sl';
-import './sections.scss';
+import './_sections.scss';
 import GigList from '../GigList';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';

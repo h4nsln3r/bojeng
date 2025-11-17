@@ -1,6 +1,6 @@
 import BojengImage from '../../assets/photos/listen.jpg';
 import SpotifyPlayer from '../Players/Spotify';
-import './sections.scss';
+import './_sections.scss';
 // === Dummy data – byt till riktiga länkar/filer ===
 const LATEST_SINGLE = {
   title: 'Ny singel: ”Ljus över Bojeng”',
