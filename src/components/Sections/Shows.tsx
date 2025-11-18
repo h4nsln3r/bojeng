@@ -37,7 +37,7 @@ const Shows = () => {
           className="section__row section__row--space-between section--align-items-center"
         >
           <h3 className="section__title">Tidigare spelningar</h3>
-          {isOpen ? <SlArrowDown /> : <SlArrowUp />}
+          {isOpen ? <SlArrowUp /> : <SlArrowDown />}
         </div>
         <AnimatePresence initial={false}>
           {isOpen && (

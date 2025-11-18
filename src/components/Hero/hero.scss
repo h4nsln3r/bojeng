@@ -64,6 +64,11 @@
       cursor: pointer;
     }
 
+    /* Mobil */
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
     &__icons {
       font-size: 36px;
       margin-left: 10px;
@@ -72,6 +77,15 @@
         margin: 0 16px;
         &:hover {
           color: green;
+        }
+      }
+      /* Mobil */
+      @media (max-width: 768px) {
+        z-index: 1;
+        margin-left: 0px;
+        font-size: 30px;
+        > * {
+          margin: 0 12px;
         }
       }
     }
@@ -84,6 +98,10 @@
       &:hover {
         color: green;
       }
+      /* Mobil */
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
 
     &__nav {
@@ -92,6 +110,10 @@
       font-size: 30px;
       &:hover {
         color: green;
+      }
+      /* Mobil */
+      @media (max-width: 768px) {
+        display: none;
       }
     }
   }
