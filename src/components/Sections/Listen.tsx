@@ -11,7 +11,7 @@ const LATEST_SINGLE = {
 const Listen = () => {
   return (
     <div className="container">
-      <div className="section__row section__row--space-between">
+      <div className="section__row section__col--mobile section__row--space-between">
         <div className="section__col">
           <h2 className="section__title">Lyssna</h2>
           <SpotifyPlayer />
