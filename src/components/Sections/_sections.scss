@@ -82,14 +82,27 @@
     font-size: 28px;
     font-weight: bolder;
   }
+
   &__img {
     &--maxwidth {
       &-720 {
         max-width: 720px;
       }
     }
+    &--maxheight {
+      &-420 {
+        max-height: 620px;
+      }
+    }
   }
 }
+
+.margin {
+  &--auto {
+    margin: auto;
+  }
+}
+
 .previosgigs {
   margin-bottom: 16px;
   * {
