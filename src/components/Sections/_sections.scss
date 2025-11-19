@@ -14,6 +14,31 @@
     background: var(--bg);
   }
 
+  &--shows {
+    // background: var(--bg);
+    // background: var(--bg-soft);
+
+    background-image: url('../../assets/photos/DSC03657-4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+
+    &:has(.shows-list__item:hover) {
+      background-image: url('../../assets/photos/DSC03657-3.jpg');
+    }
+  }
+
+  &--contact {
+    // background: var(--bg);
+    background: var(--bg-soft);
+    background-image: url('../../assets/photos/DSC03083-2.jpg');
+    background-size: cover;
+    background-position: 20% -50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   &__row {
     display: flex;
     flex-direction: row;

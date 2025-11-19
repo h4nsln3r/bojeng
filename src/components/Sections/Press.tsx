@@ -1,11 +1,12 @@
 import './_sections.scss';
-import BojengImage from '../../assets/photos/listen.jpg';
+import BojengImage1 from '../../assets/photos/DSC03200.jpg';
+import BojengImage2 from '../../assets/photos/DSC03172.jpg';
+import BojengImage3 from '../../assets/photos/DSC03167.jpg';
 
 const PRESS_PHOTOS = [
-  // Lägg högupplösta bilder i /public/press eller /src/assets/press och uppdatera vägarna
-  { src: '/press/bojeng_press_1.jpg', alt: 'Bojeng – pressbild 1' },
-  { src: '/press/bojeng_press_2.jpg', alt: 'Bojeng – pressbild 2' },
-  { src: '/press/bojeng_press_3.jpg', alt: 'Bojeng – pressbild 3' },
+  { src: BojengImage1, alt: 'Bojeng – pressbild 1' },
+  { src: BojengImage2, alt: 'Bojeng – pressbild 2' },
+  { src: BojengImage3, alt: 'Bojeng – pressbild 3' },
 ];
 
 const Press = () => {
@@ -13,9 +14,9 @@ const Press = () => {
     <div className="container">
       <h2 className="section__title">Press</h2>
       <div className="press-grid">
-        {PRESS_PHOTOS.map((p) => (
-          <a key={p.src} href={p.src} target="_blank" rel="noreferrer" className="press-grid__item">
-            <img src={BojengImage} alt={p.alt} loading="lazy" />
+        {PRESS_PHOTOS.map((p, index) => (
+          <a key={index} href={p.src} target="_blank" rel="noreferrer" className="press-grid__item">
+            <img src={p.src} alt={p.alt} loading="lazy" />
           </a>
         ))}
       </div>

@@ -14,32 +14,25 @@
   align-items: center;
   gap: 20px;
   position: relative;
+  &__links {
+    display: flex;
+    gap: 20px;
+    a {
+      font-family: 'TerminaTest', sans-serif;
+      position: relative;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-weight: 500;
+      transition:
+        color 0.2s ease,
+        background 0.2s ease;
+    }
+  }
 }
 
 /* ------- Länkar (desktop) ------- */
-
-.nav__links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav__links a {
-  font-family: 'TerminaTest', sans-serif;
-  position: relative;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 8px 10px;
-  border-radius: 10px;
-  font-weight: 500;
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
-}
-
-.nav__links a:hover {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
-}
 
 .nav__links a.active {
   color: var(--brand);
@@ -105,8 +98,8 @@
   position: fixed;
   inset-block: 0;
   right: 0;
-  width: min(180px, 80vw);
-  background: radial-gradient(circle at top left, #141414 0, #050505 60%);
+  width: min(200px, 80vw);
+
   box-shadow: -24px 0 60px rgba(0, 0, 0, 0.8);
   z-index: 50;
 
@@ -119,6 +112,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  background-color: #050505;
 }
 
 .nav__drawer-inner a {

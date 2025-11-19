@@ -1,4 +1,4 @@
-import BojengImage from '../../assets/photos/listen.jpg';
+import BojengImage from '../../assets/photos/DSC03227.jpg';
 import SpotifyPlayer from '../Players/Spotify';
 import './_sections.scss';
 // === Dummy data – byt till riktiga länkar/filer ===
