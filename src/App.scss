@@ -95,6 +95,11 @@ section {
   border-radius: var(--radius);
   padding: 14px;
   box-shadow: var(--shadow);
+  &--souncloud {
+  }
+  .container-player {
+    background-color: var(--card);
+  }
 }
 
 .player-card h3 {
@@ -242,6 +247,10 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 20px;
+
+  &--img {
+    max-width: 500px;
+  }
 }
 
 .link-underline {
