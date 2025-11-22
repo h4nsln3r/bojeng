@@ -1,7 +1,7 @@
-export type PlayedShow = {
-  date: string; // ISO-datum, kan ändras till Date om du vill
+export interface PlayedShow {
+  date: string;
   city: string;
   venue: string;
-  link: string;
-  price: number;
-};
+  link?: string;
+  price?: number;
+}

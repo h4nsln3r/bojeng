@@ -119,13 +119,3 @@
     margin: auto;
   }
 }
-
-.previosgigs {
-  margin-bottom: 16px;
-  * {
-    &:hover {
-      cursor: pointer;
-      color: var(--brand);
-    }
-  }
-}

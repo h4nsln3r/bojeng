@@ -138,64 +138,6 @@ section {
   margin-top: 10px;
 }
 
-.shows-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 10px;
-}
-
-.shows-list__item {
-  background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  display: grid;
-  grid-template-columns: 120px 1fr 1fr auto;
-  align-items: center;
-  gap: 14px;
-}
-
-.shows-list__date {
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
-}
-.shows-list__city {
-  color: var(--text);
-  opacity: 0.9;
-}
-.shows-list__venue {
-  color: var(--muted);
-}
-
-.shows-list__item .btn {
-  justify-self: end;
-}
-
-@media (max-width: 680px) {
-  .shows-list__item {
-    grid-template-columns: 120px 1fr;
-    grid-template-areas:
-      'date action'
-      'city city'
-      'venue venue';
-    gap: 8px;
-  }
-  .shows-list__date {
-    grid-area: date;
-  }
-  .shows-list__city {
-    grid-area: city;
-  }
-  .shows-list__venue {
-    grid-area: venue;
-  }
-  .shows-list__item .btn {
-    grid-area: action;
-  }
-}
-
 /* Press */
 .section--press {
   // background: var(--bg-soft);
