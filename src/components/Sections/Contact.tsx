@@ -44,20 +44,10 @@ const Contact = () => {
             ))}
           </ul>
         </div>
-        <img className="section__img--maxwidth-720 margin--auto" src={BojengImage} />
+        <img className="section__img--maxwidth-720 margin__left--auto" src={BojengImage} />
       </div>
       <br />
       <br />
-      {/* --- INSTAGRAM FEED --- */}
-      {/* <div className="instagram-feed">
-        <iframe
-          src="//lightwidget.com/widgets/ad42fc24466952b499b263d00fb8d9be.html"
-          scrolling="no"
-          // allowTransparency="true"
-          className="lightwidget-widget instagram-embed"
-          style={{ width: '100%', border: 0, overflow: 'hidden' }}
-        ></iframe>
-      </div> */}
     </div>
   );
 };

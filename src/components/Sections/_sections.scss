@@ -34,9 +34,21 @@
     background: var(--bg-soft);
     background-image: url('../../assets/photos/DSC03083-2.jpg');
     background-size: cover;
-    background-position: 20% -50%;
+
     background-repeat: no-repeat;
     background-attachment: fixed;
+
+    .section__title {
+      color: rgb(0, 38, 0);
+    }
+
+    img {
+      border-radius: var(--radius);
+      /* Mobil */
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
+    }
   }
 
   &__row {
@@ -98,6 +110,11 @@
 }
 
 .margin {
+  &__left {
+    &--auto {
+      margin-left: auto;
+    }
+  }
   &--auto {
     margin: auto;
   }

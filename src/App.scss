@@ -15,6 +15,7 @@
   --muted: #b4b4b7;
   --brand: #16d222; /* accent – byt vid behov */
   --ring: rgba(124, 244, 226, 0.35);
+  --radius-sm: 12px;
   --radius: 16px;
   --radius-lg: 28px;
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
@@ -92,7 +93,7 @@ section {
 .player-card {
   background: var(--card);
   border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   padding: 14px;
   box-shadow: var(--shadow);
   &--souncloud {
@@ -243,10 +244,17 @@ section {
 }
 
 .contact-card {
-  background: linear-gradient(180deg, rgba(7, 49, 21, 0.9), rgba(124, 244, 134, 0.2));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(0, 38, 0, 0.9), rgba(74, 88, 91, 0.6));
+  // border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
   padding: 20px;
+  font-family: 'TerminaTest', sans-serif;
+  max-width: 360px;
+  /* Mobil */
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
 }
 
 .link-underline {
@@ -260,12 +268,14 @@ section {
   padding: 0;
   margin: 14px 0 0;
   list-style: none;
+  justify-content: center;
 }
 
 .socials a {
   color: var(--text);
   text-decoration: none;
   opacity: 0.9;
+  font-size: 8px;
 }
 .socials a:hover {
   opacity: 1;

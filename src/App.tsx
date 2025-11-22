@@ -8,6 +8,7 @@ import Listen from './components/Sections/Listen';
 import Shows from './components/Sections/Shows';
 import Press from './components/Sections/Press';
 import Contact from './components/Sections/Contact';
+import Feed from './components/Sections/Feed';
 
 export default function App() {
   useEffect(() => {
@@ -44,9 +45,9 @@ export default function App() {
         <section id="contact" className="section section--contact">
           <Contact />
         </section>
+        <Footer />
+        <Feed />
       </main>
-
-      <Footer />
     </>
   );
 }
