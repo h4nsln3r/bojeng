@@ -5,6 +5,7 @@ iframe.spotify-player {
 
   @media (max-width: 768px) {
     flex-grow: 1;
+    min-width: unset;
     margin: 10px 0px 10px 0px;
   }
 }

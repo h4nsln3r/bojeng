@@ -1,20 +1,5 @@
-Fixa spelningar columenen 
-designa lite snyggare med max width osv
-
 
 Egen section för misery?
 Misery: 
 bit.ly/43cCvuu 
 1 L'gg till texten snyggt till misery
-
-
-Banner för hela skivan
-
-{
-  /* <div className="foto">
-          Foto:{' '}
-          <a href="https://www.instagram.com/urbanan/" target="true">
-            Urban Anjar
-          </a>
-        </div> */
-}

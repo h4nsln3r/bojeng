@@ -44,7 +44,7 @@ const Contact = () => {
             ))}
           </ul>
         </div>
-        <img className="section__img--maxwidth-720 margin__left--auto" src={BojengImage} />
+        <img className="section__img--maxwidth-720" src={BojengImage} />
       </div>
       <br />
       <br />

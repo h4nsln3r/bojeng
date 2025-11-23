@@ -4,4 +4,6 @@ export interface PlayedShow {
   venue: string;
   link?: string;
   price?: number;
+  notes?: string;
+  band?: string;
 }

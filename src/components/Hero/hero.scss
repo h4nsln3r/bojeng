@@ -13,6 +13,11 @@
   overflow: hidden;
   z-index: 1;
 
+  /* Mobil */
+  @media (max-width: 768px) {
+    min-height: 86vh;
+  }
+
   &__bg {
     position: absolute;
     inset: 0;

@@ -4,14 +4,9 @@ import GigList from '../List/ShowsList';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PlayedShow } from '@/types/global';
+import { PLAYED_BOJENG } from '@/data/gigs';
 
 const SHOWS: PlayedShow[] = [];
-
-const PLAYED = [
-  { date: '2025-12-05', city: 'Malmö', venue: 'Plan B', link: '#', price: 0 },
-  { date: '2026-01-17', city: 'Göteborg', venue: 'Pustervik (lilla)', link: '#', price: 0 },
-  { date: '2026-02-08', city: 'Stockholm', venue: 'Debaser', link: '#', price: 0 },
-];
 
 const Shows = () => {
   // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkt
@@ -51,7 +46,7 @@ const Shows = () => {
               transition={{ duration: 0.25, ease: 'easeInOut' }}
             >
               <div className="accordion-content">
-                <GigList shows={PLAYED} emptyText="Inga tidigare spelningar ännu." />
+                <GigList shows={PLAYED_BOJENG} emptyText="Inga tidigare spelningar ännu." />
               </div>
             </motion.div>
           )}
