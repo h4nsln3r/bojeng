@@ -9,6 +9,7 @@ import Shows from './components/Sections/Shows';
 import Press from './components/Sections/Press';
 import Contact from './components/Sections/Contact';
 import Feed from './components/Sections/Feed';
+import { Merch } from './components/Sections/Merch';
 
 export default function App() {
   useEffect(() => {
@@ -39,13 +40,19 @@ export default function App() {
         </section>
 
         <section id="press" className="section section--press">
-          <Press />
+          <Merch />
         </section>
 
         <section id="contact" className="section section--contact">
           <Contact />
         </section>
+
+        <section id="press" className="section section--press">
+          <Press />
+        </section>
+
         <Footer />
+
         <Feed />
       </main>
     </>

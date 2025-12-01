@@ -37,7 +37,7 @@ const Shows = () => {
         </div>
       </div>
 
-      <div className="previosgigs">
+      <div className="previous-gigs">
         <div
           onClick={handleClick}
           className="section__row section__row--space-between section--align-items-center"

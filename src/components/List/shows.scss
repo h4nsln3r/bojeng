@@ -62,6 +62,11 @@
   }
 }
 
-.previosgigs {
+.previous-gigs {
   margin-bottom: 16px;
+
+  .section__title:hover {
+    cursor: pointer;
+    color: var(--primary);
+  }
 }

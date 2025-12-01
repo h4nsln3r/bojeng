@@ -27,8 +27,10 @@
     &:has(.section__title:hover) {
       background-image: url('../../assets/photos/DSC03657-3.jpg');
     }
-    .section__col {
-      max-width: fit-content;
+    .section {
+      &__col {
+        max-width: fit-content;
+      }
     }
     &__icons {
       margin-top: -10px;

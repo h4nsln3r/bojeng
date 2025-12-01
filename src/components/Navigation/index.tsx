@@ -10,8 +10,8 @@ function navLabel(id: string) {
       return 'Lyssna';
     case 'shows':
       return 'Spelningar';
-    case 'press':
-      return 'Press';
+    // case 'press':
+    //   return 'Press';
     case 'contact':
       return 'Kontakt';
     default:
@@ -20,7 +20,7 @@ function navLabel(id: string) {
 }
 
 const Navigation = () => {
-  const sectionIds = ['listen', 'shows', 'press', 'contact'];
+  const sectionIds = ['listen', 'shows', 'contact'];
   const activeId = useScrollSpy(sectionIds, 100);
 
   const [isOpen, setIsOpen] = useState(false);
