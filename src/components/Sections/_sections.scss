@@ -46,16 +46,11 @@
   }
 
   &--contact {
-    // background: var(--bg);
-    background: var(--bg-soft);
-    background-image: url('../../assets/photos/DSC03083-2.jpg');
-    background-size: cover;
-
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: var(--bg);
+    // background: var(--bg-soft);
 
     .section__title {
-      color: rgb(0, 38, 0);
+      color: white;
     }
 
     img {
@@ -65,6 +60,14 @@
         max-width: 100%;
       }
     }
+  }
+
+  &--press {
+    background-image: url('../../assets/photos/DSC03083-2.jpg');
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   &__row {

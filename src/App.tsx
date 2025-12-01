@@ -39,16 +39,16 @@ export default function App() {
           <Shows />
         </section>
 
-        <section id="press" className="section section--press">
+        <section id="merch" className="section section--merch">
           <Merch />
-        </section>
-
-        <section id="contact" className="section section--contact">
-          <Contact />
         </section>
 
         <section id="press" className="section section--press">
           <Press />
+        </section>
+
+        <section id="contact" className="section section--contact">
+          <Contact />
         </section>
 
         <Footer />
