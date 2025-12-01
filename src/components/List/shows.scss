@@ -4,11 +4,13 @@
   padding: 0;
   display: grid;
   gap: 10px;
+
   &--empty {
     margin-top: 0.5rem;
     opacity: 0.8;
     font-style: italic;
   }
+
   &__item {
     background: var(--card);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -62,10 +64,4 @@
 
 .previosgigs {
   margin-bottom: 16px;
-  * {
-    &:hover {
-      cursor: pointer;
-      color: var(--brand);
-    }
-  }
 }

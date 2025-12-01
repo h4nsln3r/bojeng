@@ -80,9 +80,6 @@
       z-index: 5;
       > * {
         margin: 0 16px;
-        &:hover {
-          color: green;
-        }
       }
       /* Mobil */
       @media (max-width: 768px) {

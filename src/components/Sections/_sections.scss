@@ -24,8 +24,22 @@
     background-repeat: no-repeat;
     // background-attachment: fixed;
 
-    &:has(.shows-list__item:hover) {
+    &:has(.section__title:hover) {
       background-image: url('../../assets/photos/DSC03657-3.jpg');
+    }
+    .section__col {
+      max-width: fit-content;
+    }
+    &__icons {
+      margin-top: -10px;
+      display: flex;
+      gap: 8px;
+      justify-content: end;
+      a {
+        svg {
+          font-size: 18px;
+        }
+      }
     }
   }
 

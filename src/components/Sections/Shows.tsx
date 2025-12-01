@@ -5,6 +5,9 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PlayedShow } from '@/types/global';
 import { PLAYED_BOJENG } from '@/data/gigs';
+import Icon from '../Icon';
+import { LINKS } from '@/data/socials';
+import { FaFacebook, FaInstagram, FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
 
 const SHOWS: PlayedShow[] = [];
 
@@ -20,10 +23,18 @@ const Shows = () => {
         <h2 className="section__title">Spelningar</h2>
 
         <GigList shows={SHOWS} emptyText="Inga spelningar för tillfället." />
-
-        <p className="section__fineprint">
-          Fler datum släpps löpande – följ oss i sociala kanaler.
-        </p>
+        <div className="section__col">
+          <p className="section__fineprint">
+            Fler datum släpps löpande – följ oss i sociala kanaler.
+          </p>
+          <div className="section--shows__icons">
+            <Icon link={LINKS.Soundcloud} icon={<FaSoundcloud className="icon" />} />
+            <Icon link={LINKS.Youtube} icon={<FaYoutube className="icon" />} />
+            <Icon link={LINKS.Instagram} icon={<FaInstagram className="icon" />} />
+            <Icon link={LINKS.Facebook} icon={<FaFacebook className="icon" />} />
+            <Icon link={LINKS.Spotify} icon={<FaSpotify className="icon" />} />
+          </div>
+        </div>
       </div>
 
       <div className="previosgigs">

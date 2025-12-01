@@ -1,4 +1,5 @@
 import { ReactElement } from 'react';
+import './icon.scss';
 
 interface Props {
   link: string;
@@ -7,7 +8,7 @@ interface Props {
 
 const Icon = ({ link, icon }: Props) => {
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer">
+    <a href={link} className="icon" target="_blank" rel="noopener noreferrer">
       {icon}
     </a>
   );
