@@ -13,7 +13,8 @@ const SHOWS: PlayedShow[] = [];
 
 const Shows = () => {
   // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkt
-  const [isOpen, setIsOpen] = useState(SHOWS.length === 0);
+  // const [isOpen, setIsOpen] = useState(SHOWS.length === 0);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = () => setIsOpen((prev) => !prev);
 
@@ -36,7 +37,7 @@ const Shows = () => {
           </div>
         </div>
       </div>
-
+      <br />
       <div className="previous-gigs">
         <div
           onClick={handleClick}

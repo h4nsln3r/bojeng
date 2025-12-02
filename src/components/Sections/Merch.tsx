@@ -1,8 +1,9 @@
 import React from 'react';
 import './_sections.scss';
-import BojengImage1 from '../../assets/photos/DSC03200.jpg';
-import BojengImage2 from '../../assets/photos/DSC03172.jpg';
 import Button from '../Button';
+
+import VinylImage from '../../assets/images/zucchini_bojeng.jpg';
+import TShirtImage from '../../assets/images/tshirt.jpg';
 
 type MerchItem = {
   id: string;
@@ -11,74 +12,81 @@ type MerchItem = {
   price: string;
   image: string;
   stripeUrl: string;
+  badge?: string;
+  hasSizes?: boolean;
 };
 
 const MERCH_ITEMS: MerchItem[] = [
   {
-    id: 'tee-black',
-    name: 'Bojeng T-shirt – svart',
-    description: 'Mjuk unisex T-shirt, 100% bomull. Perfekt till gig, rep och vardag.',
-    price: '250 kr',
-    image: BojengImage1,
-    // TODO: byt till riktig Payment Link från Stripe, t.ex. https://buy.stripe.com/...
-    stripeUrl: 'https://buy.stripe.com/test_xxxxxxxxxxxxxxx',
+    id: 'vinyl',
+    name: 'Bojeng VINYL',
+    description: 'ALBUMVINYL inkl. digital nedladdning av hela Zucchini.',
+    price: '200 kr',
+    image: VinylImage,
+    stripeUrl: 'https://buy.stripe.com/test_8x200j2kj5G88bualr9sk01',
   },
   {
-    id: 'totebag-green',
-    name: 'Bojeng tote bag',
-    description: 'Tygpåse med Bojeng-tryck. Rymmer både noter, strängar och merch.',
+    id: 'tshirt',
+    name: 'Bojeng T- SHIRT',
+    description: 'Svart T-shirt med vit logga fram och bak. 100% ekologisk bomull.',
     price: '200 kr',
-    image: BojengImage2,
-    stripeUrl: 'https://buy.stripe.com/test_yyyyyyyyyyyyyyy',
+    image: TShirtImage,
+    stripeUrl: 'https://buy.stripe.com/test_8x200j2kj5G88bualr9sk01',
+    hasSizes: true,
   },
 ];
 
-//https://chatgpt.com/g/g-p-67f4fcfddcc08191860183ab5da7c9aa/c/692dc107-3510-832e-b5a1-80d568096961
-
 export const Merch: React.FC = () => {
   return (
-    <div className="container">
-      <h2 className="section__title">Merch</h2>
-      {/* <p style={{ maxWidth: 520, marginTop: 4, marginBottom: 18 }}>
-        Här kan du stötta Bojeng genom att köpa merch. När du klickar på en produkt skickas du
-        vidare till en säker Stripe-kassa där du slutför köpet.
-      </p> */}
+    <section id="merch" className="section section--merch">
+      <div className="container">
+        <h2 className="section__title">Merch</h2>
+        {/* <p className="section__subtitle">
+            Stötta Bojeng genom att köpa merch. Vi skickar från Malmö med kärlek och tejp. Betalning
+            sker säkert via Stripe.
+          </p> */}
 
-      <div className="press-cards">
-        {MERCH_ITEMS.map((item) => (
-          <article key={item.id} className="press-card merch-card">
-            <div
-              style={{
-                borderRadius: 'var(--radius)',
-                overflow: 'hidden',
-                marginBottom: 12,
-                maxHeight: 260,
-              }}
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </div>
+        <div className="merch-grid">
+          {MERCH_ITEMS.map((item) => (
+            <article key={item.id} className="merch-card">
+              <div className="merch-card__image-wrap">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="merch-card__image"
+                  loading="lazy"
+                />
+                {item.badge && <span className="merch-card__badge">{item.badge}</span>}
+              </div>
 
-            <h3 style={{ marginBottom: 4 }}>{item.name}</h3>
-            <p style={{ marginTop: 0, marginBottom: 6 }}>{item.description}</p>
-            <p style={{ fontWeight: 700, marginTop: 0, marginBottom: 12 }}>{item.price}</p>
+              <div className="merch-card__body">
+                <h3 className="merch-card__title">{item.name}</h3>
+                <p className="merch-card__description">{item.description}</p>
+                <p className="merch-card__price">{item.price}</p>
 
-            <Button
-              href={item.stripeUrl}
-              variant="solid"
-              ariaLabel={`Köp ${item.name} – öppnas Stripe-kassa`}
-            >
-              Köp via Stripe
-            </Button>
-          </article>
-        ))}
+                <Button
+                  href={item.stripeUrl}
+                  variant="solid"
+                  ariaLabel={`Köp ${item.name} – öppnas i Stripe-kassa`}
+                >
+                  Köp via Stripe
+                </Button>
+
+                <p className="merch-card__note">
+                  {item.hasSizes
+                    ? 'Storlek & adress väljer du i kassan.'
+                    : 'Adress väljer du i kassan.'}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <p className="merch-footnote">
+          Har du frågor om storlek, frakt eller beställning? Maila oss på{' '}
+          <a href="mailto:bojengband@gmail.com">bojengband@gmail.com</a>.
+        </p>
       </div>
-
-      <br />
-      <br />
-    </div>
+    </section>
   );
 };
