@@ -1,12 +1,28 @@
 import { useEffect } from 'react';
 import './_sections.scss';
 import BojengImage from '../../assets/photos/DSC03701.jpg';
+import { LINKS } from '@/data/socials';
+import { FaInstagram } from 'react-icons/fa';
+import { FaFacebook } from 'react-icons/fa';
+import { FaSpotify } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+import Icon from '../Icon';
 
 const SOCIALS = [
-  { name: 'Instagram', href: 'https://instagram.com/bojengband', aria: 'Instagram' },
-  { name: 'Spotify', href: 'https://open.spotify.com/artist/XXX', aria: 'Spotify' },
-  { name: 'YouTube', href: 'https://youtube.com/@bojeng', aria: 'YouTube' },
-  { name: 'TikTok', href: 'https://tiktok.com/@bojeng', aria: 'TikTok' },
+  {
+    name: 'Instagram',
+    href: LINKS.Instagram,
+    aria: 'Instagram',
+    icon: <FaInstagram className="icon" />,
+  },
+  {
+    name: 'Facebook',
+    href: LINKS.Facebook,
+    aria: 'Facebook',
+    icon: <FaFacebook className="icon" />,
+  },
+  { name: 'Spotify', href: LINKS.Spotify, aria: 'Spotify', icon: <FaSpotify className="icon" /> },
+  { name: 'YouTube', href: LINKS.YouTube, aria: 'YouTube', icon: <FaYoutube className="icon" /> },
 ];
 
 const Contact = () => {
@@ -36,7 +52,8 @@ const Contact = () => {
 
           <ul className="socials">
             {SOCIALS.map((s) => (
-              <li key={s.name}>
+              <li className="" key={s.name}>
+                <Icon link={s.href} icon={s.icon} />
                 <a href={s.href} aria-label={s.aria} target="_blank" rel="noreferrer">
                   {s.name}
                 </a>

@@ -30,7 +30,7 @@ const Shows = () => {
           </p>
           <div className="section--shows__icons">
             <Icon link={LINKS.Soundcloud} icon={<FaSoundcloud className="icon" />} />
-            <Icon link={LINKS.Youtube} icon={<FaYoutube className="icon" />} />
+            <Icon link={LINKS.YouTube} icon={<FaYoutube className="icon" />} />
             <Icon link={LINKS.Instagram} icon={<FaInstagram className="icon" />} />
             <Icon link={LINKS.Facebook} icon={<FaFacebook className="icon" />} />
             <Icon link={LINKS.Spotify} icon={<FaSpotify className="icon" />} />

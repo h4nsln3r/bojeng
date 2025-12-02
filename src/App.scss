@@ -196,6 +196,9 @@ section {
   padding: 20px;
   font-family: 'TerminaTest', sans-serif;
   max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   /* Mobil */
   @media (max-width: 768px) {
     margin-bottom: 10px;
