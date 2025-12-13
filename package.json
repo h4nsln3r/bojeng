@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "prepare": "husky",
     "format": "prettier --write .",
-    "test": "echo \"(no tests configured)\" && exit 0"
+    "test": "echo \"(no tests configured)\" && exit 0",
+    "postinstall": "npx patch-package"
   },
   "lint-staged": {
     "*.{ts,tsx,css,scss,md}": [
@@ -48,6 +49,7 @@
     "globals": "^16.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
+    "patch-package": "^8.0.1",
     "prettier": "^3.6.2",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
