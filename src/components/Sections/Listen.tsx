@@ -41,7 +41,12 @@ const Listen = () => {
         {LATEST_SINGLE.apple && (
           <div className="player-card">
             <div className="ratio">
-              <iframe title="Apple Music" src={LATEST_SINGLE.apple} loading="lazy" />
+              <iframe
+                title="Apple Music"
+                src={LATEST_SINGLE.apple}
+                loading="lazy"
+                allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
+              />
             </div>
           </div>
         )}
@@ -54,6 +59,7 @@ const Listen = () => {
                 title="SoundCloud"
                 src={LATEST_SINGLE.soundcloud}
                 loading="lazy"
+                allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
               />
             </div>
           </div>

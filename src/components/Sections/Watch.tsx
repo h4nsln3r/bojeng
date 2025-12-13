@@ -14,7 +14,7 @@ const Watch = () => {
           <iframe
             title="Video"
             src={VIDEO.mux || VIDEO.youtube}
-            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+            allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
             allowFullScreen
             loading="lazy"
           />

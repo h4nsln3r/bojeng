@@ -7,6 +7,7 @@ const Feed = () => {
         // allowTransparency="true"
         className="lightwidget-widget instagram-embed"
         style={{ width: '100%', border: 0, overflow: 'hidden' }}
+        allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
       ></iframe>
     </div>
   );
