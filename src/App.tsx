@@ -6,10 +6,10 @@ import Hero from './components/Hero';
 import Listen from './components/Sections/Listen';
 // import Watch from './components/Sections/Watch';
 import Shows from './components/Sections/Shows';
-import Press from './components/Sections/Press';
+// import Press from './components/Sections/Press';
 import Contact from './components/Sections/Contact';
 import Feed from './components/Sections/Feed';
-import { Merch } from './components/Sections/Merch';
+// import { Merch } from './components/Sections/Merch';
 
 export default function App() {
   useEffect(() => {
@@ -38,14 +38,14 @@ export default function App() {
         <section id="shows" className="section section--shows">
           <Shows />
         </section>
-
+        {/* 
         <section id="merch" className="section section--merch">
           <Merch />
         </section>
 
         <section id="press" className="section section--press">
           <Press />
-        </section>
+        </section> */}
 
         <section id="contact" className="section section--contact">
           <Contact />
