@@ -10,8 +10,8 @@ const Listen = () => {
         <div className="section__col">
           <h2 className="section__title">Lyssna</h2>
           <SpotifyPlayer />
-          <Card />
           <br />
+          <Card />
         </div>
         <img className="section__img--maxwidth-720 bojengimage--green" src={BojengImage} />
       </div>
