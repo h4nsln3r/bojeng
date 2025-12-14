@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './_sections.scss';
-import BojengImage from '../../assets/photos/DSC03701.jpg';
+import BojengImage from '../../assets/photos/DSC03690.jpg';
 import { LINKS } from '@/data/socials';
 import { FaInstagram } from 'react-icons/fa';
 import { FaFacebook } from 'react-icons/fa';

@@ -239,3 +239,32 @@
   font-size: 0.85rem;
   opacity: 0.8;
 }
+
+.bojengimage--green {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  /* Tvinga färgtonen */
+  filter: grayscale(0.1) contrast(1.2) brightness(0.85) saturate(1.8) hue-rotate(35deg);
+}
+
+.bojengimage--green::after {
+  background: rgba(0, 255, 100, 0.85);
+  mix-blend-mode: hard-light;
+}
+
+.bojengimage--green::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(120, 255, 180, 0.35),
+    rgba(0, 80, 40, 0.6),
+    rgba(0, 30, 15, 0.85)
+  );
+  mix-blend-mode: screen;
+  pointer-events: none;
+}

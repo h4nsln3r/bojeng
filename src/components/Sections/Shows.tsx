@@ -58,7 +58,7 @@ const Shows = () => {
               transition={{ duration: 0.25, ease: 'easeInOut' }}
             >
               <div className="accordion-content">
-                <GigList shows={PLAYED_BOJENG} emptyText="Inga tidigare spelningar ännu." />
+                <GigList shows={PLAYED_BOJENG} />
               </div>
             </motion.div>
           )}

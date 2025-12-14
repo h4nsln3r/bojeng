@@ -9,13 +9,15 @@
   display: grid;
   place-items: center;
   min-height: 86vh;
+  min-height: 86dvh;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   overflow: hidden;
   z-index: 1;
 
-  /* Mobil */
+  /* Mobila */
   @media (max-width: 768px) {
-    min-height: 86vh;
+    min-height: 80vh;
+    min-height: 80dvh;
   }
 
   &__bg {

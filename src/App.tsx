@@ -8,7 +8,7 @@ import Listen from './components/Sections/Listen';
 import Shows from './components/Sections/Shows';
 // import Press from './components/Sections/Press';
 import Contact from './components/Sections/Contact';
-import Feed from './components/Sections/Feed';
+// import Feed from './components/Sections/Feed';
 // import { Merch } from './components/Sections/Merch';
 
 export default function App() {
@@ -53,7 +53,7 @@ export default function App() {
 
         <Footer />
 
-        <Feed />
+        {/* <Feed /> */}
       </main>
     </>
   );
