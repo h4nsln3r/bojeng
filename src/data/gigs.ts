@@ -42,6 +42,11 @@ export const PLAYED_BOJENG: PlayedShow[] = [
   {
     date: '2024',
     city: 'Malmö',
+    venue: 'Folköl & DunkaDunka',
+  },
+  {
+    date: '2024',
+    city: 'Malmö',
     venue: 'Mässingshornet m Pardon',
   },
   {
