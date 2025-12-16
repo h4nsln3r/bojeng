@@ -4,8 +4,10 @@ import Icon from '../Icon';
 import { FaFacebook, FaInstagram, FaSoundcloud, FaYoutube, FaSpotify } from 'react-icons/fa';
 import { SlArrowDown } from 'react-icons/sl';
 import { LINKS } from '@/data/socials';
+import { useTranslation } from 'react-i18next';
 
 const HeroFooter = () => {
+  const { t } = useTranslation();
   return (
     <div className="hero__footer">
       <div className="hero__footer__icons">
@@ -21,7 +23,7 @@ const HeroFooter = () => {
         </a>
       </div>
       <div className="hero__footer__mail">
-        <a className="">CONTACT: BOJENGBAND@GMAIL.COM</a>
+        <a className="">{t('hero.contactPrefix')} BOJENGBAND@GMAIL.COM</a>
       </div>
     </div>
   );

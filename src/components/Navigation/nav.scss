@@ -90,7 +90,7 @@
   cursor: pointer;
   z-index: 40;
   height: 100vh;
-  width: 100vh;
+  width: 100vw;
 }
 
 /* Drawer sitter fast i höger sida */
@@ -113,6 +113,47 @@
   flex-direction: column;
   gap: 8px;
   background-color: #050505;
+}
+
+.nav__spacer {
+  flex: 1;
+}
+
+.nav__lang {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav__lang--desktop {
+  padding-top: 0;
+  border-top: 0;
+  margin-left: 6px;
+}
+
+.nav__lang button {
+  font-family: 'TerminaTest', sans-serif;
+  background: transparent;
+  border: 0;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.nav__lang button:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav__lang button.active {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nav__drawer-inner a {
@@ -168,4 +209,37 @@
   .nav__overlay {
     display: none;
   }
+}
+
+.nav__lang-btn {
+  background: transparent;
+  border: 0;
+  padding: 6px; /* mindre än innan */
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+.nav__lang-btn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.nav__lang-btn.active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Själva flagg-SVGn */
+.nav__flag {
+  width: 18px; /* lagom “icon size” */
+  height: 12px;
+  display: block;
+  border-radius: 3px; /* lite mjukare */
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); /* subtil kant */
 }

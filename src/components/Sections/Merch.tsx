@@ -4,6 +4,7 @@ import Button from '../Button';
 
 import VinylImage from '../../assets/images/zucchini_bojeng.jpg';
 import TShirtImage from '../../assets/images/tshirt.jpg';
+import { useTranslation } from 'react-i18next';
 
 type MerchItem = {
   id: string;
@@ -37,10 +38,11 @@ const MERCH_ITEMS: MerchItem[] = [
 ];
 
 export const Merch: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <section id="merch" className="section section--merch">
       <div className="container">
-        <h2 className="section__title">Merch</h2>
+        <h2 className="section__title">{t('merch.title')}</h2>
         {/* <p className="section__subtitle">
             Stötta Bojeng genom att köpa merch. Vi skickar från Malmö med kärlek och tejp. Betalning
             sker säkert via Stripe.
@@ -67,15 +69,13 @@ export const Merch: React.FC = () => {
                 <Button
                   href={item.stripeUrl}
                   variant="solid"
-                  ariaLabel={`Köp ${item.name} – öppnas i Stripe-kassa`}
+                  ariaLabel={t('merch.buyAria', { name: item.name })}
                 >
-                  Köp via Stripe
+                  {t('merch.buyViaStripe')}
                 </Button>
 
                 <p className="merch-card__note">
-                  {item.hasSizes
-                    ? 'Storlek & adress väljer du i kassan.'
-                    : 'Adress väljer du i kassan.'}
+                  {item.hasSizes ? t('merch.noteSizes') : t('merch.noteAddress')}
                 </p>
               </div>
             </article>
@@ -83,8 +83,7 @@ export const Merch: React.FC = () => {
         </div>
 
         <p className="merch-footnote">
-          Har du frågor om storlek, frakt eller beställning? Maila oss på{' '}
-          <a href="mailto:bojengband@gmail.com">bojengband@gmail.com</a>.
+          {t('merch.footnote')} <a href="mailto:bojengband@gmail.com">bojengband@gmail.com</a>.
         </p>
       </div>
     </section>

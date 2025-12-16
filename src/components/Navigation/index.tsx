@@ -2,30 +2,31 @@ import { useEffect, useState } from 'react';
 import { useScrollSpy } from '@/hooks/useScrollSpy';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import GB from 'country-flag-icons/react/3x2/GB';
+import SE from 'country-flag-icons/react/3x2/SE';
 import './nav.scss';
 
-function navLabel(id: string) {
+function navKey(id: string) {
   switch (id) {
     case 'listen':
-      return 'Lyssna';
+      return 'nav.listen';
     case 'shows':
-      return 'Spelningar';
-    // case 'press':
-    //   return 'Press';
+      return 'nav.shows';
     case 'contact':
-      return 'Kontakt';
+      return 'nav.contact';
     default:
       return id;
   }
 }
 
 const Navigation = () => {
+  const { t, i18n } = useTranslation();
   const sectionIds = ['listen', 'shows', 'contact'];
   const activeId = useScrollSpy(sectionIds, 100);
 
   const [isOpen, setIsOpen] = useState(false);
 
-  // Stäng drawer när man går upp i desktop-bredd
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 768) setIsOpen(false);
@@ -35,26 +36,53 @@ const Navigation = () => {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
-  const handleLinkClick = () => {
-    setIsOpen(false);
+  const handleLinkClick = () => setIsOpen(false);
+
+  const setLanguage = (lng: 'en' | 'sv') => {
+    void i18n.changeLanguage(lng);
   };
 
+  const isEn = i18n.language?.startsWith('en');
+  const isSv = i18n.language?.startsWith('sv');
+
   return (
-    <nav className="nav" aria-label="Huvudmeny">
+    <nav className="nav" aria-label={t('nav.aria')}>
       {/* Desktop-nav */}
       <div className="nav__links nav__links--desktop">
         {sectionIds.map((id) => (
           <a key={id} href={`#${id}`} className={activeId === id ? 'active' : ''}>
-            {navLabel(id)}
+            {t(navKey(id))}
           </a>
         ))}
+
+        <div className="nav__lang nav__lang--desktop" aria-label={t('nav.language')}>
+          <button
+            type="button"
+            className={`nav__lang-btn ${isEn ? 'active' : ''}`}
+            onClick={() => setLanguage('en')}
+            aria-label={t('nav.english')}
+            title={t('nav.english')}
+          >
+            <GB className="nav__flag" />
+          </button>
+
+          <button
+            type="button"
+            className={`nav__lang-btn ${isSv ? 'active' : ''}`}
+            onClick={() => setLanguage('sv')}
+            aria-label={t('nav.swedish')}
+            title={t('nav.swedish')}
+          >
+            <SE className="nav__flag" />
+          </button>
+        </div>
       </div>
 
       {/* Mobil-toggle */}
       <button
         type="button"
         className="nav__toggle"
-        aria-label={isOpen ? 'Stäng meny' : 'Öppna meny'}
+        aria-label={isOpen ? t('nav.closeMenu') : t('nav.openMenu')}
         aria-expanded={isOpen}
         aria-controls="mobile-menu"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -66,7 +94,6 @@ const Navigation = () => {
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Mörk overlay bakom drawer */}
             <motion.button
               type="button"
               className="nav__overlay"
@@ -77,7 +104,6 @@ const Navigation = () => {
               exit={{ opacity: 0 }}
             />
 
-            {/* Själva drawer-panelen */}
             <motion.aside
               id="mobile-menu"
               className="nav__drawer"
@@ -94,9 +120,33 @@ const Navigation = () => {
                     className={activeId === id ? 'active' : ''}
                     onClick={handleLinkClick}
                   >
-                    {navLabel(id)}
+                    {t(navKey(id))}
                   </a>
                 ))}
+
+                <div className="nav__spacer" />
+
+                <div className="nav__lang" aria-label={t('nav.language')}>
+                  <button
+                    type="button"
+                    className={`nav__lang-btn ${isEn ? 'active' : ''}`}
+                    onClick={() => setLanguage('en')}
+                    aria-label={t('nav.english')}
+                    title={t('nav.english')}
+                  >
+                    <GB className="nav__flag" />
+                  </button>
+
+                  <button
+                    type="button"
+                    className={`nav__lang-btn ${isSv ? 'active' : ''}`}
+                    onClick={() => setLanguage('sv')}
+                    aria-label={t('nav.swedish')}
+                    title={t('nav.swedish')}
+                  >
+                    <SE className="nav__flag" />
+                  </button>
+                </div>
               </div>
             </motion.aside>
           </>

@@ -3,11 +3,13 @@ import './hero.scss';
 import BojengLogo from '../../assets/logo-text/bojeng_logotyp_white.png';
 import HeroFooter from './Footer';
 // import Button from '../Button';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <section className="hero" aria-label="Bojeng hero" id="top">
+      <section className="hero" aria-label={t('hero.aria')} id="top">
         <div className="hero__bg" />
 
         <div className="container hero__inner">
