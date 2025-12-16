@@ -7,6 +7,7 @@ import { FaFacebook } from 'react-icons/fa';
 import { FaSpotify } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import Icon from '../Icon';
+import { useTranslation } from 'react-i18next';
 
 const SOCIALS = [
   {
@@ -26,6 +27,7 @@ const SOCIALS = [
 ];
 
 const Contact = () => {
+  const { t } = useTranslation();
   // Laddar LightWidget-skriptet korrekt i React
   useEffect(() => {
     const script = document.createElement('script');
@@ -40,11 +42,11 @@ const Contact = () => {
 
   return (
     <div className="container">
-      <h2 className="section__title">Kontakt</h2>
+      <h2 className="section__title">{t('contact.title')}</h2>
       <div className="section__row section__col--mobile">
         <div className="contact-card">
           <p>
-            Bokning/press:{' '}
+            {t('contact.bookingPress')}{' '}
             <a href="mailto:BOJENGBAND@gmail.com" className="link-underline">
               BOJENGBAND@gmail.com
             </a>

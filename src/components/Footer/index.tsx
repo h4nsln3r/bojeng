@@ -2,6 +2,7 @@
 // import Icon from '../Icon';
 
 import './footer.scss';
+import { useTranslation } from 'react-i18next';
 
 // const LINKS = {
 //   Soundcloud:
@@ -13,12 +14,13 @@ import './footer.scss';
 // };
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer className="footer">
       <div className="container footer__inner">
         <p>© {new Date().getFullYear()} BOJENG</p>
         <a href="#top" className="back-to-top">
-          Till toppen ↑
+          {t('footer.backToTop')}
         </a>
       </div>
     </footer>

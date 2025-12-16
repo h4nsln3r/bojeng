@@ -8,10 +8,12 @@ import { PLAYED_BOJENG } from '@/data/gigs';
 import Icon from '../Icon';
 import { LINKS } from '@/data/socials';
 import { FaFacebook, FaInstagram, FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const SHOWS: PlayedShow[] = [];
 
 const Shows = () => {
+  const { t } = useTranslation();
   // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkt
   // const [isOpen, setIsOpen] = useState(SHOWS.length === 0);
   const [isOpen, setIsOpen] = useState(false);
@@ -21,13 +23,11 @@ const Shows = () => {
   return (
     <div className="container">
       <div>
-        <h2 className="section__title">Spelningar</h2>
+        <h2 className="section__title">{t('shows.title')}</h2>
 
-        <GigList shows={SHOWS} emptyText="Inga spelningar för tillfället." />
+        <GigList shows={SHOWS} emptyText={t('shows.empty')} />
         <div className="section__col">
-          <p className="section__fineprint">
-            Fler datum släpps löpande – följ oss i sociala kanaler.
-          </p>
+          <p className="section__fineprint">{t('shows.moreDates')}</p>
           <div className="section--shows__icons">
             <Icon link={LINKS.Soundcloud} icon={<FaSoundcloud className="icon" />} />
             <Icon link={LINKS.YouTube} icon={<FaYoutube className="icon" />} />
@@ -43,7 +43,7 @@ const Shows = () => {
           onClick={handleClick}
           className="section__row section__row--space-between section--align-items-center"
         >
-          <h3 className="section__title">Tidigare spelningar</h3>
+          <h3 className="section__title">{t('shows.previous')}</h3>
           {isOpen ? <SlArrowUp /> : <SlArrowDown />}
         </div>
 

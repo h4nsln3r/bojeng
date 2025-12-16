@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "aria": "Main menu",
+    "listen": "Listen",
+    "shows": "Shows",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "english": "English",
+    "swedish": "Swedish"
+  },
+  "header": {
+    "homeAria": "Bojeng – home"
+  },
+  "hero": {
+    "aria": "Bojeng hero",
+    "contactPrefix": "CONTACT:"
+  },
+  "listen": {
+    "title": "Listen"
+  },
+  "shows": {
+    "title": "Shows",
+    "empty": "No shows right now.",
+    "tickets": "Tickets",
+    "ticketsAria": "Tickets: {{city}} – {{venue}}",
+    "moreDates": "More dates are released continuously — follow us on socials.",
+    "previous": "Previous shows"
+  },
+  "contact": {
+    "title": "Contact",
+    "bookingPress": "Booking/press:"
+  },
+  "merch": {
+    "title": "Merch",
+    "buyViaStripe": "Buy via Stripe",
+    "buyAria": "Buy {{name}} – opens Stripe checkout",
+    "noteSizes": "You choose size & address at checkout.",
+    "noteAddress": "You choose address at checkout.",
+    "footnote": "Questions about size, shipping or your order? Email us at"
+  },
+  "footer": {
+    "backToTop": "Back to top ↑"
+  },
+  "press": {
+    "title": "Press",
+    "photo1Alt": "Bojeng – press photo 1",
+    "photo2Alt": "Bojeng – press photo 2",
+    "photo3Alt": "Bojeng – press photo 3",
+    "bioShortTitle": "Bio (short)",
+    "bioLongTitle": "Bio (long)",
+    "bioShort": "Bojeng is a [genre] band from [city]. Melodies with bite, lyrics in Swedish, and energy from rehearsal to stage. The debut EP was released in 2025, with follow-up singles during 2026.",
+    "bioLong": "Bojeng blends [influence A], [influence B], and [influence C]. Live it’s tight and intimate — with a focus on dynamics, harmonies, and rhythm. The band has played, among others, [venues/festivals] and is now working on new music together with producer [name].",
+    "kitTitle": "Press kit",
+    "kitEpkZip": "Download EPK (zip)",
+    "kitTechRider": "Tech rider (PDF)",
+    "kitPressRelease": "Press release (PDF)"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "aria": "Huvudmeny",
+    "listen": "Lyssna",
+    "shows": "Spelningar",
+    "contact": "Kontakt",
+    "openMenu": "Öppna meny",
+    "closeMenu": "Stäng meny",
+    "language": "Språk",
+    "english": "Engelska",
+    "swedish": "Svenska"
+  },
+  "header": {
+    "homeAria": "Bojeng – startsida"
+  },
+  "hero": {
+    "aria": "Bojeng hero",
+    "contactPrefix": "KONTAKT:"
+  },
+  "listen": {
+    "title": "Lyssna"
+  },
+  "shows": {
+    "title": "Spelningar",
+    "empty": "Inga spelningar för tillfället.",
+    "tickets": "Biljetter",
+    "ticketsAria": "Biljetter: {{city}} – {{venue}}",
+    "moreDates": "Fler datum släpps löpande – följ oss i sociala kanaler.",
+    "previous": "Tidigare spelningar"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "bookingPress": "Bokning/press:"
+  },
+  "merch": {
+    "title": "Merch",
+    "buyViaStripe": "Köp via Stripe",
+    "buyAria": "Köp {{name}} – öppnas i Stripe-kassa",
+    "noteSizes": "Storlek & adress väljer du i kassan.",
+    "noteAddress": "Adress väljer du i kassan.",
+    "footnote": "Har du frågor om storlek, frakt eller beställning? Maila oss på"
+  },
+  "footer": {
+    "backToTop": "Till toppen ↑"
+  },
+  "press": {
+    "title": "Press",
+    "photo1Alt": "Bojeng – pressbild 1",
+    "photo2Alt": "Bojeng – pressbild 2",
+    "photo3Alt": "Bojeng – pressbild 3",
+    "bioShortTitle": "Bio (kort)",
+    "bioLongTitle": "Bio (lång)",
+    "bioShort": "Bojeng är ett [genre]-band från [stad]. Melodier med nerv, texter på svenska och energi från repetition till scen. Debut-EP:n släpptes 2025 med uppföljande singlar under 2026.",
+    "bioLong": "Bojeng blandar [influens A], [influens B] och [influens C]. På scen är det tätt och intimt – med fokus på dynamik, körer och rytm. Bandet har spelat bl.a. [venues/festivaler] och arbetar nu med ny musik tillsammans med producent [namn].",
+    "kitTitle": "Presskit",
+    "kitEpkZip": "Ladda ned EPK (zip)",
+    "kitTechRider": "Tech rider (PDF)",
+    "kitPressRelease": "Pressmeddelande (PDF)"
+  }
+}
