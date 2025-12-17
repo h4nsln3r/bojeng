@@ -214,7 +214,7 @@
 .nav__lang-btn {
   background: transparent;
   border: 0;
-  padding: 6px; /* mindre än innan */
+  padding: 6px;
   border-radius: 999px;
   color: var(--muted);
   cursor: pointer;
@@ -235,11 +235,10 @@
   background: rgba(255, 255, 255, 0.12);
 }
 
-/* Själva flagg-SVGn */
 .nav__flag {
-  width: 18px; /* lagom “icon size” */
+  width: 18px;
   height: 12px;
   display: block;
-  border-radius: 3px; /* lite mjukare */
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1); /* subtil kant */
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 }

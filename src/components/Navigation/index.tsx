@@ -54,8 +54,8 @@ const Navigation = () => {
             {t(navKey(id))}
           </a>
         ))}
-
-        <div className="nav__lang nav__lang--desktop" aria-label={t('nav.language')}>
+        {/* TODO Fix and hide better */}
+        {/* <div className="nav__lang nav__lang--desktop" aria-label={t('nav.language')}>
           <button
             type="button"
             className={`nav__lang-btn ${isEn ? 'active' : ''}`}
@@ -75,7 +75,7 @@ const Navigation = () => {
           >
             <SE className="nav__flag" />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobil-toggle */}

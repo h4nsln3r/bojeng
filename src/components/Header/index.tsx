@@ -1,6 +1,6 @@
 import './header.scss';
 import Navigation from '../Navigation';
-import Zucchini from '../../assets/icons/onlyzuc.png';
+import Zucchini from '../../assets/icons/zucchini.png';
 import { useTranslation } from 'react-i18next';
 
 const Header = () => {
