@@ -38,11 +38,10 @@ export default function App() {
         <section id="shows" className="section section--shows">
           <Shows />
         </section>
-        {/* 
-        <section id="merch" className="section section--merch">
+
+        {/* <section id="merch" className="section section--merch">
           <Merch />
         </section>
-
         <section id="press" className="section section--press">
           <Press />
         </section> */}

@@ -2,8 +2,8 @@ import React from 'react';
 import './_sections.scss';
 import Button from '../Button';
 
-import VinylImage from '../../assets/images/zucchini_bojeng.jpg';
-import TShirtImage from '../../assets/images/tshirt.jpg';
+import VinylImage from '../../assets/images/zucchini_album.jpg';
+import TShirtImage from '../../assets/images/zucchini_album.jpg';
 import { useTranslation } from 'react-i18next';
 
 type MerchItem = {
