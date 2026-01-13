@@ -10,7 +10,15 @@ import { LINKS } from '@/data/socials';
 import { FaFacebook, FaInstagram, FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-const SHOWS: PlayedShow[] = [];
+const SHOWS: PlayedShow[] = [
+  {
+    date: '2026-01-16',
+    city: 'Malmö - Plan B',
+    venue: 'Punkspark',
+    link: 'https://www.facebook.com/events/s/punkspark-brinna-freezer-food-/2225836057825104/',
+    // price: 0,
+  },
+];
 
 const Shows = () => {
   const { t } = useTranslation();
