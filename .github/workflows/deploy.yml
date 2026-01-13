@@ -33,6 +33,20 @@ jobs:
       - name: Build
         run: npm run build
 
+      # 🔎 Debug: se exakt hur stor dist är och vad som är tungt
+      - name: Dist stats
+        run: |
+          echo "== Dist exists? =="
+          ls -la
+          echo "== Dist listing =="
+          ls -la dist || (echo "dist/ saknas - byggsteget skapade ingen dist" && exit 1)
+          echo "== File count =="
+          find dist -type f | wc -l
+          echo "== Total size =="
+          du -sh dist
+          echo "== Top 25 largest files =="
+          du -ah dist | sort -h | tail -n 25
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -44,6 +58,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 30 # ✅ ge Pages mer tid om syncing_files är segt
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
