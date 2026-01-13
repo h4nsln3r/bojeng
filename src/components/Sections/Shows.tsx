@@ -22,7 +22,7 @@ const SHOWS: PlayedShow[] = [
 
 const Shows = () => {
   const { t } = useTranslation();
-  // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkt
+  // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkts
   // const [isOpen, setIsOpen] = useState(SHOWS.length === 0);
   const [isOpen, setIsOpen] = useState(false);
 
