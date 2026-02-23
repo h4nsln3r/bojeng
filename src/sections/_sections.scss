@@ -1,12 +1,13 @@
 /* =========================================================
-   Sections (Listen / Watch / Shows / Press / Contact)
+   Sections (Listen / Watch / Shows / Press / Contact / Merch)
    ========================================================= */
 @font-face {
   font-family: 'TerminaTest';
-  src: url('../../assets/font/TerminaTest-Black.otf') format('opentype');
+  src: url('../assets/font/TerminaTest-Black.otf') format('opentype');
   font-weight: 900;
   font-style: normal;
 }
+
 .section {
   padding: 10px 0;
 
@@ -15,17 +16,13 @@
   }
 
   &--shows {
-    // background: var(--bg);
-    // background: var(--bg-soft);
-
-    background-image: url('../../assets/photos/DSC03657-4.jpg');
+    background-image: url('../assets/photos/DSC03657-4.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    // background-attachment: fixed;
 
     &:has(.section__title:hover) {
-      background-image: url('../../assets/photos/DSC03657-3.jpg');
+      background-image: url('../assets/photos/DSC03657-3.jpg');
     }
 
     .section {
@@ -48,24 +45,20 @@
 
   &--contact {
     background: var(--bg);
-    // background: var(--bg-soft);
 
     .section__title {
       color: white;
     }
 
     img {
-      // border-radius: var(--radius);
-      /* Mobil */
       @media (max-width: 768px) {
         max-width: 100%;
       }
     }
     ul.socials {
       display: flex;
-      justify-content: space-evenly;
-      gap: 16px;
       justify-content: center;
+      gap: 16px;
       padding: 0;
       margin: 0;
       list-style: none;
@@ -85,9 +78,8 @@
   }
 
   &--press {
-    background-image: url('../../assets/photos/DSC03083-2.jpg');
+    background-image: url('../assets/photos/DSC03083-2.jpg');
     background-size: cover;
-
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -102,7 +94,6 @@
   &__col {
     display: flex;
     flex-direction: column;
-    /* Mobil */
     @media (max-width: 768px) {
       &--mobile {
         display: flex;
@@ -245,8 +236,6 @@
   display: block;
   width: 100%;
   height: auto;
-
-  /* Tvinga färgtonen */
   filter: grayscale(0.1) contrast(1.2) brightness(0.85) saturate(1.8) hue-rotate(35deg);
 }
 

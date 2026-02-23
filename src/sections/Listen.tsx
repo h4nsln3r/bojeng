@@ -1,6 +1,6 @@
-import BojengImage from '../../assets/photos/ngbgasd.jpg';
-import { Card } from '../CardList';
-import SpotifyPlayer from '../Players/Spotify';
+import BojengImage from '@/assets/photos/ngbgasd.jpg';
+import { Card } from '@/components/CardList';
+import SpotifyPlayer from '@/components/Players/Spotify';
 import './_sections.scss';
 import { useTranslation } from 'react-i18next';
 

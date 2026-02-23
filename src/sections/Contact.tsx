@@ -1,12 +1,9 @@
 import { useEffect } from 'react';
 import './_sections.scss';
-import BojengImage from '../../assets/photos/DSC03690.jpg';
+import BojengImage from '@/assets/photos/DSC03690.jpg';
 import { LINKS } from '@/data/socials';
-import { FaInstagram } from 'react-icons/fa';
-import { FaFacebook } from 'react-icons/fa';
-import { FaSpotify } from 'react-icons/fa';
-import { FaYoutube } from 'react-icons/fa';
-import Icon from '../Icon';
+import { FaInstagram, FaFacebook, FaSpotify, FaYoutube } from 'react-icons/fa';
+import Icon from '@/components/Icon';
 import { useTranslation } from 'react-i18next';
 
 const SOCIALS = [
@@ -28,13 +25,11 @@ const SOCIALS = [
 
 const Contact = () => {
   const { t } = useTranslation();
-  // Laddar LightWidget-skriptet korrekt i React
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://cdn.lightwidget.com/widgets/lightwidget.js';
     script.async = true;
     document.body.appendChild(script);
-
     return () => {
       document.body.removeChild(script);
     };
@@ -51,10 +46,9 @@ const Contact = () => {
               BOJENGBAND@gmail.com
             </a>
           </p>
-
           <ul className="socials">
             {SOCIALS.map((s) => (
-              <li className="" key={s.name}>
+              <li key={s.name}>
                 <Icon link={s.href} icon={s.icon} />
                 <a href={s.href} aria-label={s.aria} target="_blank" rel="noreferrer">
                   {s.name}
@@ -63,7 +57,7 @@ const Contact = () => {
             ))}
           </ul>
         </div>
-        <img className="section__img--maxwidth-720" src={BojengImage} />
+        <img className="section__img--maxwidth-720" src={BojengImage} alt="" />
       </div>
       <br />
       <br />

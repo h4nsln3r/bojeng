@@ -1,37 +1,26 @@
 import { SlArrowDown, SlArrowUp } from 'react-icons/sl';
 import './_sections.scss';
-import GigList from '../List/ShowsList';
+import GigList from '@/components/List/ShowsList';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { PlayedShow } from '@/types/global';
 import { PLAYED_BOJENG } from '@/data/gigs';
-import Icon from '../Icon';
+import Icon from '@/components/Icon';
 import { LINKS } from '@/data/socials';
 import { FaFacebook, FaInstagram, FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 
-const SHOWS: PlayedShow[] = [
-  {
-    date: '2026-01-16',
-    city: 'Malmö - Plan B',
-    venue: 'Punkspark',
-    link: 'https://www.facebook.com/events/s/punkspark-brinna-freezer-food-/2225836057825104/',
-  },
-];
+const SHOWS: PlayedShow[] = [];
 
 const Shows = () => {
   const { t } = useTranslation();
-  // Om inga kommande spelningar finns: öppna "Tidigare spelningar" direkts
-  // const [isOpen, setIsOpen] = useState(SHOWS.length === 0);
   const [isOpen, setIsOpen] = useState(false);
-
   const handleClick = () => setIsOpen((prev) => !prev);
 
   return (
     <div className="container">
       <div>
         <h2 className="section__title">{t('shows.title')}</h2>
-
         <GigList shows={SHOWS} emptyText={t('shows.empty')} />
         <div className="section__col">
           <p className="section__fineprint">{t('shows.moreDates')}</p>
@@ -53,7 +42,6 @@ const Shows = () => {
           <h3 className="section__title">{t('shows.previous')}</h3>
           {isOpen ? <SlArrowUp /> : <SlArrowDown />}
         </div>
-
         <AnimatePresence initial={false}>
           {isOpen && (
             <motion.div
@@ -71,7 +59,6 @@ const Shows = () => {
           )}
         </AnimatePresence>
       </div>
-
       <br />
       <br />
     </div>

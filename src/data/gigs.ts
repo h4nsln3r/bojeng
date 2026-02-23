@@ -1,6 +1,13 @@
 import { PlayedShow } from '@/types/global';
 
 export const PLAYED_BOJENG: PlayedShow[] = [
+  // ===== 2026 =====
+  {
+    date: '2026',
+    city: 'Malmö',
+    venue: 'Plan B – Punkspark',
+  },
+
   // ===== 2025 =====
   {
     date: '2025',

@@ -1,7 +1,7 @@
 import './_sections.scss';
-import BojengImage1 from '../../assets/photos/DSC03200.jpg';
-import BojengImage2 from '../../assets/photos/DSC03172.jpg';
-import BojengImage3 from '../../assets/photos/DSC03167.jpg';
+import BojengImage1 from '@/assets/photos/DSC03200.jpg';
+import BojengImage2 from '@/assets/photos/DSC03172.jpg';
+import BojengImage3 from '@/assets/photos/DSC03167.jpg';
 import { useTranslation } from 'react-i18next';
 
 const PRESS_PHOTOS = [
@@ -22,18 +22,15 @@ const Press = () => {
           </a>
         ))}
       </div>
-
       <div className="press-cards">
         <article className="press-card">
           <h3>{t('press.bioShortTitle')}</h3>
           <p>{t('press.bioShort')}</p>
         </article>
-
         <article className="press-card">
           <h3>{t('press.bioLongTitle')}</h3>
           <p>{t('press.bioLong')}</p>
         </article>
-
         <article className="press-card">
           <h3>{t('press.kitTitle')}</h3>
           <ul>

@@ -3,13 +3,7 @@ import './App.scss';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Listen from './components/Sections/Listen';
-// import Watch from './components/Sections/Watch';
-import Shows from './components/Sections/Shows';
-// import Press from './components/Sections/Press';
-import Contact from './components/Sections/Contact';
-// import Feed from './components/Sections/Feed';
-// import { Merch } from './components/Sections/Merch';
+import { Listen, Shows, Contact } from './sections';
 
 export default function App() {
   useEffect(() => {
