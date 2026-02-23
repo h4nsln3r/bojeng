@@ -80,8 +80,13 @@
   &--press {
     background-image: url('../assets/photos/DSC03083-2.jpg');
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  &--watch {
+    background: var(--bg-soft);
   }
 
   &__row {
@@ -242,6 +247,95 @@
 .bojengimage--green::after {
   background: rgba(0, 255, 100, 0.85);
   mix-blend-mode: hard-light;
+}
+
+/* Press grid & cards */
+.press-grid {
+  display: grid;
+  gap: 12px;
+  margin: 10px 0 22px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.press-grid__item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.press-cards {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.press-card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* Contact card */
+.contact-card {
+  background: linear-gradient(180deg, rgba(0, 38, 0, 0.9), rgba(74, 88, 91, 0.6));
+  padding: 20px;
+  font-family: 'TerminaTest', sans-serif;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+}
+
+.link-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+  padding: 0;
+  margin: 14px 0 0;
+  list-style: none;
+  justify-content: center;
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.9;
+    font-size: 0.9rem;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.video-wrap {
+  margin-top: 10px;
 }
 
 .bojengimage--green::before {

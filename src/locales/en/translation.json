@@ -26,7 +26,14 @@
     "tickets": "Tickets",
     "ticketsAria": "Tickets: {{city}} – {{venue}}",
     "moreDates": "More dates are released continuously — follow us on socials.",
-    "previous": "Previous shows"
+    "previous": "Previous shows",
+    "time": "Time",
+    "address": "Address",
+    "facebook": "Facebook",
+    "otherLink": "More info",
+    "otherBands": "With",
+    "showDetails": "Show more info",
+    "hideDetails": "Hide info"
   },
   "contact": {
     "title": "Contact",

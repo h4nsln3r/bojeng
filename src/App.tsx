@@ -16,37 +16,18 @@ export default function App() {
   return (
     <>
       <Header />
-
       <main>
         <Hero />
-
         <section id="listen" className="section section--listen">
           <Listen />
         </section>
-
-        {/* TODO gör det snyggt */}
-        {/* <section id="watch" className="section section--watch">
-          <Watch />
-        </section> */}
-
         <section id="shows" className="section section--shows">
           <Shows />
         </section>
-
-        {/* <section id="merch" className="section section--merch">
-          <Merch />
-        </section>
-        <section id="press" className="section section--press">
-          <Press />
-        </section> */}
-
         <section id="contact" className="section section--contact">
           <Contact />
         </section>
-
         <Footer />
-
-        {/* <Feed /> */}
       </main>
     </>
   );

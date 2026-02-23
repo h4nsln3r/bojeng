@@ -26,7 +26,14 @@
     "tickets": "Biljetter",
     "ticketsAria": "Biljetter: {{city}} – {{venue}}",
     "moreDates": "Fler datum släpps löpande – följ oss i sociala kanaler.",
-    "previous": "Tidigare spelningar"
+    "previous": "Tidigare spelningar",
+    "time": "Tid",
+    "address": "Adress",
+    "facebook": "Facebook",
+    "otherLink": "Läs mer",
+    "otherBands": "Med spelar",
+    "showDetails": "Visa mer info",
+    "hideDetails": "Dölj info"
   },
   "contact": {
     "title": "Kontakt",

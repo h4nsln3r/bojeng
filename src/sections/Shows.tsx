@@ -1,16 +1,11 @@
 import { SlArrowDown, SlArrowUp } from 'react-icons/sl';
 import './_sections.scss';
 import GigList from '@/components/List/ShowsList';
+import SocialLinks from '@/components/SocialLinks';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { PlayedShow } from '@/types/global';
-import { PLAYED_BOJENG } from '@/data/gigs';
-import Icon from '@/components/Icon';
-import { LINKS } from '@/data/socials';
-import { FaFacebook, FaInstagram, FaSoundcloud, FaSpotify, FaYoutube } from 'react-icons/fa';
+import { PLAYED_BOJENG, UPCOMING_SHOWS } from '@/data/gigs';
 import { useTranslation } from 'react-i18next';
-
-const SHOWS: PlayedShow[] = [];
 
 const Shows = () => {
   const { t } = useTranslation();
@@ -21,15 +16,11 @@ const Shows = () => {
     <div className="container">
       <div>
         <h2 className="section__title">{t('shows.title')}</h2>
-        <GigList shows={SHOWS} emptyText={t('shows.empty')} />
+        <GigList shows={UPCOMING_SHOWS} emptyText={t('shows.empty')} />
         <div className="section__col">
           <p className="section__fineprint">{t('shows.moreDates')}</p>
           <div className="section--shows__icons">
-            <Icon link={LINKS.Soundcloud} icon={<FaSoundcloud className="icon" />} />
-            <Icon link={LINKS.YouTube} icon={<FaYoutube className="icon" />} />
-            <Icon link={LINKS.Instagram} icon={<FaInstagram className="icon" />} />
-            <Icon link={LINKS.Facebook} icon={<FaFacebook className="icon" />} />
-            <Icon link={LINKS.Spotify} icon={<FaSpotify className="icon" />} />
+            <SocialLinks />
           </div>
         </div>
       </div>
@@ -53,7 +44,7 @@ const Shows = () => {
               transition={{ duration: 0.25, ease: 'easeInOut' }}
             >
               <div className="accordion-content">
-                <GigList shows={PLAYED_BOJENG} />
+                <GigList shows={PLAYED_BOJENG} expandable />
               </div>
             </motion.div>
           )}

@@ -1,11 +1,20 @@
 import { PlayedShow } from '@/types/global';
 
+export const UPCOMING_SHOWS: PlayedShow[] = [];
+
 export const PLAYED_BOJENG: PlayedShow[] = [
   // ===== 2026 =====
   {
-    date: '2026',
+    date: '2026-01-16',
     city: 'Malmö',
     venue: 'Plan B – Punkspark',
+    time: '20:00',
+    address: 'Norra Skolgatan 2, Malmö',
+    ticketLink:
+      'https://www.facebook.com/events/s/punkspark-brinna-freezer-food-/2225836057825104/',
+    facebookLink:
+      'https://www.facebook.com/events/s/punkspark-brinna-freezer-food-/2225836057825104/',
+    otherBands: 'Brinna, Freezer, Food',
   },
 
   // ===== 2025 =====
