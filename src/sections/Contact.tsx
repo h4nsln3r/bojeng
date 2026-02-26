@@ -3,7 +3,6 @@ import './_sections.scss';
 import BojengImage from '@/assets/photos/DSC03690.jpg';
 import { LINKS } from '@/data/socials';
 import { FaInstagram, FaFacebook, FaSpotify, FaYoutube } from 'react-icons/fa';
-import Icon from '@/components/Icon';
 import { useTranslation } from 'react-i18next';
 
 const SOCIALS = [
@@ -49,9 +48,14 @@ const Contact = () => {
           <ul className="socials">
             {SOCIALS.map((s) => (
               <li key={s.name}>
-                <Icon link={s.href} icon={s.icon} />
-                <a href={s.href} aria-label={s.aria} target="_blank" rel="noreferrer">
-                  {s.name}
+                <a
+                  href={s.href}
+                  aria-label={s.aria}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="socials__icon"
+                >
+                  {s.icon}
                 </a>
               </li>
             ))}
