@@ -9,7 +9,7 @@
 }
 
 .section {
-  padding: 10px 0;
+  padding: clamp(56px, 10vw, 96px) 0;
 
   &--listen {
     background: var(--bg);
@@ -68,10 +68,10 @@
         flex-direction: column;
         gap: 4px;
         &:hover > a {
-          color: green;
+          color: var(--brand);
         }
         &:hover > svg {
-          color: green;
+          color: var(--brand);
         }
       }
     }
@@ -331,7 +331,7 @@
 
     &:hover {
       opacity: 1;
-      color: green;
+      color: var(--brand);
     }
   }
 }

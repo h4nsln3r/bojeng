@@ -8,13 +8,14 @@
 
 /* -------- Tokens / Theme -------- */
 :root {
-  --bg: #0a0a0a;
-  --bg-soft: #121212;
-  --card: #161616;
+  --bg: #080808;
+  --bg-soft: #101010;
+  --card: #141414;
   --text: #f4f4f5;
-  --muted: #b4b4b7;
-  --brand: #16d222; /* accent – byt vid behov */
-  --ring: rgba(124, 244, 226, 0.35);
+  --muted: #a8a8ad;
+  --brand: #1ee62a;
+  --brand-dim: #16b821;
+  --ring: rgba(30, 230, 42, 0.35);
   --radius-sm: 12px;
   --radius: 16px;
   --radius-lg: 28px;
@@ -68,13 +69,12 @@ a {
   color: inherit;
 }
 
-/* Gör plats så innehållet inte hamnar under fixed header */
 main {
-  padding-top: var(--header-h);
+  padding-top: 0;
 }
 
-/* Ankarlänkar ska inte hamna under headern */
-section {
+/* Ankarlänkar ska inte hamna under fixed header (hero undantas) */
+section:not(.hero) {
   scroll-margin-top: calc(var(--header-h) + 12px);
 }
 

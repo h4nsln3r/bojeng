@@ -12,38 +12,26 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <>
-      <section className="hero" aria-label={t('hero.aria')} id="top">
-        {/* Video-bakgrund */}
-        <div className="hero__bg" aria-hidden="true">
-          <video className="hero__bgVideo" autoPlay loop muted playsInline preload="metadata">
-            <source src={zucWebm} type="video/webm" />
-            {/* <source src={zucMp4} type="video/mp4" /> */}
-          </video>
-        </div>
+    <section className="hero" aria-label={t('hero.aria')} id="top">
+      <div className="hero__bg" aria-hidden="true">
+        <video className="hero__bgVideo" autoPlay loop muted playsInline preload="metadata">
+          <source src={zucWebm} type="video/webm" />
+        </video>
+      </div>
+      <div className="hero__overlay" aria-hidden="true" />
 
-        <div className="container hero__inner">
-          <h1 className="hero__title">
-            <img src={BojengLogo} alt="Bojeng" />
-          </h1>
+      <div className="container hero__inner">
+        <h1 className="hero__title">
+          <img src={BojengLogo} alt="Bojeng" />
+        </h1>
 
-          {/* <p className="hero__subtitle">Ny musik ute nu</p> */}
+        <div className="hero__cta">{/* CTA-knappar kan läggas till här */}</div>
+      </div>
 
-          <div className="hero__cta">
-            {/*
-            <Button href="#listen" ariaLabel="Biljetter: Malmö – KB">
-              Lyssna
-            </Button>
-            <Button href="#shows" variant="ghost" ariaLabel="Biljetter: Malmö – KB">
-              Biljetter
-            </Button>
-            */}
-          </div>
-        </div>
-      </section>
-
-      <HeroFooter />
-    </>
+      <div className="container hero__footer-wrap">
+        <HeroFooter />
+      </div>
+    </section>
   );
 };
 

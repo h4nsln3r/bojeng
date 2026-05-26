@@ -3,9 +3,12 @@ import './App.scss';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import { useAnimatedFavicon } from './hooks/useAnimatedFavicon';
 import { Listen, Shows, Contact } from './sections';
 
 export default function App() {
+  useAnimatedFavicon();
+
   useEffect(() => {
     if (window.location.hash) {
       const el = document.querySelector(window.location.hash);
