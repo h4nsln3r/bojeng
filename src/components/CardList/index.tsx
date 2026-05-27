@@ -20,18 +20,6 @@ export const Card = () => {
           </div>
         </div>
       )}
-      {LATEST_SINGLE.apple && (
-        <div className="player-card">
-          <div className="ratio">
-            <iframe
-              title="Apple Music"
-              src={LATEST_SINGLE.apple}
-              loading="lazy"
-              allow="encrypted-media; autoplay; clipboard-write; fullscreen; picture-in-picture"
-            />
-          </div>
-        </div>
-      )}
       {LATEST_SINGLE.soundcloud && (
         <div className="player-card">
           <div className="ratio">

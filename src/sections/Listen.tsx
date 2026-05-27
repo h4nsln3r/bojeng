@@ -1,21 +1,21 @@
 import BojengImage from '@/assets/photos/ngbgasd.jpg';
-import { Card } from '@/components/CardList';
 import SpotifyPlayer from '@/components/Players/Spotify';
 import './_sections.scss';
-import { useTranslation } from 'react-i18next';
 
 const Listen = () => {
-  const { t } = useTranslation();
   return (
     <div className="container">
       <div className="section__row section__col--mobile section__row--space-between">
         <div className="section__col">
-          <h2 className="section__title">{t('listen.title')}</h2>
           <SpotifyPlayer />
-          <Card />
-          <br />
         </div>
-        <img className="section__img--maxwidth-720 bojengimage--green" src={BojengImage} />
+        <figure className="section__img--maxwidth-720 bojengimage--green" aria-hidden="true">
+          <img className="bojengimage__media" src={BojengImage} alt="" />
+          <span className="bojengimage__grain" />
+          <span className="bojengimage__vignette" />
+          <span className="bojengimage__label">BOJENG · LIVE @ NGBG &apos;24 · 33⅓ RPM</span>
+          <span className="bojengimage__stamp">NGBG FESTIVAL · 2024</span>
+        </figure>
       </div>
       <br />
       <br />

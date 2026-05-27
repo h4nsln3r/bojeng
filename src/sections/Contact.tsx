@@ -36,32 +36,50 @@ const Contact = () => {
 
   return (
     <div className="container">
-      <h2 className="section__title">{t('contact.title')}</h2>
       <div className="section__row section__col--mobile">
-        <div className="contact-card">
-          <p>
-            {t('contact.bookingPress')}{' '}
-            <a href="mailto:BOJENGBAND@gmail.com" className="link-underline">
+        <article className="contact-pass">
+          <div className="contact-pass__clip" aria-hidden="true">
+            <span className="contact-pass__hole" />
+          </div>
+          <div className="contact-pass__header">
+            <span className="contact-pass__access">ALL ACCESS</span>
+            <span className="contact-pass__category">BACKSTAGE · CREW · 2026</span>
+          </div>
+          <div className="contact-pass__body">
+            <p className="contact-pass__label">{t('contact.bookingPress')}</p>
+            <a href="mailto:BOJENGBAND@gmail.com" className="contact-pass__email link-underline">
               BOJENGBAND@gmail.com
             </a>
-          </p>
-          <ul className="socials">
-            {SOCIALS.map((s) => (
-              <li key={s.name}>
-                <a
-                  href={s.href}
-                  aria-label={s.aria}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="socials__icon"
-                >
-                  {s.icon}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <img className="section__img--maxwidth-720" src={BojengImage} alt="" />
+            <ul className="socials contact-pass__socials">
+              {SOCIALS.map((s) => (
+                <li key={s.name}>
+                  <a
+                    href={s.href}
+                    aria-label={s.aria}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="socials__icon"
+                  >
+                    {s.icon}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <span className="contact-pass__stamp" aria-hidden="true">
+            VIP
+          </span>
+          <span className="contact-pass__barcode" aria-hidden="true" />
+        </article>
+        <figure className="contact-portrait">
+          <div className="contact-portrait__stage">
+            <img className="contact-portrait__media" src={BojengImage} alt="" />
+            <span className="contact-portrait__wash" aria-hidden="true" />
+            <span className="contact-portrait__spot" aria-hidden="true" />
+            <span className="contact-portrait__grain" aria-hidden="true" />
+          </div>
+          <span className="contact-portrait__rule" aria-hidden="true" />
+        </figure>
       </div>
       <br />
       <br />

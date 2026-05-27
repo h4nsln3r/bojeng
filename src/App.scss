@@ -78,6 +78,22 @@ section:not(.hero) {
   scroll-margin-top: calc(var(--header-h) + 12px);
 }
 
+/* -------- Scroll snap (desktop) --------
+   Låser scroll till varje sektion när man tar sig mellan dem.
+   Eftersom alla sektioner nu är låsta till 100dvh och accordions
+   scrollar internt behövs inga undantag. */
+@media (min-width: 769px) and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .hero,
+  main > section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+}
+
 /* -------- Layout helpers -------- */
 .container {
   width: min(1100px, 92vw);
